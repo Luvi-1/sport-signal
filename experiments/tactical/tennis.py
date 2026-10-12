@@ -69,7 +69,7 @@ def validate_sources(root: Path) -> dict:
     files = []
     for entry in source["files"]:
         path = cache / entry["file"]
-        expected_url = f"https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/{MCP_COMMIT}/{quote(entry["file"])}"
+        expected_url = f"https://raw.githubusercontent.com/JeffSackmann/tennis_MatchChartingProject/{MCP_COMMIT}/{quote(entry['file'])}"
         if entry.get("source_commit") != MCP_COMMIT or entry["url"] != expected_url:
             raise ValueError(f"Unpinned source: {entry['file']}")
         if path.stat().st_size != entry["bytes"] or digest(path) != entry["sha256"]:

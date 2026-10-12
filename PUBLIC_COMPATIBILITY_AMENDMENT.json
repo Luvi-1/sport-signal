@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "amendment_type": "github_source_python311_compatibility",
+  "prepared_utc_date": "2026-10-12",
+  "repository": "https://github.com/Luvi-1/sport-signal",
+  "base_commit": "d6ff9db48f5dfdc482f77f9a2d0d768408a06b86",
+  "scope": "A single source-string quote correction for the declared Python >=3.11 support. No algorithms, model specifications, data selections, numerical results, or independent review approvals are changed.",
+  "baseline_release_manifest": {
+    "path": "TACTICAL_PUBLISH_MANIFEST.json",
+    "sha256": "51b9db2b5251d15c60747da3de028aac70ec714dd56caffad01d8929b5213a8c",
+    "role": "Unchanged historical manifest of the originally published 258-file source release. Its parser hash, inventory hash and independent review hash still describe that original release, not the amended GitHub source bytes."
+  },
+  "changed_files": [
+    {
+      "path": "experiments/tactical/tennis.py",
+      "original_bytes": 39368,
+      "original_sha256": "5af4a6b11555456e48e6c722f5363b422fb445f6bc1b76377f815eb2f4049042",
+      "amended_bytes": 39368,
+      "amended_sha256": "4dffdebfe78d4a4b2d46afd7bf6b92fba4435139ce24426bbfe7d0a28e84ad0e",
+      "line": 72,
+      "change": "Use single-quoted file key inside the double-quoted URL f-string, avoiding Python 3.12-only quote reuse."
+    }
+  ],
+  "added_files": [
+    "PUBLIC_COMPATIBILITY_AMENDMENT.json"
+  ],
+  "verification": {
+    "local_runtime": "3.12.14",
+    "full_unittest_discovery": {
+      "tests_run": 591,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 4,
+      "skip_reason": "Four tests require intentionally excluded private source caches."
+    },
+    "cli_help": "passed: python -m sportslab --help",
+    "all_public_python_files": 101,
+    "python312_compile": "All 101 source files compile.",
+    "python311_grammar_check": {
+      "parser": "parso 0.8.7, grammar 3.11",
+      "result": "All 101 source files pass; the unpatched tennis f-string fails this grammar check. This is not a Python 3.11 runtime test."
+    },
+    "python311_runtime": "Not available locally; the repository CI workflow executes the complete test suite on Python 3.11 for the amended commit.",
+    "equivalence": {
+      "ast": "The complete Python 3.12 AST, including source positions, is identical before and after the quote edit.",
+      "compiled_code": "Serialized Python 3.12 code objects are identical when compiled with the same filename.",
+      "limit": "This verifies executable syntax equivalence, not source-byte identity or a fresh numerical evaluation. The parser reads and hashes its own source, so newly generated parser provenance hashes will intentionally differ."
+    },
+    "aggregate_views": "All seven existing model views still load in audited_aggregate_snapshot mode under their unchanged implementation and aggregate hash checks."
+  },
+  "frozen_evidence": {
+    "unchanged_original_files": 257,
+    "amended_github_file_count": 259,
+    "original_archives_and_research_sources": "Preserved separately without modification; this amendment applies only to the GitHub source copy.",
+    "reports_and_attestations": "All existing reports, source manifests, protocols, numerical reviews, aggregate snapshots and independent audit attestations retain their original bytes and identities.",
+    "no_rebinding": "No original run binding, evaluation approval or independent-review hash is rewritten to imply that the amended source was the evaluated source.",
+    "future_local_runs": "Any fresh parser run produces the amended source hash and must use newly generated, independently reviewed provenance and bindings. Original exact-source-hash guards remain unchanged and may reject mixed old and amended artifacts."
+  },
+  "verification_recipe": [
+    "Verify the unchanged baseline release manifest against its SHA-256 above.",
+    "Verify every file listed by that manifest against its recorded hash, except the single changed file explicitly identified above.",
+    "Verify the changed file against its amended SHA-256 above. The only added file is this amendment; its own identity is recorded by the Git commit."
+  ],
+  "authorization_boundary": "This compatibility record does not create or expand data rights, numerical approval, distribution review, or an independent audit attestation."
+}
