@@ -286,9 +286,14 @@ class RecoveryTests(unittest.TestCase):
         def record_operation(root, task, stage, identity, config, limit, kind="fit"):
             self.assertEqual(limit, 49)
             return self.append_operation(identity)
-        with patch.object(m, "Dataset", FakeDataset), patch.object(m, "Preprocessor", FakePreprocessor), patch.object(m, "fit_candidate", side_effect=self.fake_fit) as fitted, patch.object(m, "build_rows", side_effect=build_calibration), patch.object(r.gates, "record_operation", side_effect=record_operation), patch.object(m, "minimize_scalar", return_value=SimpleNamespace(success=True, x=0., fun=1., nfev=3)) as optimizer:
+        # Wiring-only fixture: production runtime pins remain independently enforced.
+        synthetic_runtime = {"synthetic": True, "scope": "unit_test_only"}
+        with patch.object(m, "verify_runtime", return_value=synthetic_runtime) as runtime_check, \
+             patch.object(m, "Dataset", FakeDataset), patch.object(m, "Preprocessor", FakePreprocessor), patch.object(m, "fit_candidate", side_effect=self.fake_fit) as fitted, patch.object(m, "build_rows", side_effect=build_calibration), patch.object(r.gates, "record_operation", side_effect=record_operation), patch.object(m, "minimize_scalar", return_value=SimpleNamespace(success=True, x=0., fun=1., nfev=3)) as optimizer:
             frozen = r.run(self.root)
             second = r.run(self.root)
+        runtime_check.assert_called()
+        self.assertEqual(frozen["runtime"], synthetic_runtime)
         self.assertEqual(fitted.call_count, 9)
         self.assertEqual(optimizer.call_count, 16)
         self.assertEqual(m.json_hash(frozen), m.json_hash(second))

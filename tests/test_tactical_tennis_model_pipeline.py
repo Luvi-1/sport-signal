@@ -155,12 +155,17 @@ class OrchestrationTests(unittest.TestCase):
                 protocol=Path(directory)/m.PROTOCOL;protocol.parent.mkdir(parents=True);protocol.write_text("synthetic unit fixture")
                 AllCellSource.future_target=future;AllCellSource.calls=[];AllCellSource.calibration_observed_freeze=False
                 sufficient={"sufficient":True,"n":3000,"matches":50,"class_counts":[1000,1000,1000]}
-                with patch.object(m,"SourceReader",AllCellSource),patch.object(m,"make_estimator",side_effect=MockEstimator),\
+                # Wiring-only fixture: this is not a reviewed numerical-runtime attestation.
+                synthetic_runtime = {"synthetic": True, "scope": "unit_test_only"}
+                with patch.object(m,"verify_runtime",return_value=synthetic_runtime) as runtime_check,\
+                     patch.object(m,"SourceReader",AllCellSource),patch.object(m,"make_estimator",side_effect=MockEstimator),\
                      patch.object(m.Dataset,"supports",return_value=sufficient),\
                      patch.object(m,"minimize_scalar",return_value=SimpleNamespace(success=True,x=0.,fun=1.,nfev=1)),\
                      patch("experiments.tactical.gates.require_stage"),patch("experiments.tactical.gates.record_operation"),\
                      patch("experiments.tactical.gates.verify_binding",return_value={"binding_sha256":"synthetic"}):
                     result=m.develop(directory,run_probe=False)
+                    runtime_check.assert_called()
+                    self.assertEqual(result["runtime"], synthetic_runtime)
                     self.assertTrue(AllCellSource.calibration_observed_freeze)
                     self.assertEqual(set(result["cells"]),{"A1_m","A1_w","A2_m","A2_w"})
                     self.assertEqual(result["optimizer_attempts"],24)  # 12 fixed L stubs + 12 temperature stubs
@@ -223,3 +228,30 @@ class CacheLineageTests(unittest.TestCase):
             m.write_json(m.artifact_dir(directory)/"SOURCE_CACHE_REVIEW.json",anchor)
             changed=copy.deepcopy(provenance);changed["parser_code_sha256"]="new parser"
             with self.assertRaises(PermissionError):m.verify_source_cache_lineage(directory,changed)
+
+
+class RuntimeGuardTests(unittest.TestCase):
+    # Synthetic reported versions test the real guard; they grant no run approval.
+    pinned = {"numpy": "2.3.5", "pandas": "2.2.3", "scipy": "1.17.0", "scikit_learn": "1.8.0"}
+
+    def test_real_runtime_guard_accepts_only_the_reviewed_versions(self):
+        with patch.object(m.sys, "version_info", (3, 12, 0)), \
+             patch.object(m, "runtime_manifest", return_value=self.pinned):
+            self.assertEqual(m.verify_runtime(), self.pinned)
+
+    def test_real_runtime_guard_rejects_other_python_versions(self):
+        for version in ((3, 11, 0), (3, 13, 0)):
+            with self.subTest(version=version), \
+                 patch.object(m.sys, "version_info", version), \
+                 patch.object(m, "runtime_manifest", return_value=self.pinned):
+                with self.assertRaisesRegex(RuntimeError, "Runtime differs from reviewed"):
+                    m.verify_runtime()
+
+    def test_real_runtime_guard_rejects_each_dependency_mismatch(self):
+        for dependency in self.pinned:
+            wrong = dict(self.pinned, **{dependency: "unreviewed"})
+            with self.subTest(dependency=dependency), \
+                 patch.object(m.sys, "version_info", (3, 12, 0)), \
+                 patch.object(m, "runtime_manifest", return_value=wrong):
+                with self.assertRaisesRegex(RuntimeError, "Runtime differs from reviewed"):
+                    m.verify_runtime()

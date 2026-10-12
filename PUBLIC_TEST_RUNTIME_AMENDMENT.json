@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "amendment_type": "github_synthetic_test_runtime_fixtures",
+  "prepared_utc_date": "2026-10-12",
+  "repository": "https://github.com/Luvi-1/sport-signal",
+  "base_commit": "47ee816e97d7c19976597f981c5de6e23a52ed98",
+  "scope": "Isolate two synthetic tennis orchestration tests from the production numerical-runtime gate, and add direct regression tests of that unchanged gate. No production source, dependency pins, workflow, data, numerical report or independent approval changes.",
+  "reason": "The offline CI supports Python 3.11. Real tennis numerical execution intentionally requires reviewed Python 3.12 and exact dependency versions. Two already mocked wiring tests accidentally called that real gate, preventing them from exercising their synthetic orchestration on Python 3.11.",
+  "prior_amendment": {
+    "path": "PUBLIC_COMPATIBILITY_AMENDMENT.json",
+    "sha256": "3903f0f7c1a07ab5117d1e386fa229d4fe780858f17242e7a8b98abdc97a3692",
+    "role": "Unchanged record of the preceding parser quote correction; its recorded tests and file counts describe that preceding amendment."
+  },
+  "baseline_release_manifest": {
+    "path": "TACTICAL_PUBLISH_MANIFEST.json",
+    "sha256": "51b9db2b5251d15c60747da3de028aac70ec714dd56caffad01d8929b5213a8c",
+    "role": "Unchanged historical release and independent-review identities. This fixture amendment is not a replacement release approval."
+  },
+  "changed_files": [
+    {
+      "path": "tests/test_tactical_tennis_model_pipeline.py",
+      "original_bytes": 14037,
+      "original_sha256": "d8548882fc3dfdcc86e63e5e0032a7e7b82bb76d990ff8aca835ee7df9694d8d",
+      "amended_bytes": 15897,
+      "amended_sha256": "2c075904a0890db4edd4efc2d0fe63ae621a491269fb5875e296c18c6ac4dd5a"
+    },
+    {
+      "path": "tests/test_tactical_tennis_recovery.py",
+      "original_bytes": 18506,
+      "original_sha256": "8f8742b9ef9d618e0980515e1af3c9a64c3a6e89627632f5b86a6656e1022b4e",
+      "amended_bytes": 18867,
+      "amended_sha256": "663f48ebf3cca0cf7a2ae9fa2354a5e3e93e0c5a3be16f97f4157ca1fbbb10d7"
+    }
+  ],
+  "added_files": [
+    "PUBLIC_TEST_RUNTIME_AMENDMENT.json"
+  ],
+  "test_changes": [
+    "Only the two fully synthetic orchestration tests mock verify_runtime. Their fixture explicitly reports synthetic=true and scope=unit_test_only, and both tests assert that this marker is saved in their temporary synthetic freeze.",
+    "Three added tests call the real, unmocked verify_runtime with synthetic reported versions. They check acceptance of the reviewed version tuple, rejection of Python 3.11 and 3.13, and rejection of a mismatch in each of the four pinned dependencies.",
+    "All existing orchestration assertions remain, including freeze order, future-target isolation, exact candidate grid, recovered work preservation and budget accounting."
+  ],
+  "verification": {
+    "local_runtime": "3.12.14",
+    "full_unittest_discovery": {
+      "tests_run": 594,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 4,
+      "skip_reason": "Four tests require intentionally excluded private source caches."
+    },
+    "targeted_guard_simulation": {
+      "tests_run": 5,
+      "failures": 0,
+      "errors": 0,
+      "method": "Under the actual Python 3.12 interpreter, temporarily report sys.version_info=(3,11,0); verify the real production guard rejects it, while both isolated wiring tests and all three guard regressions pass. This is not native Python 3.11 execution."
+    },
+    "syntax": "All 101 public Python files compile on Python 3.12 and pass parso 0.8.7 using the Python 3.11 grammar.",
+    "cli_help": "passed: python -m sportslab --help",
+    "aggregate_views": "All seven existing views still load in audited_aggregate_snapshot mode with unchanged integrity checks.",
+    "python311_runtime": "Not available locally. The unchanged CI workflow must run the full suite on Python 3.11 for the new commit before runtime compatibility is reported as verified."
+  },
+  "preservation": {
+    "unchanged_files_from_preceding_commit": 257,
+    "amended_github_file_count": 260,
+    "production_code": "Every production Python file, including the exact Python 3.12/dependency guard, is byte-identical to the preceding commit.",
+    "historical_evidence": "Both release manifests, previous amendment, frozen archives, executed research sources, source/protocol bindings, numerical reports and all independent attestations remain unchanged. No results are refitted, rebound or represented as newly evaluated."
+  },
+  "verification_recipe": [
+    "Verify the unchanged original release manifest and apply the preceding PUBLIC_COMPATIBILITY_AMENDMENT.json hash overlay.",
+    "Then apply only the two changed-file SHA-256 records above. All other files from the preceding commit are unchanged.",
+    "The only newly added file is this amendment, whose identity is recorded by the Git commit."
+  ],
+  "authorization_boundary": "A unit-test fixture is never approval to run a numerical study. This record grants no data rights, stage authorization, numerical approval, distribution clearance or replacement independent attestation."
+}
