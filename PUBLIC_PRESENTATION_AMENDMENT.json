@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "amendment_type": "github_readme_presentation_and_replication_addendum",
+  "prepared_utc_date": "2026-10-12",
+  "repository": "https://github.com/Luvi-1/sport-signal",
+  "base_commit": "edf5bb213190a0c46710bee8123a662a470fbed4",
+  "base_tree": "088d5273afa7f1d2b9aeba8a27ab488fd8cd1b9b",
+  "scope": "Revise only the root README presentation and add the unchanged, separately supplied aggregate replication narrative plus this amendment. No source, test, runtime guard, dependency, workflow, existing report, model, protocol, data, or independent attestation changes.",
+  "baseline_release_manifest": {
+    "path": "TACTICAL_PUBLISH_MANIFEST.json",
+    "sha256": "51b9db2b5251d15c60747da3de028aac70ec714dd56caffad01d8929b5213a8c",
+    "original_release_file_count": 258,
+    "role": "Unchanged historical inventory and review identities of the original public source release. Its README hash describes the original README, not this revised landing page."
+  },
+  "prior_amendments": [
+    {
+      "path": "PUBLIC_COMPATIBILITY_AMENDMENT.json",
+      "sha256": "3903f0f7c1a07ab5117d1e386fa229d4fe780858f17242e7a8b98abdc97a3692",
+      "git_blob_sha1": "256eb13e6808e200a59a59844aea817a2a71a8e5",
+      "role": "Unchanged historical record of a preceding amendment; its validation counts and preservation statements apply to that revision."
+    },
+    {
+      "path": "PUBLIC_TEST_RUNTIME_AMENDMENT.json",
+      "sha256": "8522e0feb4f4ae783295386a09dbffc44cb1fe63aca238a6c9999f21808b61f0",
+      "git_blob_sha1": "6bd0c0b4131316fcb3d6be1227e86ab6a150fad0",
+      "role": "Unchanged historical record of a preceding amendment; its validation counts and preservation statements apply to that revision."
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "README.md",
+      "original_bytes": 12621,
+      "original_sha256": "0a2f1df46b1d4adc484daafd830ad716c53248dfa92cbe4b5aa19c19a5551589",
+      "original_git_blob_sha1": "c9320f8de4da559fa1da1574a3cfd323d6c9e2c9",
+      "amended_bytes": 16855,
+      "amended_sha256": "75fafb32878a020e786cc722c3122a06fd9c048ed6c4bcb06a7ee178a91faea7",
+      "amended_git_blob_sha1": "4f936ef9182129f2b7a52a1a73b3c16c3433f26e",
+      "change": "Use the Sport Signal repository name, introduce both research tracks and the real local aggregate viewer, reorganize evidence/setup/architecture/navigation, retain negative results and limitations, distinguish historical versus current checks, and link the later scoped replication addendum."
+    }
+  ],
+  "added_files": [
+    {
+      "path": "docs/tactical/REPLICATION_RESULTS.md",
+      "bytes": 7819,
+      "sha256": "cce3beec5a8c86100686ef5dfda0032a0c03e3981208cbeb8c96a7a7fe0c6403",
+      "git_blob_sha1": "0601314743cac46421c90a76d18cf0c2ac501039",
+      "origin": "Unchanged user-provided standalone replication addendum, completed 2026-10-11. Exact supplied bytes and final newline are preserved."
+    },
+    {
+      "path": "PUBLIC_PRESENTATION_AMENDMENT.json",
+      "identity": "This amendment has no self-referential byte hash. Its identity is recorded by the containing Git commit."
+    }
+  ],
+  "replication_evidence_scope": {
+    "studies": 7,
+    "counted_successful_operations": 272,
+    "compared_prediction_score_and_interval_differences": "All observed original-versus-refit differences were zero for the compared numerical values, as reported in the unchanged addendum.",
+    "environment": "Same original software environment and task-specific thread settings; no cross-hardware replication claim.",
+    "procedure": "Source-to-selected-procedure refit. Original unavailable candidates and failed trajectories were not replayed; the full nested baseball-mechanics procedure and fixed ACB schedule are documented exceptions.",
+    "review": "Independent AI-assisted methodological and numerical review; not human ground-truth validation or legal certification.",
+    "limits": "The addendum is historical evidence, not a new held-out experiment or a claim that amended public source bytes were the executed sources. Original findings, private inputs and run bindings remain separate.",
+    "attestation_handling": "No independent review JSON is added, rewritten, reconstructed or fabricated. The unchanged narrative retains the review digest as provenance; excluded private supporting artifacts are not newly supplied."
+  },
+  "preservation": {
+    "unchanged_files_from_base_commit": 259,
+    "expected_github_file_count_after_amendment": 262,
+    "original_readme_history_url": "https://github.com/Luvi-1/sport-signal/blob/d6ff9db48f5dfdc482f77f9a2d0d768408a06b86/README.md",
+    "historical_manifests": "PUBLISH_MANIFEST.json, TACTICAL_PUBLISH_MANIFEST.json and all prior amendment records remain unchanged. Apply the recorded amendments in order; the current repository is no longer byte-identical to the original release.",
+    "no_rebinding": "Existing scientific reports, protocols, source/run bindings, aggregate snapshots and independent review identities remain unchanged. Earlier references to an uncompleted tactical refit describe their pre-addendum publication state.",
+    "original_archives": "This amendment does not replace the originally delivered source/aggregate archive or its historical inventory."
+  },
+  "verification": {
+    "method": "Documentation and byte-integrity review only, against the exact base commit and supplied addendum.",
+    "relative_readme_links_checked": 77,
+    "unique_relative_readme_targets": 58,
+    "missing_relative_targets": [],
+    "new_relative_targets": [
+      "PUBLIC_PRESENTATION_AMENDMENT.json",
+      "docs/tactical/REPLICATION_RESULTS.md"
+    ],
+    "cross_document_anchors_checked": [
+      "docs/v2/REPRODUCE.md#analyze-a-hypothetical-matchup",
+      "docs/tactical/WORKBENCH.md#checks-and-known-environment-limitation"
+    ],
+    "markdown": "UTF-8, one root heading, balanced code fences, existing repository chart retained.",
+    "source_evidence": [
+      {
+        "path": "START_HERE_FIVE_SPORTS.md",
+        "git_blob_sha1": "cc930764c54dfc10a52c526fd66da1f7efc84679"
+      },
+      {
+        "path": "reports/v2/RESULTS.md",
+        "git_blob_sha1": "6e2ab353399ca9140252746b9b9d03c5aebf3d6e"
+      },
+      {
+        "path": "reports/VALIDATION.md",
+        "git_blob_sha1": "048366f016eb199e894aff2b028486d63c40c340"
+      },
+      {
+        "path": "docs/tactical/BENCHMARK_RESULTS.md",
+        "git_blob_sha1": "ba7f9b539293e954a482f9d8789b23b440f19e1c"
+      },
+      {
+        "path": "docs/tactical/WORKBENCH.md",
+        "git_blob_sha1": "0cbf0b373805936227c9173d7f53a3e864bbbf48"
+      },
+      {
+        "path": "docs/tactical/MODEL_VIEWS.md",
+        "git_blob_sha1": "0a310ae9953533a80638a02964a6cad6abece934"
+      },
+      {
+        "path": "docs/v2/REPRODUCE.md",
+        "git_blob_sha1": "f580a5f1f7ca5e38d04d54499dd35410bf34e809"
+      },
+      {
+        "path": "docs/v2/PROTOCOL.md",
+        "git_blob_sha1": "f9b5227381890e6dad9d9cc49a399133ab5f667a"
+      },
+      {
+        "path": "DATA_LICENSES.md",
+        "git_blob_sha1": "45333462c1171efdfb340efe003e04e30b319e75"
+      },
+      {
+        "path": "docs/tactical/notices/DERIVED_MATERIAL_LICENSES.md",
+        "git_blob_sha1": "0359a115c8babbbe9258acc6252e579dfd6a95ff"
+      },
+      {
+        "path": "experiments/tactical/tennis_model.py",
+        "git_blob_sha1": "e8d248deda7ec986ce60971a8558610b5967e243"
+      }
+    ],
+    "privacy_review": "The added narrative was read in full: aggregate comparisons and provenance only; no raw/trial records, participant names, individual predictions, credentials or private absolute filesystem paths were found. This is an editorial check, not a replacement independent audit.",
+    "execution_limits": "No model fitting, scientific evaluation, new unit-test run or browser-rendered workbench QA was performed for this documentation-only amendment.",
+    "validation_counts": "The README cites 594 tests from PUBLIC_TEST_RUNTIME_AMENDMENT.json. The addendum preserves its historical 757-test full-implementation statement. The earlier 591-test compatibility record remains unchanged. These are distinct revisions/scopes, not cumulative or interchangeable test counts.",
+    "ci": {
+      "verified_base_commit": "edf5bb213190a0c46710bee8123a662a470fbed4",
+      "run_url": "https://github.com/Luvi-1/sport-signal/actions/runs/38213835518",
+      "status": "completed",
+      "conclusion": "success",
+      "runtime": "Native Python 3.11",
+      "scope": "The existing workflow executes full unittest discovery and CLI help. This passing base-commit run does not certify a later presentation commit or relax the tactical research runtime guard."
+    }
+  },
+  "source_terms": {
+    "software": "Original source-independent software and writing remain under the root MIT license.",
+    "derived_material": "Provider-derived README passages and figures retain DATA_LICENSES.md and docs/tactical/notices/DERIVED_MATERIAL_LICENSES.md conditions, including source-specific noncommercial/share-alike/custom terms and attribution.",
+    "addendum": "Existing source-specific notices and derived-material terms apply to the unchanged replication narrative. The new document conveys no raw-data access or broader distribution rights."
+  },
+  "verification_recipe": [
+    "Confirm the publication base is the stated commit; do not overwrite unrelated later work.",
+    "Apply only the README replacement and the two listed additions.",
+    "Verify the amended README and added narrative against the exact hashes above.",
+    "Confirm all 259 other files from the base commit remain byte-identical and the resulting inventory contains 262 files.",
+    "Verify the original historical manifest, then overlay the parser compatibility, synthetic-test runtime and presentation amendments in order. Do not rewrite original manifest hashes or independent attestations."
+  ],
+  "authorization_boundary": "This presentation record and the added narrative do not create new data rights, approve new research stages, certify a deployed service, or replace an independent scientific or distribution attestation."
+}

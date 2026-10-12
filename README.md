@@ -1,231 +1,183 @@
-# SportsLab · Four-sport prediction research
+# Sport Signal
 
-A reproducible learning project that turns historical match results into
-**pre-event outcome probabilities** for soccer, baseball, American football and
-tennis. Four separately fitted model ensembles share an availability-aware research engine.
+**Reproducible sports ML, from pre-event forecasts to tactical evidence.**
 
-**77,235 real historical events. 50 pre-event features. Three chronological
-development folds. Separate calibration years. 5,809 newer held-out matches.**
+Sport Signal asks how much historical results and measured context actually improve a prediction. It combines availability-aware data pipelines, chronological evaluation, calibrated baselines, and a local workbench that makes uncertainty and negative results visible.
 
-This is an AI-assisted research portfolio, not a live production forecasting
-service. It does not guarantee outcomes, integrate with betting, or claim to
-outperform commercial systems or university-club projects.
+[Quick start](#quick-start) · [Results](#results) · [Architecture](#architecture) · [Research guide](START_HERE_FIVE_SPORTS.md) · [Reproduction](docs/v2/REPRODUCE.md) · [Data rights](#data-rights-and-attribution)
 
-## Newer-period results you can audit
+An AI-assisted, noncommercial research portfolio. The published evidence is retrospective; the repository does not provide a live forecasting service, betting integration, or guaranteed outcomes.
 
-The expanded V2 benchmark evaluates 2025 (EPL 2025–26), after all four models were
-frozen together. The original V1 recipe is refitted on the same training and
-calibration periods and predicts the same new matches. This distinguishes a
-modeling improvement from simply testing on a different year.
+## Two research tracks
 
-| Sport | New test games | Ensemble accuracy | Ensemble log loss | Refitted V1 log loss | Paired difference 95% interval |
-| --- | ---: | ---: | ---: | ---: | --- |
-| Soccer | 380 | 47.63% | 1.0265 | 1.0312 | [-0.0145, +0.0037] |
-| Baseball | 2,430 | 56.21% | 0.6803 | 0.6794 | [-0.0022, +0.0042] |
-| American football | 271 | 63.84% | 0.6310 | 0.6417 | [-0.0231, +0.0033] |
-| Tennis | 2,728 | 65.47% | 0.6119 | 0.6160 | [-0.0071, -0.0012] |
+| Track | Scope | Start here |
+| --- | --- | --- |
+| **Match-outcome forecasting** | Four separately fitted sport ensembles: soccer, baseball, American football, and tennis. V2 covers 77,235 historical events, 50 pre-event features, and 5,809 newer held-out matches | [V2 results](reports/v2/RESULTS.md) · [Fixed protocol](docs/v2/PROTOCOL.md) |
+| **Tactical and execution studies** | Seven distinct studies across five sports, including basketball, plus separate baseball and tennis laboratory companions. Reviewed aggregate results are available in a read-only local workbench | [Five-sport guide](START_HERE_FIVE_SPORTS.md) · [Study results](docs/tactical/BENCHMARK_RESULTS.md) |
 
-Lower log loss is better; negative differences favor V2. These approximate
-calendar-week bootstrap intervals are unadjusted descriptive uncertainty, not a
-universal superiority claim. The clearest same-game V2 improvement is tennis.
-Soccer and NFL improve on point estimates but remain uncertain versus refitted
-V1; baseball is slightly worse. NFL and tennis also improve against calibrated
-Elo with intervals below zero. The ensemble remains the main model even where an
-individual family scores better.
+The tracks have different targets, populations, and evidence requirements. Their scores cannot be combined into a single “five-sport accuracy.”
 
-![Same-game improvement intervals](reports/v2/improvement_intervals.svg)
-
-[All family comparisons, negative results and reliability plots](reports/v2/RESULTS.md) ·
-[Start with the project guide](docs/PROJECT_GUIDE.md) ·
-[Fixed protocol](docs/v2/PROTOCOL.md) · [Reproduce V2](docs/v2/REPRODUCE.md) ·
-[Executed validation checks](reports/VALIDATION.md)
-
-V2 compares rating-only/extended logistic regression, gradient boosting, random
-forests, Extra Trees, a soccer goal-count model, an out-of-fold ensemble, refitted
-V1 and prior/Elo baselines. There are 12 development candidates per binary sport
-and 13 for soccer. No new-test winner is chosen after scoring.
-
-The requested **Laya** zero-shot experiment completed on 800 frozen V1 cases.
-It had worse log loss than the simpler baselines in all four sports.
-[Actual Laya results](docs/laya_experiment.md). A partial preserved FiveThirtyEight
-MLB diagnostic favored its pitcher-adjusted probabilities by a small, uncertain
-margin; complete comparable commercial archives were unavailable.
-[External comparison and source limitations](docs/COMPARATORS.md).
-
-## Original V1 benchmark, preserved
-
-The smaller original experiment covers 71,349 historical events and uses five
-candidate configurations per sport, two earlier backtest folds and two-year final
-holdouts. These results were inspected before V2 was developed and are not new
-test evidence for V2.
-
-
-| Sport | Coverage | Holdout games | Selected accuracy | Selected log loss | Constant-prior log loss |
-| --- | --- | ---: | ---: | ---: | ---: |
-| Soccer | EPL, 2015–16 to 2024–25 | 760 | 54.47% | 0.9576 | 1.0672 |
-| Baseball | MLB, 2015–2024 | 4,859 | 54.83% | 0.6836 | 0.6927 |
-| American football | NFL regular seasons, 2010–2024 | 544 | 64.34% | 0.6395 | 0.6896 |
-| Tennis | ATP men's singles, 2010–2024 | 5,856 | 65.22% | 0.6145 | 0.6936 |
-
-Lower log loss is better. Accuracy is secondary. Soccer has three outcome
-classes; the other tasks have two, with explicit exclusions.
-
-[Full results, calibrated Elo comparisons, uncertainty and reliability plots](reports/RESULTS.md)
-
-In V1, the strongest finding is tennis's improvement over calibrated Elo. Improvements
-over Elo in the other three sports remain uncertain under the approximate
-weekly-bootstrap intervals. Calibration slightly worsened soccer and baseball
-holdout log loss; those negative results are retained. No cherry-picked model
-switch after inspecting the final holdout.
+The package and CLI retain `sportslab`; earlier documents use the SportsLab name.
 
 ## Quick start
 
-Python 3.11 or 3.12, a normal CPU, and public internet access are sufficient for
-the core models. No API key, paid account, GPU or LLM is required. Commands below
-run from the repository root.
+Python **3.12 is recommended** for the commands below. The core package also declares Python 3.11 support; tactical tennis fitting requires its [reviewed Python 3.12/dependency pins](experiments/tactical/tennis_model.py) and newly reviewed run bindings. Core models need a CPU and internet access, with no API key, paid account, GPU, or LLM.
 
 ```bash
+git clone https://github.com/Luvi-1/sport-signal.git
+cd sport-signal
 python -m venv .venv
-source .venv/bin/activate                  # Windows: .venv\Scripts\activate
+source .venv/bin/activate                 # Windows: .venv\Scripts\activate
 python -m pip install -e .
 python -m unittest discover -s tests -v
-bash scripts/reproduce_v2.sh              # reproduces V1, then the expanded V2 benchmark
-```
-
-The full historical experiment downloads public provider files, checks their
-SHA-256 snapshot lock, validates and normalizes records, trains/evaluates each
-sport, and regenerates the reports. V2 development took about 18 minutes on this
-CPU environment, plus evaluation and data preparation; hardware changes runtime.
-Use `bash scripts/reproduce.sh` for only the smaller V1 experiment. A separate
-optional Laya experiment has much larger dependencies and is not installed here.
-
-```bash
-python -m sportslab run --sport tennis     # fetch + normalize + train + evaluate
-python -m sportslab analyze --sport tennis # descriptive historical counts
-python -m sportslab train --sport soccer  # reuse previously fetched/validated data
 python -m sportslab --help
 ```
 
-Retrosheet and nflverse release URLs can change when their providers revise
-history. The reproduction script uses a compact, attributed CC-BY-4.0 NFL
-normalized snapshot with separately verified original-source and representation
-hashes. Other provider downloads with a different hash deliberately stop. The
-repository's results are tied to the recorded snapshot, not any future bytes.
-Review revisions before creating a new benchmark; never silently update the lock
-to pass a failed reproduction. Pinned soccer/tennis URLs identify immutable commits.
+Dependencies are pinned in [pyproject.toml](pyproject.toml). Four tests require intentionally excluded source caches; see the [public test record](PUBLIC_TEST_RUNTIME_AMENDMENT.json).
 
-## Predict a matchup
-
-After expanded-benchmark reproduction, use exact participant identifiers from
-data/v2/processed. `side_a`
-is designated home for team sports. Tennis uses stable ATP player IDs; the CLI
-canonicalizes their ordering internally and returns probabilities for the order
-you requested. Rankings must be known before the tournament.
+### Explore the local workbench
 
 ```bash
-python scripts/analyze_matchup.py --sport football --side-a KC --side-b BUF --date 2026-02-01
-python scripts/analyze_matchup.py --sport tennis --side-a 104745 --side-b 104925 --date 2026-02-01 --surface Hard --rank-a 200 --rank-b 7
+python -m experiments.tactical.workbench index
+python -m experiments.tactical.workbench serve --port 8765
 ```
 
-These are **illustrative historical scenarios**, not assertions that these
-fixtures occurred or that the supplied example rankings were real. Live future
-predictions would require newly verified data, validated updates and retraining.
-The CLI warns about stale history and missing tennis ranks, rejects unknown
-participants unless cold starts are explicitly requested, and refuses dates before
-the model's calibration cutoff. It also verifies the completed benchmark, model
-and historical-input hashes. Probabilities are estimates, not guarantees.
-The returned base-model range is disagreement, not a confidence interval.
+Open **http://127.0.0.1:8765**. Stop with Ctrl-C.
 
-Only load model.joblib files produced locally by code you trust: joblib/pickle
-can execute code. Trained artifacts are deliberately excluded from Git.
+The included seven audited aggregate snapshots let you inspect matched-case comparisons, reliability bins, support, and study limitations without raw data or trained weights. The workbench uses local assets and has no data acquisition, fitting, telemetry, or background refresh. Missing source summaries are shown as unavailable.
 
-## How leakage is prevented
+The **aggregate evidence viewer** serves no new tactical predictions. Keep it on loopback; do not expose it through a public tunnel or reverse proxy. [Workbench guide](docs/tactical/WORKBENCH.md) · [Snapshot and integrity contract](docs/tactical/MODEL_VIEWS.md)
 
-1. Adapters expose a narrow allowlist of result, identity and pre-event fields
-2. A result can update features only when available_date is strictly earlier
-   than the new event date; all same-day games are frozen together
-3. Retrosheet suspended games use their completion dates, not original dates
-4. Tennis source dates denote tournament starts. Results are delayed 21 days;
-   current-tournament match statistics never enter the feature matrix
-5. Side A in tennis is assigned by player ID before mapping the winner label
-6. Predefined configurations are selected on three earlier chronological V2
-   folds (two for V1), then fitted on the training era only
-7. Temperature calibration uses a later validation partition. The final holdout
-   is used for reporting, never hyperparameter/model selection
-8. Tests mutate outcomes, append future games, shuffle rows, check availability,
-   verify split embargoes, and exercise the entire save/load/predict path
+### Reproduce the match-outcome benchmark
 
-Test-time history rolls forward when earlier held-out results become available.
-The classifier stays frozen. This estimates sequential pre-event prediction,
-not a whole season forecast made before the season starts.
+```bash
+bash scripts/reproduce_v2.sh              # V1, then V2 development and evaluation
+# For the original smaller experiment only:
+# bash scripts/reproduce.sh
+```
 
-## Research design
+The script preserves previous V2 outputs, verifies frozen source hashes, and regenerates the published comparisons. The bundled, attributed NFL snapshot supports durable reproduction; other provider revisions deliberately stop at a hash mismatch. Review changed inputs rather than replacing a lock to make a run pass.
 
-- Priors: training class frequencies, Elo, and validation-calibrated Elo
-- Candidates: standardized logistic regression, histogram boosting, random
-  forests, Extra Trees and a soccer goal model; separate sport-specific fits
-- Features: prior Elo and surface Elo differences, ten-game form/margins/scoring,
-  experience/rest differences, cold-start indicators, venue designation, and
-  pre-tournament tennis rank differences with missingness indicators; V2 adds
-  fast/slow batch ratings, time-weighted form, opponent strength, rank transforms,
-  surface/role history and absence features
-- Metrics: log loss, Brier score, accuracy, top-label ECE, classwise reliability
-  bins and plots, per-year breakdowns, paired weekly-bootstrap intervals
-- Reproducibility: fixed seed, pinned dependencies, source hashes, strict schemas,
-  code/data fingerprints, separate artifact IDs, a small inference contract
+This reruns an already published experiment. Further improvement claims need a fresh period. [Stage-by-stage reproduction](docs/v2/REPRODUCE.md) · [Frozen NFL versus refresh](snapshots/README.md)
 
-[Methodology](docs/methodology.md) · [Learning walkthrough](docs/walkthrough.md) ·
-[Deployment gaps and monitoring design](docs/deployment.md) ·
-[Optional Laya experiment](docs/laya_experiment.md) ·
-[External/commercial comparison and its limits](docs/COMPARATORS.md)
+For a hypothetical matchup after reproduction, use the guarded [analysis entrypoint](scripts/analyze_matchup.py) and the [documented examples](docs/v2/REPRODUCE.md#analyze-a-hypothetical-matchup). It checks benchmark completion and artifact/input hashes, warns about stale history, and preserves participant ordering. Model disagreement is not a confidence interval. Only load locally produced, trusted `joblib` artifacts: pickle-based formats can execute code.
 
-### V2 model cards
+## Results
 
-[Soccer](docs/v2/model_cards/soccer.md) · [Baseball](docs/v2/model_cards/baseball.md) ·
-[American football](docs/v2/model_cards/football.md) · [Tennis](docs/v2/model_cards/tennis.md)
+### Match-outcome forecasting: V2 versus a refitted V1
 
-### Original V1 model cards
+All four V2 ensembles were frozen before scoring the 2025 periods, including EPL 2025–26. The V1 recipe was refitted on the same training/calibration periods and evaluated on the same matches.
 
-[Soccer](docs/model_cards/soccer.md) · [Baseball](docs/model_cards/baseball.md) ·
-[American football](docs/model_cards/football.md) · [Tennis](docs/model_cards/tennis.md)
+| Sport | Held-out matches | V2 log loss | Refitted V1 log loss | Paired difference, approximate 95% interval |
+| --- | ---: | ---: | ---: | --- |
+| Soccer | 380 | 1.0265 | 1.0312 | [-0.0145, +0.0037] |
+| Baseball | 2,430 | 0.6803 | 0.6794 | [-0.0022, +0.0042] |
+| American football | 271 | 0.6310 | 0.6417 | [-0.0231, +0.0033] |
+| Tennis | 2,728 | 0.6119 | 0.6160 | [-0.0071, -0.0012] |
 
-## AI-assisted development and honest authorship
+Lower log loss is better; negative differences favor V2. Tennis shows the clearest same-game improvement. Soccer and NFL have favorable point estimates with intervals crossing zero; baseball is slightly worse. These unadjusted calendar-week bootstrap intervals are descriptive and omit some source, dependence, and selection uncertainty.
 
-The initial implementation, data-source investigation, tests and documentation
-were produced with substantial AI assistance. This repository is a starting
-point for the owner's learning and review. It should not be described as an
-independently developed production system or proof of skills the owner has not
-yet practiced. The walkthrough includes experiments to reproduce and explain.
-[Application wording and a personal learning record](docs/APPLICATION_NOTE.md)
-help distinguish generated implementation from skills you have demonstrated.
+![V2 minus refitted V1 log-loss differences with approximate uncertainty intervals](reports/v2/improvement_intervals.svg)
 
-A truthful project description is: “I am building and learning from an
-AI-assisted four-sport analytics project with real historical data,
-chronological evaluation, baseline comparisons and leakage tests.”
+[Complete V2 results, accuracy, family comparisons, and reliability plots](reports/v2/RESULTS.md) · [V2 model cards](docs/v2/model_cards) · [Preserved V1 results](reports/RESULTS.md)
 
-## Data rights
+The ensemble remains the designated model even when another family scores better. V1’s already-inspected holdout is not fresh V2 evidence. Calibration regressions and negative results remain in the reports.
 
-Original provider downloads, checkpoints, per-game features and predictions stay
-local and are excluded from Git. One compact, odds-free normalized NFL input
-snapshot is included under CC BY 4.0 for durable reproduction. The code is MIT; data rights are separate. Soccer uses
-OpenFootball CC0, baseball Retrosheet's attribution-based terms, NFL the
-nflverse-data CC BY 4.0 release, and tennis Jeff Sackmann / Tennis Abstract
-CC BY-NC-SA 4.0 through a preserved licensed archive. Tennis data and covered
-adaptations are **non-commercial**, even though the original code is MIT.
+### Tactical and physical-execution research
 
-[Full attribution, rights and source audits](DATA_LICENSES.md)
+The [seven-study report](docs/tactical/BENCHMARK_RESULTS.md) preserves fixed comparisons, denominators, uncertainty, and unavailable procedures:
 
-**Retrosheet acknowledgment:** The information used here was obtained free of
-charge from and is copyrighted by Retrosheet. Interested parties may contact
-Retrosheet at "www.retrosheet.org".
+- Soccer: shot geometry and selectively recorded defensive positions
+- Basketball: shot-release geometry, clock, and nearest-defender context
+- Baseball: swing/contact tendencies from count and observed pitch-outcome sequences
+- American football: realized dropback from retrospectively charted at-snap context
+- Professional tennis: charted first- and second-serve direction
+- Separate laboratory companions: adult baseball exit velocity and collegiate tennis target/bounce execution
 
-### Frozen NFL input versus refresh
+Read the [study-specific model cards](docs/tactical/model_cards) before interpreting a score. The report retains useful gains, small or inconclusive changes, a worse baseball-mechanics estimate, and interrupted/nonconvergent procedures. It makes no causal coaching, injury, readiness, or individual-selection claim. Tactical source-derived findings retain the [source-specific terms and credits](docs/tactical/notices/DERIVED_MATERIAL_LICENSES.md).
 
-`python scripts/reproduce_frozen_nfl.py --mode frozen` reproduces the published
-V1 NFL experiment from its licensed normalized input. The original source bytes
-and the reduced snapshot have distinct hashes and provenance.
+### LLM and external comparisons
 
-`python scripts/reproduce_frozen_nfl.py --mode refresh --output /tmp/nfl-review`
-fetches provider data into a new review directory. It never overwrites frozen
-inputs, fitted models or reports. Review schema, source changes and hashes before
-creating a new experiment; refreshed data does not reproduce an old snapshot.
+The separate [Laya zero-shot experiment](docs/laya_experiment.md) evaluated 800 frozen V1 cases and had worse log loss than simpler baselines in all four sports. Laya is optional and is not part of the core pipeline.
+
+A partial FiveThirtyEight MLB archive favored its pitcher-adjusted probabilities by a small, uncertain margin. Its limited coverage and weaker archival provenance are documented in [external comparisons](docs/COMPARATORS.md). Complete, verified same-case commercial archives were unavailable; no commercial-superiority claim is made.
+
+## Architecture
+
+```text
+Match-outcome research
+  Pinned sources → validated events → availability-aware features
+    → chronological development → calibration + global freeze
+    → held-out evaluation → reports / guarded matchup analysis
+
+Tactical studies, with separate protocols and populations
+  Pinned sources → source-specific parsers → fixed evaluations
+    → independent numerical and display review → aggregate snapshots
+    → read-only local workbench
+```
+
+| Layer | Implementation and evidence |
+| --- | --- |
+| Data contracts | [Provider adapters](sportslab/adapters), [event validation](sportslab/data.py), [source locks](data_manifest.json), [V2 source audit](docs/v2_data_audit.md) |
+| Features and models | [Original feature engine](sportslab/features.py), [V2 features](experiments/v2/features.py), [model families and ensemble](experiments/v2/models.py) |
+| Evaluation | [V2 run stages](experiments/v2/run.py), [fixed protocol](docs/v2/PROTOCOL.md), [reproduction checker](scripts/check_reproduction.py) |
+| Tactical research | [Parsers, models, and gates](experiments/tactical), [execution stages](docs/tactical/EXECUTION_STAGES.md), [research synthesis](docs/research/FIVE_SPORT_RESEARCH_SYNTHESIS.md) |
+| Presentation | [Aggregate-view verifier](experiments/tactical/model_views.py), [loopback server](experiments/tactical/workbench.py), [local web assets](experiments/tactical/web) |
+| Tests | [Offline test suite](tests), [CI workflow](.github/workflows/tests.yml), [historical validation](reports/VALIDATION.md) |
+
+### Information timing and evaluation discipline
+
+- Match-outcome features use results only when `available_date` is strictly earlier than the predicted event; same-day games share a frozen state
+- Suspended baseball games wait for completion. Tennis tournament-start proxies use a conservative 21-day result delay; current-match statistics stay out of the feature matrix
+- Candidate selection uses earlier chronological folds. Calibration has its own later partition, followed by a global model/selection freeze before final scoring
+- Test-time history may roll forward as earlier held-out results become available; the classifier stays frozen. This evaluates sequential pre-event prediction, not a season forecast made at opening day
+- Tests mutate outcomes, append future games, shuffle rows, check embargoes, and exercise artifact serialization. Tactical studies apply their own reviewed timing, cohort, grouping, and fit-budget rules
+
+[Full methodology](docs/methodology.md) · [V2 protocol](docs/v2/PROTOCOL.md) · [Tactical measurement and evaluation](docs/research/MEASUREMENT_AND_EVALUATION.md)
+
+## Verification and limits
+
+**Historical benchmark evidence.** The [2026-10-11 validation record](reports/VALIDATION.md) documents an independent V1/V2 refit and comparison of 90 model variants. V2's maximum probability difference was 2.96e-7, within the predefined 1e-6 tolerance. This historical reproduction is separate from the tactical studies and later source amendments.
+
+**Public-source checks.** The [2026-10-12 test-runtime amendment](PUBLIC_TEST_RUNTIME_AMENDMENT.json) records 594 tests run on Python 3.12, with four intentional skips and no failures or errors. This public-package count is separate from the historical full-research suite. [Native Python 3.11 CI](https://github.com/Luvi-1/sport-signal/actions/runs/38213835518) also passed on revision `edf5bb2`. Later commits have their own [CI results](https://github.com/Luvi-1/sport-signal/actions); these checks do not relax the tactical tennis research runtime guard.
+
+**Tactical replication.** The later [2026-10-11 addendum](docs/tactical/REPLICATION_RESULTS.md) records same-environment source-to-selected-procedure refits for all seven studies: 272 successful operations and zero differences in the compared predictions, scores, and interval endpoints. Independent review was AI-assisted. This was not a full search/failure replay, cross-hardware test, or new holdout. Earlier tactical documents retain their pre-addendum status.
+
+**Public viewer scope.** The [snapshot attestation](docs/tactical/INDEPENDENT_AGGREGATE_SNAPSHOT_REVIEW.json) covers reviewed aggregate views. Raw inputs, row-level predictions, tactical weights, and private run artifacts are excluded; a fresh tactical refit requires separately rights-cleared sources, the reviewed runtime, and new run bindings. The addendum does not make this source/aggregate distribution a turnkey fitted predictor.
+
+**Remaining validation.** Functional and DOM tests were run, but the recorded environment blocked browser-rendered visual QA. Layout, accessibility, and browser compatibility still need local inspection. [Known workbench limits](docs/tactical/WORKBENCH.md#checks-and-known-environment-limitation)
+
+**Use boundaries.** Source QA sometimes exposed later annotations or marginal outcomes; these are retrospective, performance-blind-after-QA studies rather than prospective trials. Missing live feeds, unverified publication latency, omitted injuries/lineups, selective charting, small cohorts, and measurement bias limit transfer. [Deployment gaps](docs/deployment.md) · [Research priorities](docs/research/FIVE_SPORT_GAPS_AND_PRIORITIES.md)
+
+### Release provenance
+
+The original 258-file source release and its manifests remain historical evidence. The current GitHub tree includes [parser compatibility](PUBLIC_COMPATIBILITY_AMENDMENT.json), [test-fixture](PUBLIC_TEST_RUNTIME_AMENDMENT.json), and [presentation/addendum](PUBLIC_PRESENTATION_AMENDMENT.json) amendments; it is no longer byte-identical to that release.
+
+The [original README](https://github.com/Luvi-1/sport-signal/blob/d6ff9db48f5dfdc482f77f9a2d0d768408a06b86/README.md) remains in Git history. Existing reports, protocols, aggregate reviews, and audit identities are unchanged by this presentation revision. The [public-source release notes](docs/tactical/PUBLIC_SOURCE_RELEASE_NOTES.md) explain earlier privacy-safe source copies and why historical execution hashes must not be rebound to edited source.
+
+## AI-assisted authorship
+
+The initial implementation, source investigation, tests, and documentation were produced with substantial AI assistance. This is a learning and research portfolio; personal contribution claims should reflect components actually reproduced, understood, or changed.
+
+The [learning walkthrough](docs/walkthrough.md), [tactical learning guide](docs/tactical/LEARNING_GUIDE.md), and [application/learning record](docs/APPLICATION_NOTE.md) provide concrete exercises for demonstrating that understanding. Generated implementation is not evidence of independent manual authorship or production-operating experience.
+
+## Data rights and attribution
+
+Original software is [MIT-licensed](LICENSE). Third-party data and covered derived material retain separate conditions:
+
+- **Original benchmark:** OpenFootball (CC0), Retrosheet (required attribution), Lee Sharpe/nflverse (CC BY 4.0), and Jeff Sackmann/Tennis Abstract via a preserved archive (CC BY-NC-SA 4.0). Tennis-derived reports and covered adaptations are noncommercial
+- **Tactical material:** StatsBomb custom noncommercial terms and logo/credit requirements; FTN/nflverse share-alike conditions; Match Charting Project noncommercial/share-alike terms; SkillCorner and Nate Sandholtz/BYU notices; Retrosheet attribution; and OpenBiomechanics noncommercial/share-alike terms with its additional professional-organization/financial-analysis affiliation exclusion
+- **Distribution:** one explicitly licensed, odds-free normalized NFL snapshot is included. Original downloads, row-level derivatives, trained weights, and participant-level laboratory records remain excluded. Aggregate review does not grant broader data access, commercial rights, or permission to redistribute restricted inputs
+
+[Benchmark attribution and licenses](DATA_LICENSES.md) · [Tactical derived-material terms and credits](docs/tactical/notices/DERIVED_MATERIAL_LICENSES.md) · [Source-copy boundaries](docs/tactical/PUBLIC_SOURCE_RELEASE_NOTES.md)
+
+Source-derived portions of this README, including the V2 table and figure, retain the corresponding provider terms above; original source-independent writing remains MIT. No provider endorsement is implied.
+
+**Retrosheet acknowledgment:** The information used here was obtained free of charge from and is copyrighted by Retrosheet. Interested parties may contact Retrosheet at "www.retrosheet.org".
+
+## Read next
+
+- **Understand the problem:** [Project guide](docs/PROJECT_GUIDE.md) and [five-sport research synthesis](docs/research/FIVE_SPORT_RESEARCH_SYNTHESIS.md)
+- **Audit a result:** [V2 comparisons](reports/v2/RESULTS.md), [tactical studies](docs/tactical/BENCHMARK_RESULTS.md), and [tactical replication](docs/tactical/REPLICATION_RESULTS.md)
+- **Run the work:** [Benchmark reproduction](docs/v2/REPRODUCE.md) and [local workbench](docs/tactical/WORKBENCH.md)
+- **Plan a defensible extension:** [Measurement gaps](docs/research/FIVE_SPORT_GAPS_AND_PRIORITIES.md) and [deployment requirements](docs/deployment.md)
