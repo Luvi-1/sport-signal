@@ -1,0 +1,85 @@
+{
+  "status": "DIAGNOSTIC_ONLY_PRESERVED_MIRROR_NOT_AUTHENTICATED_AS_ISSUED",
+  "source_url": "https://raw.githubusercontent.com/Angelogallardo05/Assignment01/04b528e1d5327aeb112672e39a6eb3a75a3bd4a5/mlb_elo_latest.csv",
+  "source_sha256": "12491eafd6e1ef2e97066b6517096381577e79f1db82b5e8cc141afbd6bfbc52",
+  "mirror_commit_time": "2024-02-04T03:59:36Z",
+  "mirror_commit_url": "https://github.com/Angelogallardo05/Assignment01/commit/04b528e1d5327aeb112672e39a6eb3a75a3bd4a5",
+  "source_data_attribution": "FiveThirtyEight, CC BY 4.0; preserved by Angelogallardo05/Assignment01; alias normalization, date filtering and matched scoring performed locally.",
+  "local_prediction_sha256": "18f6432e2c51fe91b89b8b1225168282f3a9fda7344333704356e85ebe349df7",
+  "local_processed_sha256": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6",
+  "local_v1_artifact_id": "ec70850bddd61581",
+  "publisher_schema": "https://github.com/fivethirtyeight/data/blob/master/mlb-elo/README.md",
+  "publisher_license": "https://github.com/fivethirtyeight/data/blob/master/LICENSE",
+  "publisher_discontinuation": "https://github.com/fivethirtyeight/data",
+  "source_total_rows": 2429,
+  "source_completed_rows": 1099,
+  "source_completed_last_date": "2023-06-20",
+  "source_eligible_rows_before_june13": 989,
+  "matched_rows": 969,
+  "period": [
+    "2023-03-30",
+    "2023-06-12"
+  ],
+  "exclusions": {
+    "ambiguous_source_matchup_rows": 20
+  },
+  "local_full_holdout_rows": 4859,
+  "full_holdout_coverage_fraction": 0.19942374974274543,
+  "metrics": {
+    "538_pitcher_ratings": {
+      "n": 969,
+      "accuracy": 0.5799793601651186,
+      "log_loss": 0.6766392372063035,
+      "binary_brier": 0.24188981394891113,
+      "top_label_ece_10_bins": 0.017210004347422314
+    },
+    "538_simple_elo": {
+      "n": 969,
+      "accuracy": 0.5603715170278638,
+      "log_loss": 0.6803874612952251,
+      "binary_brier": 0.24372227545195407,
+      "top_label_ece_10_bins": 0.005038990585324695
+    },
+    "sportslab_v1_selected": {
+      "n": 969,
+      "accuracy": 0.5510835913312694,
+      "log_loss": 0.6817134537676648,
+      "binary_brier": 0.2444044857599163,
+      "top_label_ece_10_bins": 0.024731897723591238
+    },
+    "sportslab_v1_calibrated_elo": {
+      "n": 969,
+      "accuracy": 0.5552115583075335,
+      "log_loss": 0.6829283160381051,
+      "binary_brier": 0.2449798068641065,
+      "top_label_ece_10_bins": 0.017081346530856932
+    }
+  },
+  "uncertainty": {
+    "538_pitcher_ratings": {
+      "sportslab_minus_comparator_log_loss": 0.005074216561361273,
+      "paired_week_bootstrap_95pct": [
+        -0.0018626981550959598,
+        0.011997427420007149
+      ],
+      "clusters": 12,
+      "replicates": 2000
+    },
+    "538_simple_elo": {
+      "sportslab_minus_comparator_log_loss": 0.0013259924724398553,
+      "paired_week_bootstrap_95pct": [
+        -0.0015721285883879596,
+        0.0040195439852124286
+      ],
+      "clusters": 12,
+      "replicates": 2000
+    }
+  },
+  "limitations": [
+    "Third-party preservation; no publisher hash or per-game issuance timestamps, and mirror includes completed records after official discontinuation date.",
+    "Primary download endpoint redirected to unrelated ABC News HTML when checked 2026-10-11.",
+    "Only pre-2023-06-13 completed unique date/home/away matchups retained; all ambiguous doubleheaders dropped without using outcome to disambiguate.",
+    "As-issued information parity is unverified; pitcher-adjusted comparator contains richer inputs than outcome-only SportsLab.",
+    "This is neither the full final holdout nor proof of commercial superiority. Bootstrap covers sampling variation, not archival provenance, model selection, or time-of-publication uncertainty."
+  ]
+}

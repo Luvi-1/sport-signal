@@ -1,0 +1,176 @@
+{
+  "phase": "independently_verified_final_aggregate",
+  "schema_version": 1,
+  "targets": [
+    {
+      "case_set_sha256": "c8da852a532e723017dccfbc45fd09e6a01b807bc605550d465d874070fdd929",
+      "cases": 548,
+      "clusters": 8,
+      "cohort": "nonlet",
+      "comparisons": [
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.18415776708921316,
+          "interval": [
+            -0.24356010406270254,
+            -0.1132824203403651
+          ],
+          "metric": "joint_NLL_equal_player",
+          "model": "B1",
+          "reference": "B0",
+          "sensitivity_range": null,
+          "uncertainty": "paired_player_bootstrap"
+        },
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.1700015224669425,
+          "interval": null,
+          "metric": "joint_NLL_attempt_weighted",
+          "model": "B1",
+          "reference": "B0",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "joint_execution",
+      "models": [
+        {
+          "case_set_sha256": "c8da852a532e723017dccfbc45fd09e6a01b807bc605550d465d874070fdd929",
+          "id": "B0",
+          "metrics": {
+            "ellipse90_covered_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.8924485125858124
+            },
+            "ellipse90_covered_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.8977038535276831
+            },
+            "euclidean_error_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 1.171466037771458
+            },
+            "euclidean_error_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 1.1594884931648535
+            },
+            "joint_NLL_attempt_weighted": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.6389563582693776
+            },
+            "joint_NLL_equal_player": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.629704684025848
+            },
+            "location_NLL_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.6725181165423377
+            },
+            "location_NLL_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.6499188065150134
+            },
+            "net_Brier_attempt_weighted": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.16274971268856683
+            },
+            "net_Brier_equal_player": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.15949426060031716
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c8da852a532e723017dccfbc45fd09e6a01b807bc605550d465d874070fdd929",
+          "id": "B1",
+          "metrics": {
+            "ellipse90_covered_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.8993135011441648
+            },
+            "ellipse90_covered_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.9054993655349503
+            },
+            "euclidean_error_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 1.0759298586019572
+            },
+            "euclidean_error_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 1.0604887541209376
+            },
+            "joint_NLL_attempt_weighted": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.468954835802435
+            },
+            "joint_NLL_equal_player": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.4455469169366353
+            },
+            "location_NLL_attempt_weighted": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.4691224038102515
+            },
+            "location_NLL_equal_player": {
+              "cases": 437,
+              "clusters": 8,
+              "status": "reported",
+              "value": 2.4283135538941023
+            },
+            "net_Brier_attempt_weighted": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.1611133384018244
+            },
+            "net_Brier_equal_player": {
+              "cases": 548,
+              "clusters": 8,
+              "status": "reported",
+              "value": 0.15785387476835364
+            }
+          }
+        }
+      ],
+      "reliability": []
+    }
+  ],
+  "task": "tennis_execution"
+}

@@ -1,0 +1,1204 @@
+{
+  "audit_type": "outcome-blind-to-performance structural staging",
+  "created_at_utc": "2026-10-11T06:42:28.872785+00:00",
+  "holdout_policy": {
+    "access_note": "Sealed is a workflow boundary, not encryption. No features/models are imported. Raw NFL 2025 bytes existed in v1 cache but v1 adapter excluded that season.",
+    "development_or_evaluation_metrics_computed": false,
+    "incidental_exposure": "Fixture-calendar/franchise web searches surfaced unsolicited public EPL/MLB result snippets. They were not extracted or used for model development. Perfect analyst outcome blindness is not claimed.",
+    "per_event_predictions_created": false,
+    "target_rates_computed": false,
+    "timing_rule": "Use pre_holdout_development for fitting before the protocol holdout boundary; history may contain late-available labels. ATP target rows have calendar-2025 tournament-start proxy dates; December-2024 rows from its 2025 file are pre-target history only and are embargoed until available. Preserve strictly earlier available_date for sequential features."
+  },
+  "nfl_ingestion_mode": "frozen_normalized_snapshot",
+  "normalized_sources": [
+    {
+      "bytes": 56737,
+      "kind": "normalized_licensed_snapshot",
+      "license": "CC-BY-4.0",
+      "loader_file": {
+        "bytes": 1430,
+        "path": "experiments/frozen_nfl.py",
+        "sha256": "ed9216c8bc85141b2db82f95f5f2d01bd9d5669c6f15bfbca5093670aac7627f"
+      },
+      "original_upstream_lineage": {
+        "bytes": 2184000,
+        "retrieved_at_utc": "2026-10-11T06:18:33Z",
+        "sha256": "ab8580e05d7469154c3948e56730e6bdf028dd6e4757fa16aa4663759e4b244b",
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv"
+      },
+      "path": "snapshots/nfl_regular_2010_2025.csv.gz",
+      "provenance_file": {
+        "bytes": 1961,
+        "path": "snapshots/nfl_regular_2010_2025.json",
+        "sha256": "c8ed4dfae924ef976aa806767a8c7731241fd5ec57f50fff227d6d444d678ebb"
+      },
+      "representation": "normalized, filtered historical NFL results; not original provider bytes",
+      "sha256": "734a5950bc0e1c3db5e4e95fb0d854f2f4702b6ed624601d4558efbba661616b",
+      "uncompressed_sha256": "b0d565c308f62f0fc7bd6239b15784c2e34204f5c1ed4a58a5b063d5a643c206"
+    }
+  ],
+  "schema_version": 1,
+  "source_files": [
+    {
+      "bytes": 450107,
+      "fetched_at_utc": "2026-10-11T06:17:31.572541+00:00",
+      "path": "data/v2/raw/baseball/gl2015.zip",
+      "sha256": "3e5e02b2fc5cf4b0efc210ea461a7370d9f95ee02054109f5a8448a5408c060e",
+      "sidecar_sha256": "7b7213884b146da056c6c76cc66332e31acf6945170816b07501900f9dac2172",
+      "url": "https://www.retrosheet.org/gamelogs/gl2015.zip"
+    },
+    {
+      "bytes": 451072,
+      "fetched_at_utc": "2026-10-11T06:17:33.970971+00:00",
+      "path": "data/v2/raw/baseball/gl2016.zip",
+      "sha256": "c447193bc9d0084c95e1d3f3b5b8e68770b4e69f370082d29c58649e4f151819",
+      "sidecar_sha256": "2f0db864b569001c59d79204682f808feccf932342064e5524fbb25504fa5fba",
+      "url": "https://www.retrosheet.org/gamelogs/gl2016.zip"
+    },
+    {
+      "bytes": 451026,
+      "fetched_at_utc": "2026-10-11T06:17:36.510616+00:00",
+      "path": "data/v2/raw/baseball/gl2017.zip",
+      "sha256": "9612a0200236c9661761ae33819ed0d0782450bbf38e4af95930ab2e8a75d933",
+      "sidecar_sha256": "f59806ea1c6772c40c265ca551d4e461e51ce116b267396b01a595f01fc07d31",
+      "url": "https://www.retrosheet.org/gamelogs/gl2017.zip"
+    },
+    {
+      "bytes": 462655,
+      "fetched_at_utc": "2026-10-11T06:17:39.095124+00:00",
+      "path": "data/v2/raw/baseball/gl2018.zip",
+      "sha256": "7c1cc0348444b003152d86b585bf660746ae9f52ecc628ef31916a059987b779",
+      "sidecar_sha256": "df3430645d278de5c43541d0591b68a40181a29d288437a08bb90b70ffdb9806",
+      "url": "https://www.retrosheet.org/gamelogs/gl2018.zip"
+    },
+    {
+      "bytes": 465409,
+      "fetched_at_utc": "2026-10-11T06:17:42.869317+00:00",
+      "path": "data/v2/raw/baseball/gl2019.zip",
+      "sha256": "af624738230530f2f59e141c84cb31a97c2298727301e4be8308266f6e49d229",
+      "sidecar_sha256": "8a4de92f066ca663925c5593e57622ee4a31fa1dfd9bd6926f3ea26d9b56068e",
+      "url": "https://www.retrosheet.org/gamelogs/gl2019.zip"
+    },
+    {
+      "bytes": 175970,
+      "fetched_at_utc": "2026-10-11T06:17:45.684835+00:00",
+      "path": "data/v2/raw/baseball/gl2020.zip",
+      "sha256": "c5138dcda34809223085f036354e61a743958337c9e19a86036406819cfe9752",
+      "sidecar_sha256": "0a05b51a8b106844c8be1c7e323794cb97d1531fc8651aed816de28f1ba4c579",
+      "url": "https://www.retrosheet.org/gamelogs/gl2020.zip"
+    },
+    {
+      "bytes": 465227,
+      "fetched_at_utc": "2026-10-11T06:17:48.235050+00:00",
+      "path": "data/v2/raw/baseball/gl2021.zip",
+      "sha256": "19cc610732f3b15f69dbcfb72e048e512adcc8f38c39ae33f2d5fe4feb9a50bb",
+      "sidecar_sha256": "64ae3a26ae137d893b734cfad33554172a0603a4434bbfddb1b01b5f6ec679b4",
+      "url": "https://www.retrosheet.org/gamelogs/gl2021.zip"
+    },
+    {
+      "bytes": 475414,
+      "fetched_at_utc": "2026-10-11T06:17:50.934872+00:00",
+      "path": "data/v2/raw/baseball/gl2022.zip",
+      "sha256": "c1d5416ed28b172c70fb88e8afdfbccfddddd204d9dcb8e326c4052b3d2d7aa2",
+      "sidecar_sha256": "01abd595f8b945d56b4f0b950bf1c854216fa91cd29301b7cb75855c7d5cb3fa",
+      "url": "https://www.retrosheet.org/gamelogs/gl2022.zip"
+    },
+    {
+      "bytes": 473397,
+      "fetched_at_utc": "2026-10-11T06:17:53.540722+00:00",
+      "path": "data/v2/raw/baseball/gl2023.zip",
+      "sha256": "c1461a3ed965c428406f288201b7021fcf051e5b43cca9143c8f1f0b78c072e1",
+      "sidecar_sha256": "a60c8dbdbff3d9e3523e032764f563beec0b5d5ce1a417cedf18a4b13acdf38d",
+      "url": "https://www.retrosheet.org/gamelogs/gl2023.zip"
+    },
+    {
+      "bytes": 465881,
+      "fetched_at_utc": "2026-10-11T06:17:56.010597+00:00",
+      "path": "data/v2/raw/baseball/gl2024.zip",
+      "sha256": "3089e0a895e70a6fd244d31fe822bc4d856d0987458e86b5acc5df1aa297d250",
+      "sidecar_sha256": "3d28abe31dc8b9d139c396e2f2faa638cc0908dcca8518e61db61d1f82cc3550",
+      "url": "https://www.retrosheet.org/gamelogs/gl2024.zip"
+    },
+    {
+      "bytes": 466269,
+      "fetched_at_utc": "2026-10-11T06:35:47.199439+00:00",
+      "path": "data/v2/raw/baseball/gl2025.zip",
+      "sha256": "f8a36120bc5f6925ffc914f964167f745e61a3421be9318e2ee24a576392693a",
+      "sidecar_sha256": "bf92a2fc9966d7a1b586da265cd5021f510e5641e2e7e4b25b24e7b2bc646fce",
+      "url": "https://www.retrosheet.org/gamelogs/gl2025.zip"
+    },
+    {
+      "bytes": 25416,
+      "fetched_at_utc": "2026-10-11T06:21:26.784873+00:00",
+      "path": "data/v2/raw/soccer/2019-20-source-date-audit.txt",
+      "sha256": "fdc8300c09e0700faa0c517ff408bc630b8b6a77b6f1aa68e5858f9adae6f72d",
+      "sidecar_sha256": "ea60ca1e8d077128d3954dcdfe704e3eb7d845451dde4001baffb9be3a4c7c15",
+      "url": "https://raw.githubusercontent.com/openfootball/england/b17e8f01707d83d2ce1790c14d4a5eeb35987825/2019-20/1-premierleague.txt"
+    },
+    {
+      "bytes": 6555,
+      "fetched_at_utc": "2026-10-11T06:21:29.845732+00:00",
+      "path": "data/v2/raw/soccer/LICENSE.openfootball-england.md",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+      "sidecar_sha256": "35c8dd68fa845077f6233e1a267b6cf69e56d2c9114921e9810cfbcb8d964722",
+      "url": "https://raw.githubusercontent.com/openfootball/england/b17e8f01707d83d2ce1790c14d4a5eeb35987825/LICENSE.md"
+    },
+    {
+      "bytes": 6555,
+      "fetched_at_utc": "2026-10-11T06:20:35.757278+00:00",
+      "path": "data/v2/raw/soccer/LICENSE.openfootball-json.md",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+      "sidecar_sha256": "7eb5a824e2b81d3c6ae812d76c04419004ad5383722698447d96487083b6a37d",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/LICENSE.md"
+    },
+    {
+      "bytes": 113631,
+      "fetched_at_utc": "2026-10-11T06:20:00.183599+00:00",
+      "path": "data/v2/raw/soccer/en.1-2015-16.json",
+      "sha256": "4d8ab70f5d2c29231320be7404310bc1b0fbc6e6be0284e5ee667f581406fead",
+      "sidecar_sha256": "aab0ed6ec79223d8329f1b23bb46c03ff5b5d2bac17e699c1b2649f2bed9e545",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2015-16/en.1.json"
+    },
+    {
+      "bytes": 113759,
+      "fetched_at_utc": "2026-10-11T06:20:03.910291+00:00",
+      "path": "data/v2/raw/soccer/en.1-2016-17.json",
+      "sha256": "9c8cdb27355678ab81aacbbabc34a08d00b399aacc28ef4b733da4954a344f17",
+      "sidecar_sha256": "fd7d302f38808a46a567e01dbad5847164be70ed7c19606596c17d6cb4aa22a1",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2016-17/en.1.json"
+    },
+    {
+      "bytes": 114087,
+      "fetched_at_utc": "2026-10-11T06:20:07.449608+00:00",
+      "path": "data/v2/raw/soccer/en.1-2017-18.json",
+      "sha256": "b635f2442a94aa91d85f282fc5e8f7f5dc4f0d04e3e30c4472102f5708d7548c",
+      "sidecar_sha256": "207ddf9e4eaeb9847bddc9293f252523c7a02fd54096bec6782034ea158ab96b",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2017-18/en.1.json"
+    },
+    {
+      "bytes": 114723,
+      "fetched_at_utc": "2026-10-11T06:20:10.764042+00:00",
+      "path": "data/v2/raw/soccer/en.1-2018-19.json",
+      "sha256": "e2224d86f0605a5a1b5b019c845cdecb13aca1d88035686d4159b875250d4730",
+      "sidecar_sha256": "baa5206be61605252e2520334f155b226c20ceb6d32ae1dfb248b4189bdb469b",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2018-19/en.1.json"
+    },
+    {
+      "bytes": 114817,
+      "fetched_at_utc": "2026-10-11T06:20:13.901059+00:00",
+      "path": "data/v2/raw/soccer/en.1-2019-20.json",
+      "sha256": "9e1695f85ce5553f762e809dea357ec0a95838939be89569060a83c4e98a302d",
+      "sidecar_sha256": "6e6c4b4a979f7e97217a1297b53d16674eddb5352ef1cf19213f0fcc4a0bb962",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2019-20/en.1.json"
+    },
+    {
+      "bytes": 115947,
+      "fetched_at_utc": "2026-10-11T06:20:16.982663+00:00",
+      "path": "data/v2/raw/soccer/en.1-2020-21.json",
+      "sha256": "21ddf26b48469da530c51ccc4857bf1a534bda3aed08766b55185efb142e9a20",
+      "sidecar_sha256": "7dd72c84cbb58c9e317baa29a5920f181f26953c2ad6083b2f956d84b4363a28",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2020-21/en.1.json"
+    },
+    {
+      "bytes": 115863,
+      "fetched_at_utc": "2026-10-11T06:20:21.417970+00:00",
+      "path": "data/v2/raw/soccer/en.1-2021-22.json",
+      "sha256": "fbdfd426fa18fa2f8630b77de87c082734da495ac4668d6d72f29f76b73b9564",
+      "sidecar_sha256": "b81dfa8336656eb502d4890ea7f5081ffbcf973ba180d11def9bd47c9a69d769",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2021-22/en.1.json"
+    },
+    {
+      "bytes": 116149,
+      "fetched_at_utc": "2026-10-11T06:20:24.157176+00:00",
+      "path": "data/v2/raw/soccer/en.1-2022-23.json",
+      "sha256": "8d09f0f9846981626cdfec48903e1f21e7c79aabe6f92535c9e092e8e79b808b",
+      "sidecar_sha256": "e2f7fd617ccde6e576822aaad7b351dc088e5f5c4541392997b69ee5aeb243b2",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2022-23/en.1.json"
+    },
+    {
+      "bytes": 116669,
+      "fetched_at_utc": "2026-10-11T06:20:26.685096+00:00",
+      "path": "data/v2/raw/soccer/en.1-2023-24.json",
+      "sha256": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+      "sidecar_sha256": "150f49aed3b84632eed419087128c368227493f88f707544522a57f22f3ec66a",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2023-24/en.1.json"
+    },
+    {
+      "bytes": 110141,
+      "fetched_at_utc": "2026-10-11T06:20:32.939492+00:00",
+      "path": "data/v2/raw/soccer/en.1-2024-25.json",
+      "sha256": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+      "sidecar_sha256": "7b5a4caa261e0513bae87705963e2570f6f6281ad8e39dbd37f2d8d4821b62ac",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/en.1.json"
+    },
+    {
+      "bytes": 108493,
+      "fetched_at_utc": "2026-10-11T06:35:50.289414+00:00",
+      "path": "data/v2/raw/soccer/en.1-2025-26.json",
+      "sha256": "d6070bdf731546ccf97767f062e8af4bd26dd309dee69f6092025bf9c78f43c1",
+      "sidecar_sha256": "06efab963cf162dbc2b5365c7a0850df83d65bdd3d62b485878ccba2585ab046",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2025-26/en.1.json"
+    },
+    {
+      "bytes": 4673,
+      "fetched_at_utc": "2026-10-11T06:19:59.770269+00:00",
+      "path": "data/v2/raw/tennis/README.md",
+      "sha256": "80fd5a50ba020fd306890d31142187bb737627ba468d3e36faabe92d48ab5083",
+      "sidecar_sha256": "08d1b5424297e52aff55cee50942508a5fba855d431893eef99201edbbfa497d",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/README.md"
+    },
+    {
+      "bytes": 614299,
+      "fetched_at_utc": "2026-10-11T06:20:00.028249+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2010.csv",
+      "sha256": "135a4a1e2ab69c33318b6e5ad59efc67cc5358629b15bf28fb2f905d48f7aeb0",
+      "sidecar_sha256": "a491789f4ed4b9299eeb977c0549a174e7591efe8bfcf65b6cfdb18491b8d122",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2010.csv"
+    },
+    {
+      "bytes": 611939,
+      "fetched_at_utc": "2026-10-11T06:19:59.995960+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2011.csv",
+      "sha256": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+      "sidecar_sha256": "e78eaf81430c4e680e6e2fe6c0db0eae2cc4b5b75bdece7912d90dccd189f521",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2011.csv"
+    },
+    {
+      "bytes": 610116,
+      "fetched_at_utc": "2026-10-11T06:19:59.957466+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2012.csv",
+      "sha256": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+      "sidecar_sha256": "bd5108b8bccdb7ae5021ad5e5e9615928bce1801c88e8bc07b6de6f6eb40bd01",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2012.csv"
+    },
+    {
+      "bytes": 596714,
+      "fetched_at_utc": "2026-10-11T06:20:02.675488+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2013.csv",
+      "sha256": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+      "sidecar_sha256": "8912f6ee54a2a7f665c589eb625d9df296fb9b6ac529e3ac4e3d77e6dfd2deed",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2013.csv"
+    },
+    {
+      "bytes": 589216,
+      "fetched_at_utc": "2026-10-11T06:20:02.714363+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2014.csv",
+      "sha256": "7c102ee3b0da1fee59edc6a5f280eb0784ac0bad69988583f65791dcb7084177",
+      "sidecar_sha256": "02762fe744c937e5db1ad31fe68a52c238c66e7694def39ad99ea4b068aecaed",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2014.csv"
+    },
+    {
+      "bytes": 594438,
+      "fetched_at_utc": "2026-10-11T06:20:02.701870+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2015.csv",
+      "sha256": "20c1f723df86b367f3ec205bbda3d8a7163fa6d4e46dcfda15095e24965bc5ed",
+      "sidecar_sha256": "709e50e07216707377ee1d6eabe664be5753953f44f00ac6d3d7f32647e23e8a",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2015.csv"
+    },
+    {
+      "bytes": 617660,
+      "fetched_at_utc": "2026-10-11T06:20:02.786781+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2016.csv",
+      "sha256": "86dda3871cb79d3226a047774c8fc97b86267cfe96709dea832a347dfbf81684",
+      "sidecar_sha256": "5f2c50e4ec808f503f48daea72a7c5ba085501c2e9ccb55cb13d65099b1e51d8",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2016.csv"
+    },
+    {
+      "bytes": 611380,
+      "fetched_at_utc": "2026-10-11T06:20:02.708692+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2017.csv",
+      "sha256": "4bb295788c37487b120cd39171d413cef0ebc6f4c2d9fa40b7261f5143f3719f",
+      "sidecar_sha256": "4ad7cbeb905a0feb6e6bc81126fad998f772a4465ec61db9d42efd2928346aa3",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2017.csv"
+    },
+    {
+      "bytes": 608903,
+      "fetched_at_utc": "2026-10-11T06:20:04.936177+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2018.csv",
+      "sha256": "0363dc6012190f337fcf34b4ca443634f192c4670cc6c14c94342a54b9adf7eb",
+      "sidecar_sha256": "e84ca370f102926cb3106a91437031731a91df72e487775cfdc3e064b3bc4f9d",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2018.csv"
+    },
+    {
+      "bytes": 586071,
+      "fetched_at_utc": "2026-10-11T06:20:04.922013+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2019.csv",
+      "sha256": "7f1a21451ff622bb0c6a09690898db46d51e59dcdf08086d369753822e1d5478",
+      "sidecar_sha256": "e97dab23e075f46b23f41e37cf8e65dabf400995cc99a8b2b1d8c03f708f5487",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2019.csv"
+    },
+    {
+      "bytes": 307277,
+      "fetched_at_utc": "2026-10-11T06:20:04.832531+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2020.csv",
+      "sha256": "985a917b72d5efb7dd5ef9df8ecc58c637ed6b88561ccad364653af71ac12da0",
+      "sidecar_sha256": "6c07bb9b761741f7c6e2450fde793f84bba6679a5515cbf95cbe3b051bfd9231",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2020.csv"
+    },
+    {
+      "bytes": 573056,
+      "fetched_at_utc": "2026-10-11T06:20:04.900603+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2021.csv",
+      "sha256": "b9b1d31a4b0b9273b8f338cbb1347c5a847ad2361334ec760a286f5990fba347",
+      "sidecar_sha256": "18f0aa9cfc9f1dc102f33f0b4005f3359ae438af763b5c0fb2ddb8fd4cb52531",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2021.csv"
+    },
+    {
+      "bytes": 608789,
+      "fetched_at_utc": "2026-10-11T06:20:04.891722+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2022.csv",
+      "sha256": "7190042565ab8400e74f44fda60700acb36ddf3c82d393f331a07589e05b5f52",
+      "sidecar_sha256": "887c5a09687f45eee141404b24c8edb22909f6c49abf57ebec54845105b0554d",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2022.csv"
+    },
+    {
+      "bytes": 625341,
+      "fetched_at_utc": "2026-10-11T06:20:07.097497+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2023.csv",
+      "sha256": "9b9671aa7c8156e74c2e4466675b7ed4e762bb8a58b7237a30daefd84ffceff5",
+      "sidecar_sha256": "5503a73b586985ac7d5fc43e15a11939723e76109121746202c478c4c6565a5d",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2023.csv"
+    },
+    {
+      "bytes": 650136,
+      "fetched_at_utc": "2026-10-11T06:20:07.099094+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2024.csv",
+      "sha256": "73aec32247a0db68d8aa8fd8003eefea132905177f1cb145502d9215b53311be",
+      "sidecar_sha256": "c79bee8d4921f42c94006d23303cf1a8a3101b8f0f497e22d51c92fd4e5dd6ee",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2024.csv"
+    },
+    {
+      "bytes": 617154,
+      "fetched_at_utc": "2026-10-11T06:35:53.825840+00:00",
+      "path": "data/v2/raw/tennis/atp_matches_2025.csv",
+      "sha256": "78c356ef9328b89ae58a17564d61c02cdad2a3a007f6b8af5cfc17992b11bb2d",
+      "sidecar_sha256": "192177290f08a1049fc60039bdc863deb3354c056da3fc07a56cff3f50940eea",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2025.csv"
+    },
+    {
+      "bytes": 3758,
+      "fetched_at_utc": "2026-10-11T06:19:59.771216+00:00",
+      "path": "data/v2/raw/tennis/matches_data_dictionary.txt",
+      "sha256": "b4b525ad8163f9ee2ffde3ab7108924ec1385ef7d2fddf828c1fc096fcaafee4",
+      "sidecar_sha256": "2bff8bdbbede7273d49dce4634f42afaa78c78b2d0ebc6433c1a421d0a3f7382",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/matches_data_dictionary.txt"
+    },
+    {
+      "bytes": 51782,
+      "fetched_at_utc": "2026-10-11T06:37:17.303054+00:00",
+      "path": "data/v2/evidence/2025-26-source-schema-audit.txt",
+      "sha256": "38c1de56c9e9b6662c7efc1420b7e1fe00dddbb502fe72d8f759e773ba3c093b",
+      "sidecar_sha256": "00492fcc7bb83f1fd40c4e21405df515762ef3ef69b9af6359e17705e82994e7",
+      "url": "https://raw.githubusercontent.com/openfootball/england/b17e8f01707d83d2ce1790c14d4a5eeb35987825/2025-26/1-premierleague.txt"
+    },
+    {
+      "bytes": 18651,
+      "fetched_at_utc": "2026-10-11T06:37:22.109137+00:00",
+      "path": "data/v2/evidence/LICENSE.nflverse.md",
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111",
+      "sidecar_sha256": "21ed182fbf40474974be729872b90286c34ec859b58145b8bd7e04b0ba7a9d2b",
+      "url": "https://raw.githubusercontent.com/nflverse/nflverse-data/main/LICENSE.md"
+    },
+    {
+      "bytes": 971,
+      "fetched_at_utc": "2026-10-11T06:37:19.669488+00:00",
+      "path": "data/v2/evidence/LICENSE.retrosheet.txt",
+      "sha256": "2218abe680e21d3308de06352c394baefbffc7618d36a821d38ed6e97c24105d",
+      "sidecar_sha256": "dbb260e35e128ef93c3d64ef70803fe5ce62ea4fe95230e25c47d142db32c2d0",
+      "url": "https://www.retrosheet.org/notice.txt"
+    },
+    {
+      "bytes": 4115,
+      "fetched_at_utc": "2026-10-11T06:44:24.068327+00:00",
+      "path": "data/v2/evidence/teams.retrosheet.zip",
+      "sha256": "8b71744e56df36cf3de00ceeab1808bed8ab0ec0f29a30c0f70b95d0f971b2b8",
+      "sidecar_sha256": "4d68e92e4aee7a2105bf87679d3e51018a8706d1206db3e351851bb7c10278a7",
+      "url": "https://www.retrosheet.org/teams.zip"
+    }
+  ],
+  "source_pins": {
+    "baseball": "official annual ZIP; SHA256-locked after download",
+    "football": "SHA256-locked normalized CC-BY-4.0 snapshot; original upstream lineage recorded separately",
+    "soccer": "e6744429ee395bc86f247348c6184bb08d4eb361",
+    "soccer_original_text": "b17e8f01707d83d2ce1790c14d4a5eeb35987825",
+    "tennis": "712be0c5ade693cdab9e69c23a71a0edf5a23c44"
+  },
+  "sports": {
+    "baseball": {
+      "adapter_attributes": {
+        "delayed_results": 35,
+        "exclusions": {
+          "forfeits_or_no_decisions": 0,
+          "missing_or_invalid_scores": 0,
+          "ties": 1
+        },
+        "source": "Retrosheet annual regular-season game logs",
+        "source_rows": 25193,
+        "v2_alias_affected_rows": 162,
+        "v2_participant_aliases": {
+          "ATH": "OAK"
+        },
+        "years_loaded": [
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "all_rows": 25192,
+      "availability_before_event": 0,
+      "coverage_by_season": {
+        "2015": {
+          "date_max": "2015-10-04",
+          "date_min": "2015-04-05",
+          "retained_rows": 2429
+        },
+        "2016": {
+          "date_max": "2016-10-02",
+          "date_min": "2016-04-03",
+          "retained_rows": 2427
+        },
+        "2017": {
+          "date_max": "2017-10-01",
+          "date_min": "2017-04-02",
+          "retained_rows": 2430
+        },
+        "2018": {
+          "date_max": "2018-10-01",
+          "date_min": "2018-03-29",
+          "retained_rows": 2431
+        },
+        "2019": {
+          "date_max": "2019-09-29",
+          "date_min": "2019-03-20",
+          "retained_rows": 2429
+        },
+        "2020": {
+          "date_max": "2020-09-27",
+          "date_min": "2020-07-23",
+          "retained_rows": 898
+        },
+        "2021": {
+          "date_max": "2021-10-03",
+          "date_min": "2021-04-01",
+          "retained_rows": 2429
+        },
+        "2022": {
+          "date_max": "2022-10-05",
+          "date_min": "2022-04-07",
+          "retained_rows": 2430
+        },
+        "2023": {
+          "date_max": "2023-10-01",
+          "date_min": "2023-03-30",
+          "retained_rows": 2430
+        },
+        "2024": {
+          "date_max": "2024-09-30",
+          "date_min": "2024-03-20",
+          "retained_rows": 2429
+        },
+        "2025": {
+          "date_max": "2025-09-28",
+          "date_min": "2025-03-18",
+          "retained_rows": 2430
+        }
+      },
+      "datasets": {
+        "all": {
+          "bytes": 1943698,
+          "path": "data/v2/processed/baseball.csv",
+          "rows": 25192,
+          "sha256": "71e2379da9805fe296f81d737074f1d4322c6bd3d42d6a1072bbfe2fb4ebed26"
+        },
+        "history": {
+          "bytes": 1756203,
+          "path": "data/v2/development/baseball.csv",
+          "rows": 22762,
+          "sha256": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6"
+        },
+        "pre_holdout_development": {
+          "bytes": 1756203,
+          "path": "data/v2/pre_holdout_development/baseball.csv",
+          "rows": 22762,
+          "sha256": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6"
+        },
+        "sealed_holdout": {
+          "bytes": 187577,
+          "path": "data/v2/sealed/baseball.csv",
+          "rows": 2430,
+          "sha256": "f4b5ce821d9875446226f07b96632d9b389578c57371c3fd87fa9cec4f7aa12e"
+        }
+      },
+      "duplicate_event_ids": 0,
+      "first_holdout_event_date": "2025-03-18",
+      "history_labels_unavailable_at_holdout_start": 0,
+      "history_rows": 22762,
+      "holdout_audit": {
+        "delayed_results": 4,
+        "exclusions": {
+          "forfeits_or_no_decisions": 0,
+          "missing_or_invalid_scores": 0,
+          "ties": 0
+        },
+        "franchise_alias_affected_rows": 162,
+        "franchise_identity_audit": {
+          "event_ids_preserved": true,
+          "participant_alias": {
+            "ATH": "OAK"
+          },
+          "pre_event_continuity_reference": "https://www.mlb.com/press-release/press-release-sutter-health-park-in-west-sacramento-to-host-a-s-for-2025-2027-seasons",
+          "source": "https://www.retrosheet.org/teams.zip"
+        },
+        "games_per_team_max": 162,
+        "games_per_team_min": 162,
+        "schedule_completeness": "2430 distinct games; 30 teams with 162 games each; doubleheaders retained",
+        "schedule_games": 2430,
+        "schedule_teams": 30,
+        "source": "Retrosheet annual regular-season game logs",
+        "source_rows": 2430,
+        "years_loaded": [
+          2025
+        ]
+      },
+      "holdout_available_date_max": "2025-09-28",
+      "holdout_end_exclusive": "2026-01-01",
+      "holdout_history_event_id_overlap": 0,
+      "holdout_rows": 2430,
+      "holdout_season": "2025",
+      "holdout_start_inclusive": "2025-01-01",
+      "new_source_rows_preceding_holdout_start": 0,
+      "new_source_season_retained_rows": 2430,
+      "official_schedule_reference": "https://www.mlb.com/press-release/press-release-mlb-announces-2025-regular-season-schedule",
+      "original_source_seasons_match_v1_exactly": true,
+      "out_of_order_dates": 0,
+      "pre_holdout_development_rows": 22762,
+      "rights": {
+        "license": "Retrosheet copyright / required attribution",
+        "url": "https://www.retrosheet.org/notice.txt"
+      }
+    },
+    "football": {
+      "adapter_attributes": {
+        "license": "CC-BY-4.0",
+        "normalized_snapshot_sha256": "734a5950bc0e1c3db5e4e95fb0d854f2f4702b6ed624601d4558efbba661616b",
+        "original_upstream_sha256": "ab8580e05d7469154c3948e56730e6bdf028dd6e4757fa16aa4663759e4b244b",
+        "source": "Licensed normalized nflverse regular-season snapshot",
+        "source_representation": "normalized; not original provider download"
+      },
+      "all_rows": 4162,
+      "availability_before_event": 0,
+      "coverage_by_season": {
+        "2010": {
+          "date_max": "2011-01-02",
+          "date_min": "2010-09-09",
+          "retained_rows": 256
+        },
+        "2011": {
+          "date_max": "2012-01-01",
+          "date_min": "2011-09-08",
+          "retained_rows": 256
+        },
+        "2012": {
+          "date_max": "2012-12-30",
+          "date_min": "2012-09-05",
+          "retained_rows": 255
+        },
+        "2013": {
+          "date_max": "2013-12-29",
+          "date_min": "2013-09-05",
+          "retained_rows": 255
+        },
+        "2014": {
+          "date_max": "2014-12-28",
+          "date_min": "2014-09-04",
+          "retained_rows": 255
+        },
+        "2015": {
+          "date_max": "2016-01-03",
+          "date_min": "2015-09-10",
+          "retained_rows": 256
+        },
+        "2016": {
+          "date_max": "2017-01-01",
+          "date_min": "2016-09-08",
+          "retained_rows": 254
+        },
+        "2017": {
+          "date_max": "2017-12-31",
+          "date_min": "2017-09-07",
+          "retained_rows": 256
+        },
+        "2018": {
+          "date_max": "2018-12-30",
+          "date_min": "2018-09-06",
+          "retained_rows": 254
+        },
+        "2019": {
+          "date_max": "2019-12-29",
+          "date_min": "2019-09-05",
+          "retained_rows": 255
+        },
+        "2020": {
+          "date_max": "2021-01-03",
+          "date_min": "2020-09-10",
+          "retained_rows": 255
+        },
+        "2021": {
+          "date_max": "2022-01-09",
+          "date_min": "2021-09-09",
+          "retained_rows": 271
+        },
+        "2022": {
+          "date_max": "2023-01-08",
+          "date_min": "2022-09-08",
+          "retained_rows": 269
+        },
+        "2023": {
+          "date_max": "2024-01-07",
+          "date_min": "2023-09-07",
+          "retained_rows": 272
+        },
+        "2024": {
+          "date_max": "2025-01-05",
+          "date_min": "2024-09-05",
+          "retained_rows": 272
+        },
+        "2025": {
+          "date_max": "2026-01-04",
+          "date_min": "2025-09-04",
+          "retained_rows": 271
+        }
+      },
+      "datasets": {
+        "all": {
+          "bytes": 291050,
+          "path": "data/v2/processed/football.csv",
+          "rows": 4162,
+          "sha256": "b0d565c308f62f0fc7bd6239b15784c2e34204f5c1ed4a58a5b063d5a643c206"
+        },
+        "history": {
+          "bytes": 272115,
+          "path": "data/v2/development/football.csv",
+          "rows": 3891,
+          "sha256": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5"
+        },
+        "pre_holdout_development": {
+          "bytes": 272115,
+          "path": "data/v2/pre_holdout_development/football.csv",
+          "rows": 3891,
+          "sha256": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5"
+        },
+        "sealed_holdout": {
+          "bytes": 19017,
+          "path": "data/v2/sealed/football.csv",
+          "rows": 271,
+          "sha256": "59030c6f5d178e1e853771a8379b6ee8eacc6659d3a9ee55cb72c41b842103a7"
+        }
+      },
+      "duplicate_event_ids": 0,
+      "first_holdout_event_date": "2025-09-04",
+      "history_labels_unavailable_at_holdout_start": 0,
+      "history_rows": 3891,
+      "holdout_audit": {
+        "audit_mode": "retained normalized rows plus recorded original upstream structural audit",
+        "duplicate_ids": 0,
+        "recorded_original_upstream_audit": {
+          "evidence": "Original nflverse release bytes independently audited during V2 staging; these counts are lineage metadata, not reconstructed from filtered normalized rows.",
+          "regular_season_rows": 272,
+          "retained_normalized_rows": 271,
+          "tied_results_excluded": 1,
+          "unfinished_results": 0
+        },
+        "retained_games_per_team_max": 17,
+        "retained_games_per_team_min": 16,
+        "retained_holdout_rows": 271,
+        "retained_teams": 32,
+        "same_team_same_day_duplicates": 0,
+        "schedule_completeness": "Original raw audit established 272 regular-season fixtures and one excluded tie. This normalized snapshot reproduces the same 271 retained fixtures; excluded rows are not present for re-audit."
+      },
+      "holdout_available_date_max": "2026-01-04",
+      "holdout_end_exclusive": "2026-03-01",
+      "holdout_history_event_id_overlap": 0,
+      "holdout_rows": 271,
+      "holdout_season": "2025",
+      "holdout_start_inclusive": "2025-03-01",
+      "new_source_rows_preceding_holdout_start": 0,
+      "new_source_season_retained_rows": 271,
+      "official_schedule_reference": "https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule",
+      "original_source_seasons_match_v1_exactly": true,
+      "out_of_order_dates": 0,
+      "pre_holdout_development_rows": 3891,
+      "rights": {
+        "license": "CC-BY-4.0",
+        "url": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md"
+      }
+    },
+    "soccer": {
+      "adapter_attributes": {
+        "corrected_july_2020_dates": 66,
+        "license": "CC0-1.0",
+        "loaded_files": [
+          "en.1-2015-16.json",
+          "en.1-2016-17.json",
+          "en.1-2017-18.json",
+          "en.1-2018-19.json",
+          "en.1-2019-20.json",
+          "en.1-2020-21.json",
+          "en.1-2021-22.json",
+          "en.1-2022-23.json",
+          "en.1-2023-24.json",
+          "en.1-2024-25.json",
+          "en.1-2025-26.json"
+        ],
+        "skipped_incomplete_matches": 0,
+        "source": "OpenFootball football.json",
+        "source_commit": "e6744429ee395bc86f247348c6184bb08d4eb361"
+      },
+      "all_rows": 4180,
+      "availability_before_event": 0,
+      "coverage_by_season": {
+        "2015-16": {
+          "date_max": "2016-05-17",
+          "date_min": "2015-08-08",
+          "retained_rows": 380
+        },
+        "2016-17": {
+          "date_max": "2017-05-21",
+          "date_min": "2016-08-13",
+          "retained_rows": 380
+        },
+        "2017-18": {
+          "date_max": "2018-05-13",
+          "date_min": "2017-08-11",
+          "retained_rows": 380
+        },
+        "2018-19": {
+          "date_max": "2019-05-12",
+          "date_min": "2018-08-10",
+          "retained_rows": 380
+        },
+        "2019-20": {
+          "date_max": "2020-07-26",
+          "date_min": "2019-08-09",
+          "retained_rows": 380
+        },
+        "2020-21": {
+          "date_max": "2021-05-23",
+          "date_min": "2020-09-12",
+          "retained_rows": 380
+        },
+        "2021-22": {
+          "date_max": "2022-05-22",
+          "date_min": "2021-08-13",
+          "retained_rows": 380
+        },
+        "2022-23": {
+          "date_max": "2023-05-28",
+          "date_min": "2022-08-05",
+          "retained_rows": 380
+        },
+        "2023-24": {
+          "date_max": "2024-05-19",
+          "date_min": "2023-08-11",
+          "retained_rows": 380
+        },
+        "2024-25": {
+          "date_max": "2025-05-25",
+          "date_min": "2024-08-16",
+          "retained_rows": 380
+        },
+        "2025-26": {
+          "date_max": "2026-05-24",
+          "date_min": "2025-08-15",
+          "retained_rows": 380
+        }
+      },
+      "datasets": {
+        "all": {
+          "bytes": 488192,
+          "path": "data/v2/processed/soccer.csv",
+          "rows": 4180,
+          "sha256": "c809a16cbbce18bfb962bb8cccf6dfa81d366180608b1fcb31ae4d827ab9208f"
+        },
+        "history": {
+          "bytes": 443732,
+          "path": "data/v2/development/soccer.csv",
+          "rows": 3800,
+          "sha256": "ca01e4ce767457023d332ef50781fc06d2ea6bec10844ad6875b3171477e7d42"
+        },
+        "pre_holdout_development": {
+          "bytes": 443732,
+          "path": "data/v2/pre_holdout_development/soccer.csv",
+          "rows": 3800,
+          "sha256": "ca01e4ce767457023d332ef50781fc06d2ea6bec10844ad6875b3171477e7d42"
+        },
+        "sealed_holdout": {
+          "bytes": 44542,
+          "path": "data/v2/sealed/soccer.csv",
+          "rows": 380,
+          "sha256": "afaa60bed33ce7be6aaf836c4fe8df114d9956ee5293dd732d2f0169db514303"
+        }
+      },
+      "duplicate_event_ids": 0,
+      "first_holdout_event_date": "2025-08-15",
+      "history_labels_unavailable_at_holdout_start": 0,
+      "history_rows": 3800,
+      "holdout_audit": {
+        "away_games_per_team": 19,
+        "corrected_july_2020_dates": 0,
+        "duplicate_ordered_pairs": 0,
+        "home_games_per_team": 19,
+        "independent_text_schema_date_audit": {
+          "bare_full_time_arrays_normalized": 27,
+          "date_mismatches": 0,
+          "full_time_schema_equivalence_mismatches": 0,
+          "json_fixtures": 380,
+          "missing_text_pairs": 0,
+          "text_fixtures": 380,
+          "text_weekday_errors": 0
+        },
+        "license": "CC0-1.0",
+        "loaded_files": [
+          "en.1-2025-26.json"
+        ],
+        "same_team_same_day_duplicates": 0,
+        "schedule_completeness": "380 distinct ordered pairs; 20 teams, each 19 home and 19 away games",
+        "schedule_games": 380,
+        "schedule_teams": 20,
+        "skipped_incomplete_matches": 0,
+        "source": "OpenFootball football.json",
+        "source_commit": "e6744429ee395bc86f247348c6184bb08d4eb361",
+        "source_rows": 380
+      },
+      "holdout_available_date_max": "2026-05-24",
+      "holdout_end_exclusive": "2026-07-01",
+      "holdout_history_event_id_overlap": 0,
+      "holdout_rows": 380,
+      "holdout_season": "2025-26",
+      "holdout_start_inclusive": "2025-07-01",
+      "new_source_rows_preceding_holdout_start": 0,
+      "new_source_season_retained_rows": 380,
+      "official_schedule_reference": "https://www.premierleague.com/en/news/4324273",
+      "original_source_seasons_match_v1_exactly": true,
+      "out_of_order_dates": 0,
+      "pre_holdout_development_rows": 3800,
+      "rights": {
+        "license": "CC0-1.0",
+        "url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/LICENSE.md"
+      }
+    },
+    "tennis": {
+      "adapter_attributes": {
+        "data_license": "CC-BY-NC-SA-4.0",
+        "exclusions": {
+          "incomplete_or_inconsistent_score": 162,
+          "retirement_walkover_default_or_abandoned": 1652
+        },
+        "result_delay_days": 21,
+        "source": "Jeff Sackmann / Tennis Abstract, preserved by Kadantte/tennis_atp",
+        "source_commit": "712be0c5ade693cdab9e69c23a71a0edf5a23c44",
+        "source_rows": 45515,
+        "years_loaded": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "all_rows": 43701,
+      "availability_before_event": 0,
+      "coverage_by_season": {
+        "2010": {
+          "date_max": "2010-12-03",
+          "date_min": "2010-01-03",
+          "retained_rows": 2908
+        },
+        "2011": {
+          "date_max": "2011-12-02",
+          "date_min": "2011-01-02",
+          "retained_rows": 2890
+        },
+        "2012": {
+          "date_max": "2012-11-16",
+          "date_min": "2012-01-01",
+          "retained_rows": 2897
+        },
+        "2013": {
+          "date_max": "2013-11-15",
+          "date_min": "2012-12-30",
+          "retained_rows": 2818
+        },
+        "2014": {
+          "date_max": "2014-11-21",
+          "date_min": "2013-12-29",
+          "retained_rows": 2773
+        },
+        "2015": {
+          "date_max": "2015-11-27",
+          "date_min": "2015-01-04",
+          "retained_rows": 2830
+        },
+        "2016": {
+          "date_max": "2016-11-25",
+          "date_min": "2016-01-04",
+          "retained_rows": 2794
+        },
+        "2017": {
+          "date_max": "2017-11-24",
+          "date_min": "2017-01-02",
+          "retained_rows": 2749
+        },
+        "2018": {
+          "date_max": "2018-11-12",
+          "date_min": "2018-01-01",
+          "retained_rows": 2785
+        },
+        "2019": {
+          "date_max": "2019-11-24",
+          "date_min": "2018-12-31",
+          "retained_rows": 2709
+        },
+        "2020": {
+          "date_max": "2020-11-16",
+          "date_min": "2020-01-06",
+          "retained_rows": 1427
+        },
+        "2021": {
+          "date_max": "2021-12-05",
+          "date_min": "2021-01-04",
+          "retained_rows": 2634
+        },
+        "2022": {
+          "date_max": "2022-11-27",
+          "date_min": "2022-01-03",
+          "retained_rows": 2826
+        },
+        "2023": {
+          "date_max": "2023-11-27",
+          "date_min": "2023-01-02",
+          "retained_rows": 2887
+        },
+        "2024": {
+          "date_max": "2024-12-18",
+          "date_min": "2024-01-01",
+          "retained_rows": 2969
+        },
+        "2025": {
+          "date_max": "2025-12-17",
+          "date_min": "2024-12-27",
+          "retained_rows": 2805
+        }
+      },
+      "datasets": {
+        "all": {
+          "bytes": 3817501,
+          "path": "data/v2/processed/tennis.csv",
+          "rows": 43701,
+          "sha256": "1123803e156fdbb4a08a31520101788575706854051231ab251c6a0e92756094"
+        },
+        "history": {
+          "bytes": 3574824,
+          "path": "data/v2/development/tennis.csv",
+          "rows": 40973,
+          "sha256": "b8988b197840d631486d48715e2e5b51e06f88bc94cb4ae15042982fb11221d5"
+        },
+        "pre_holdout_development": {
+          "bytes": 3566883,
+          "path": "data/v2/pre_holdout_development/tennis.csv",
+          "rows": 40882,
+          "sha256": "5f0ddd7871955c102f7b1feac2ade23943886e40d66555235505ed914edabc4f"
+        },
+        "sealed_holdout": {
+          "bytes": 242773,
+          "path": "data/v2/sealed/tennis.csv",
+          "rows": 2728,
+          "sha256": "74ed61d14f72dd82d36dbc263e3d4677260fe769a9adac8ba97f4d7fc828dbdf"
+        }
+      },
+      "duplicate_event_ids": 0,
+      "first_holdout_event_date": "2025-01-06",
+      "history_labels_unavailable_at_holdout_start": 91,
+      "history_rows": 40973,
+      "holdout_audit": {
+        "data_license": "CC-BY-NC-SA-4.0",
+        "exclusions": {
+          "incomplete_or_inconsistent_score": 7,
+          "retirement_walkover_default_or_abandoned": 132
+        },
+        "result_delay_days": 21,
+        "schedule_completeness": "Full annual source file staged; tournament calendar spans the season. Independent match-by-match completeness is unverified; a knockout/team-event schedule has no fixed regular-season match total.",
+        "source": "Jeff Sackmann / Tennis Abstract, preserved by Kadantte/tennis_atp",
+        "source_commit": "712be0c5ade693cdab9e69c23a71a0edf5a23c44",
+        "source_proxy_date_max": "2025-12-17",
+        "source_proxy_date_min": "2024-12-27",
+        "source_rows": 2944,
+        "source_tournament_ids": 141,
+        "source_tournaments_by_level": {
+          "A": 48,
+          "D": 78,
+          "F": 2,
+          "G": 4,
+          "M": 9
+        },
+        "years_loaded": [
+          2025
+        ]
+      },
+      "holdout_available_date_max": "2026-01-07",
+      "holdout_end_exclusive": "2026-01-01",
+      "holdout_history_event_id_overlap": 0,
+      "holdout_rows": 2728,
+      "holdout_season": "2025",
+      "holdout_start_inclusive": "2025-01-01",
+      "new_source_rows_preceding_holdout_start": 77,
+      "new_source_season_retained_rows": 2805,
+      "official_schedule_reference": "https://www.atptour.com/en/news/what-is-the-2025-atp-tour-calendar",
+      "original_source_seasons_match_v1_exactly": true,
+      "out_of_order_dates": 0,
+      "pre_holdout_development_rows": 40882,
+      "rights": {
+        "license": "CC-BY-NC-SA-4.0",
+        "url": "https://github.com/Kadantte/tennis_atp/blob/712be0c5ade693cdab9e69c23a71a0edf5a23c44/README.md"
+      }
+    }
+  },
+  "staging_script_sha256": "c745ba7e4fab26638d40f0856b716bb6e4a4ff58b4e938b1d3ec40787ad9c410",
+  "v1_guard": {
+    "artifacts/baseball/features.csv": "5eaedc53da99e31b9d791227d715898eac13cc31c37135ee92b10cd7eeb3df89",
+    "artifacts/baseball/holdout_predictions.csv": "18f6432e2c51fe91b89b8b1225168282f3a9fda7344333704356e85ebe349df7",
+    "artifacts/baseball/model.joblib": "c2f9d4240fd794f441c375dc862ecaa37f2c65204eceee81313a15b6633666be",
+    "artifacts/football/features.csv": "4417363a26e64037713f7e8a1f368bfc8fd3ce0ef701cfb6a82be3acf9351619",
+    "artifacts/football/holdout_predictions.csv": "2876e16d2aac031cace8b5bd73d3dcc671b91a4c26641160661d80b7e9030703",
+    "artifacts/football/model.joblib": "b9d5c72172016dd3c8081a2e9ac2a3e866dd9c0f46c46d9ef1c65fbbedb6a84d",
+    "artifacts/soccer/features.csv": "db279a723cc5d72ae88a770e9ef26622afc1b9c526649e05f5165656c1da5b62",
+    "artifacts/soccer/holdout_predictions.csv": "c4c70f716aa03d9326cfd85e98ce9d51635c4a49c3306368c903186e1bd8d0d5",
+    "artifacts/soccer/model.joblib": "1521c0b82ea6c7d75793d4f1b05a0e0078f0a7a20c246b3347e22ffad0174c9d",
+    "artifacts/tennis/features.csv": "03115ef6b5d930052e3691ee575896c06cc1fd95591201c1c0b1aab96c467537",
+    "artifacts/tennis/holdout_predictions.csv": "552bcab2bd65c920eed11cf4ec0bf66328bd4964b250ff3f19d3adc78e8aef4a",
+    "artifacts/tennis/model.joblib": "aedb53ed4421e8e4f4a12fcfe625ee2e90fe0b346e93d29ec3b9b1ac4a24a81b",
+    "data/processed/baseball.csv": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6",
+    "data/processed/football.csv": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5",
+    "data/processed/soccer.csv": "ca01e4ce767457023d332ef50781fc06d2ea6bec10844ad6875b3171477e7d42",
+    "data/processed/tennis.csv": "61c619f6a2a1b99d520ad17e5b62eff63a49df1f8f87decc703bd8896f8fb442",
+    "data/raw/baseball/gl2015.zip": "3e5e02b2fc5cf4b0efc210ea461a7370d9f95ee02054109f5a8448a5408c060e",
+    "data/raw/baseball/gl2015.zip.source.json": "7b7213884b146da056c6c76cc66332e31acf6945170816b07501900f9dac2172",
+    "data/raw/baseball/gl2016.zip": "c447193bc9d0084c95e1d3f3b5b8e68770b4e69f370082d29c58649e4f151819",
+    "data/raw/baseball/gl2016.zip.source.json": "2f0db864b569001c59d79204682f808feccf932342064e5524fbb25504fa5fba",
+    "data/raw/baseball/gl2017.zip": "9612a0200236c9661761ae33819ed0d0782450bbf38e4af95930ab2e8a75d933",
+    "data/raw/baseball/gl2017.zip.source.json": "f59806ea1c6772c40c265ca551d4e461e51ce116b267396b01a595f01fc07d31",
+    "data/raw/baseball/gl2018.zip": "7c1cc0348444b003152d86b585bf660746ae9f52ecc628ef31916a059987b779",
+    "data/raw/baseball/gl2018.zip.source.json": "df3430645d278de5c43541d0591b68a40181a29d288437a08bb90b70ffdb9806",
+    "data/raw/baseball/gl2019.zip": "af624738230530f2f59e141c84cb31a97c2298727301e4be8308266f6e49d229",
+    "data/raw/baseball/gl2019.zip.source.json": "8a4de92f066ca663925c5593e57622ee4a31fa1dfd9bd6926f3ea26d9b56068e",
+    "data/raw/baseball/gl2020.zip": "c5138dcda34809223085f036354e61a743958337c9e19a86036406819cfe9752",
+    "data/raw/baseball/gl2020.zip.source.json": "0a05b51a8b106844c8be1c7e323794cb97d1531fc8651aed816de28f1ba4c579",
+    "data/raw/baseball/gl2021.zip": "19cc610732f3b15f69dbcfb72e048e512adcc8f38c39ae33f2d5fe4feb9a50bb",
+    "data/raw/baseball/gl2021.zip.source.json": "64ae3a26ae137d893b734cfad33554172a0603a4434bbfddb1b01b5f6ec679b4",
+    "data/raw/baseball/gl2022.zip": "c1d5416ed28b172c70fb88e8afdfbccfddddd204d9dcb8e326c4052b3d2d7aa2",
+    "data/raw/baseball/gl2022.zip.source.json": "01abd595f8b945d56b4f0b950bf1c854216fa91cd29301b7cb75855c7d5cb3fa",
+    "data/raw/baseball/gl2023.zip": "c1461a3ed965c428406f288201b7021fcf051e5b43cca9143c8f1f0b78c072e1",
+    "data/raw/baseball/gl2023.zip.source.json": "a60c8dbdbff3d9e3523e032764f563beec0b5d5ce1a417cedf18a4b13acdf38d",
+    "data/raw/baseball/gl2024.zip": "3089e0a895e70a6fd244d31fe822bc4d856d0987458e86b5acc5df1aa297d250",
+    "data/raw/baseball/gl2024.zip.source.json": "3d28abe31dc8b9d139c396e2f2faa638cc0908dcca8518e61db61d1f82cc3550",
+    "data/raw/football/games.csv": "ab8580e05d7469154c3948e56730e6bdf028dd6e4757fa16aa4663759e4b244b",
+    "data/raw/football/games.csv.source.json": "ae72d0800158d935a952f43e1c9b63433bbe6df19db47ca48357bf7cbe352f02",
+    "data/raw/soccer/2019-20-source-date-audit.txt": "fdc8300c09e0700faa0c517ff408bc630b8b6a77b6f1aa68e5858f9adae6f72d",
+    "data/raw/soccer/2019-20-source-date-audit.txt.source.json": "ea60ca1e8d077128d3954dcdfe704e3eb7d845451dde4001baffb9be3a4c7c15",
+    "data/raw/soccer/LICENSE.openfootball-england.md": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+    "data/raw/soccer/LICENSE.openfootball-england.md.source.json": "35c8dd68fa845077f6233e1a267b6cf69e56d2c9114921e9810cfbcb8d964722",
+    "data/raw/soccer/LICENSE.openfootball-json.md": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+    "data/raw/soccer/LICENSE.openfootball-json.md.source.json": "7eb5a824e2b81d3c6ae812d76c04419004ad5383722698447d96487083b6a37d",
+    "data/raw/soccer/en.1-2015-16.json": "4d8ab70f5d2c29231320be7404310bc1b0fbc6e6be0284e5ee667f581406fead",
+    "data/raw/soccer/en.1-2015-16.json.source.json": "aab0ed6ec79223d8329f1b23bb46c03ff5b5d2bac17e699c1b2649f2bed9e545",
+    "data/raw/soccer/en.1-2016-17.json": "9c8cdb27355678ab81aacbbabc34a08d00b399aacc28ef4b733da4954a344f17",
+    "data/raw/soccer/en.1-2016-17.json.source.json": "fd7d302f38808a46a567e01dbad5847164be70ed7c19606596c17d6cb4aa22a1",
+    "data/raw/soccer/en.1-2017-18.json": "b635f2442a94aa91d85f282fc5e8f7f5dc4f0d04e3e30c4472102f5708d7548c",
+    "data/raw/soccer/en.1-2017-18.json.source.json": "207ddf9e4eaeb9847bddc9293f252523c7a02fd54096bec6782034ea158ab96b",
+    "data/raw/soccer/en.1-2018-19.json": "e2224d86f0605a5a1b5b019c845cdecb13aca1d88035686d4159b875250d4730",
+    "data/raw/soccer/en.1-2018-19.json.source.json": "baa5206be61605252e2520334f155b226c20ceb6d32ae1dfb248b4189bdb469b",
+    "data/raw/soccer/en.1-2019-20.json": "9e1695f85ce5553f762e809dea357ec0a95838939be89569060a83c4e98a302d",
+    "data/raw/soccer/en.1-2019-20.json.source.json": "6e6c4b4a979f7e97217a1297b53d16674eddb5352ef1cf19213f0fcc4a0bb962",
+    "data/raw/soccer/en.1-2020-21.json": "21ddf26b48469da530c51ccc4857bf1a534bda3aed08766b55185efb142e9a20",
+    "data/raw/soccer/en.1-2020-21.json.source.json": "7dd72c84cbb58c9e317baa29a5920f181f26953c2ad6083b2f956d84b4363a28",
+    "data/raw/soccer/en.1-2021-22.json": "fbdfd426fa18fa2f8630b77de87c082734da495ac4668d6d72f29f76b73b9564",
+    "data/raw/soccer/en.1-2021-22.json.source.json": "b81dfa8336656eb502d4890ea7f5081ffbcf973ba180d11def9bd47c9a69d769",
+    "data/raw/soccer/en.1-2022-23.json": "8d09f0f9846981626cdfec48903e1f21e7c79aabe6f92535c9e092e8e79b808b",
+    "data/raw/soccer/en.1-2022-23.json.source.json": "e2f7fd617ccde6e576822aaad7b351dc088e5f5c4541392997b69ee5aeb243b2",
+    "data/raw/soccer/en.1-2023-24.json": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+    "data/raw/soccer/en.1-2023-24.json.source.json": "150f49aed3b84632eed419087128c368227493f88f707544522a57f22f3ec66a",
+    "data/raw/soccer/en.1-2024-25.json": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+    "data/raw/soccer/en.1-2024-25.json.source.json": "7b5a4caa261e0513bae87705963e2570f6f6281ad8e39dbd37f2d8d4821b62ac",
+    "data/raw/tennis/README.md": "80fd5a50ba020fd306890d31142187bb737627ba468d3e36faabe92d48ab5083",
+    "data/raw/tennis/README.md.source.json": "08d1b5424297e52aff55cee50942508a5fba855d431893eef99201edbbfa497d",
+    "data/raw/tennis/atp_matches_2010.csv": "135a4a1e2ab69c33318b6e5ad59efc67cc5358629b15bf28fb2f905d48f7aeb0",
+    "data/raw/tennis/atp_matches_2010.csv.source.json": "a491789f4ed4b9299eeb977c0549a174e7591efe8bfcf65b6cfdb18491b8d122",
+    "data/raw/tennis/atp_matches_2011.csv": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+    "data/raw/tennis/atp_matches_2011.csv.source.json": "e78eaf81430c4e680e6e2fe6c0db0eae2cc4b5b75bdece7912d90dccd189f521",
+    "data/raw/tennis/atp_matches_2012.csv": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+    "data/raw/tennis/atp_matches_2012.csv.source.json": "bd5108b8bccdb7ae5021ad5e5e9615928bce1801c88e8bc07b6de6f6eb40bd01",
+    "data/raw/tennis/atp_matches_2013.csv": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+    "data/raw/tennis/atp_matches_2013.csv.source.json": "8912f6ee54a2a7f665c589eb625d9df296fb9b6ac529e3ac4e3d77e6dfd2deed",
+    "data/raw/tennis/atp_matches_2014.csv": "7c102ee3b0da1fee59edc6a5f280eb0784ac0bad69988583f65791dcb7084177",
+    "data/raw/tennis/atp_matches_2014.csv.source.json": "02762fe744c937e5db1ad31fe68a52c238c66e7694def39ad99ea4b068aecaed",
+    "data/raw/tennis/atp_matches_2015.csv": "20c1f723df86b367f3ec205bbda3d8a7163fa6d4e46dcfda15095e24965bc5ed",
+    "data/raw/tennis/atp_matches_2015.csv.source.json": "709e50e07216707377ee1d6eabe664be5753953f44f00ac6d3d7f32647e23e8a",
+    "data/raw/tennis/atp_matches_2016.csv": "86dda3871cb79d3226a047774c8fc97b86267cfe96709dea832a347dfbf81684",
+    "data/raw/tennis/atp_matches_2016.csv.source.json": "5f2c50e4ec808f503f48daea72a7c5ba085501c2e9ccb55cb13d65099b1e51d8",
+    "data/raw/tennis/atp_matches_2017.csv": "4bb295788c37487b120cd39171d413cef0ebc6f4c2d9fa40b7261f5143f3719f",
+    "data/raw/tennis/atp_matches_2017.csv.source.json": "4ad7cbeb905a0feb6e6bc81126fad998f772a4465ec61db9d42efd2928346aa3",
+    "data/raw/tennis/atp_matches_2018.csv": "0363dc6012190f337fcf34b4ca443634f192c4670cc6c14c94342a54b9adf7eb",
+    "data/raw/tennis/atp_matches_2018.csv.source.json": "e84ca370f102926cb3106a91437031731a91df72e487775cfdc3e064b3bc4f9d",
+    "data/raw/tennis/atp_matches_2019.csv": "7f1a21451ff622bb0c6a09690898db46d51e59dcdf08086d369753822e1d5478",
+    "data/raw/tennis/atp_matches_2019.csv.source.json": "e97dab23e075f46b23f41e37cf8e65dabf400995cc99a8b2b1d8c03f708f5487",
+    "data/raw/tennis/atp_matches_2020.csv": "985a917b72d5efb7dd5ef9df8ecc58c637ed6b88561ccad364653af71ac12da0",
+    "data/raw/tennis/atp_matches_2020.csv.source.json": "6c07bb9b761741f7c6e2450fde793f84bba6679a5515cbf95cbe3b051bfd9231",
+    "data/raw/tennis/atp_matches_2021.csv": "b9b1d31a4b0b9273b8f338cbb1347c5a847ad2361334ec760a286f5990fba347",
+    "data/raw/tennis/atp_matches_2021.csv.source.json": "18f0aa9cfc9f1dc102f33f0b4005f3359ae438af763b5c0fb2ddb8fd4cb52531",
+    "data/raw/tennis/atp_matches_2022.csv": "7190042565ab8400e74f44fda60700acb36ddf3c82d393f331a07589e05b5f52",
+    "data/raw/tennis/atp_matches_2022.csv.source.json": "887c5a09687f45eee141404b24c8edb22909f6c49abf57ebec54845105b0554d",
+    "data/raw/tennis/atp_matches_2023.csv": "9b9671aa7c8156e74c2e4466675b7ed4e762bb8a58b7237a30daefd84ffceff5",
+    "data/raw/tennis/atp_matches_2023.csv.source.json": "5503a73b586985ac7d5fc43e15a11939723e76109121746202c478c4c6565a5d",
+    "data/raw/tennis/atp_matches_2024.csv": "73aec32247a0db68d8aa8fd8003eefea132905177f1cb145502d9215b53311be",
+    "data/raw/tennis/atp_matches_2024.csv.source.json": "c79bee8d4921f42c94006d23303cf1a8a3101b8f0f497e22d51c92fd4e5dd6ee",
+    "data/raw/tennis/matches_data_dictionary.txt": "b4b525ad8163f9ee2ffde3ab7108924ec1385ef7d2fddf828c1fc096fcaafee4",
+    "data/raw/tennis/matches_data_dictionary.txt.source.json": "2bff8bdbbede7273d49dce4634f42afaa78c78b2d0ebc6433c1a421d0a3f7382",
+    "data_manifest.json": "226ec5e451b23083227f7b04c591d5c0aa4ab4e3063e68536d19dd24232b2f54",
+    "reports/RESULTS.md": "1e7e528f50e8c9f13d62042c9fdcd6155bf79be2bb7dd40eb69446e4bb139d39",
+    "reports/baseball/evaluation.json": "14cd0659cbf0c303ffb16593ef622f4d91e6b1ecd1f23552b8fa67c83e67ed64",
+    "reports/baseball/reliability.svg": "5ceb43c8cb22bab2948dc3ff8b56539a17b0edafcd6578a26a5276aefb4e3cb6",
+    "reports/football/evaluation.json": "12385f7247e8f4f4e958c33da9029e499e6bb90d55cf31c44d746c6c3830c6e8",
+    "reports/football/reliability.svg": "cac7f495f247de6bf89b28842641aa91a5139f7a70c296b623763b3a52c7a2c6",
+    "reports/soccer/evaluation.json": "fa1a19568ceaa458eea53e1df7f88c8c6116f768acb12faa4c40be47c30e571a",
+    "reports/soccer/reliability.svg": "7a111f9fe7af460d9755585822d5cde24a6bbba9221aa59eeb1a7f0f51d8167b",
+    "reports/tennis/LICENSE.md": "1122712158a01288361e5871db2cc4c50fcfbb0b2afd265a2c0b24f371d4ac2c",
+    "reports/tennis/evaluation.json": "6dcb256c2c7c0de70dc85d88b57e275ba6721b877c52dbc121feccb72409f097",
+    "reports/tennis/reliability.svg": "b82c3e3e3edaad08b5c23eaac4a9e4e80b85b97f0a46f4c1d07508b758bd646e",
+    "sportslab/adapters/__init__.py": "f47f6cdde173cfbffe9564f8390871e97c24c36842162273045ad5cee3e5e299",
+    "sportslab/adapters/baseball.py": "482bb0f293a945d1c7fb525df3ec839147ba30ea915f5a600cee237fe3621d21",
+    "sportslab/adapters/football.py": "421a9a5884574ac4f0aaf95b108ca8883d86848985e7cf0e2bdec69fe7035568",
+    "sportslab/adapters/soccer.py": "7bdf86e7c1ae023a8f6f4b707dd371c24f43487f7a5ca5642ace784ee058bff8",
+    "sportslab/adapters/tennis.py": "d13ac75b9cbd7e783d404d80087cdc08f9fe306e748133107a9cb229a88bdc89"
+  },
+  "v1_guard_verified_unchanged": true,
+  "version": "v2"
+}

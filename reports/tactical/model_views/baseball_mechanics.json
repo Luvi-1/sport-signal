@@ -1,0 +1,123 @@
+{
+  "phase": "independently_verified_final_aggregate",
+  "schema_version": 1,
+  "targets": [
+    {
+      "case_set_sha256": "2b47da21a45195ad763f0617ba96aa61c878faaafdacfcf5958d0c95ddbca200",
+      "cases": 571,
+      "clusters": 82,
+      "cohort": "adult_paired",
+      "comparisons": [
+        {
+          "confidence": 0.95,
+          "criterion_met": false,
+          "delta": 0.20008733588730465,
+          "interval": [
+            -0.03958018197364597,
+            0.45791544049945876
+          ],
+          "metric": "macro_MAE",
+          "model": "augmented",
+          "reference": "context",
+          "sensitivity_range": null,
+          "uncertainty": "paired_athlete_bootstrap"
+        }
+      ],
+      "id": "exit_velocity",
+      "models": [
+        {
+          "case_set_sha256": "2b47da21a45195ad763f0617ba96aa61c878faaafdacfcf5958d0c95ddbca200",
+          "id": "mean",
+          "metrics": {
+            "macro_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 5.845214061080154
+            },
+            "macro_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 6.526890647294422
+            },
+            "row_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 5.803571708728449
+            },
+            "row_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 7.80110322152745
+            }
+          }
+        },
+        {
+          "case_set_sha256": "2b47da21a45195ad763f0617ba96aa61c878faaafdacfcf5958d0c95ddbca200",
+          "id": "context",
+          "metrics": {
+            "macro_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 5.925760521691432
+            },
+            "macro_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 6.639354420063846
+            },
+            "row_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 5.899852267807057
+            },
+            "row_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 7.87290321964079
+            }
+          }
+        },
+        {
+          "case_set_sha256": "2b47da21a45195ad763f0617ba96aa61c878faaafdacfcf5958d0c95ddbca200",
+          "id": "augmented",
+          "metrics": {
+            "macro_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 6.125847857578737
+            },
+            "macro_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 6.809168857975983
+            },
+            "row_MAE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 6.100402513317012
+            },
+            "row_RMSE": {
+              "cases": 571,
+              "clusters": 82,
+              "status": "reported",
+              "value": 8.033531141289838
+            }
+          }
+        }
+      ],
+      "reliability": []
+    }
+  ],
+  "task": "baseball_mechanics"
+}

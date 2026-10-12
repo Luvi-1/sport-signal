@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "representation": "normalized, filtered historical NFL results; not original provider bytes",
+  "attribution": "NFL game/schedule data by Lee Sharpe and nflverse, licensed CC BY 4.0. No endorsement implied.",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "provider_license_url": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+  "original_source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
+  "original_source_sha256": "ab8580e05d7469154c3948e56730e6bdf028dd6e4757fa16aa4663759e4b244b",
+  "original_retrieved_at_utc": "2026-10-11T06:18:33Z",
+  "snapshot_created_at_utc": "2026-10-11T06:55:00.764815+00:00",
+  "changes": [
+    "selected completed non-tied regular-season games, 2010\u20132025",
+    "kept only event/date/season/team/final-score/neutral fields",
+    "normalized relocated franchise IDs",
+    "removed all odds, market, player, coach, weather and other extra columns",
+    "added explicit day-level availability and all-surface marker"
+  ],
+  "rows": 4162,
+  "sha256_gzip": "734a5950bc0e1c3db5e4e95fb0d854f2f4702b6ed624601d4558efbba661616b",
+  "sha256_uncompressed": "b0d565c308f62f0fc7bd6239b15784c2e34204f5c1ed4a58a5b063d5a643c206",
+  "processed_sha256_by_end_season": {
+    "2024": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5",
+    "2025": "b0d565c308f62f0fc7bd6239b15784c2e34204f5c1ed4a58a5b063d5a643c206"
+  },
+  "copyright_note": "This licensed data snapshot is separate from MIT project code; preserve attribution and CC BY 4.0 notice.",
+  "audited_source_2025_counts": {
+    "regular_season_rows": 272,
+    "tied_results_excluded": 1,
+    "unfinished_results": 0,
+    "retained_normalized_rows": 271,
+    "evidence": "Original nflverse release bytes independently audited during V2 staging; these counts are lineage metadata, not reconstructed from filtered normalized rows."
+  }
+}

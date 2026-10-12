@@ -1,0 +1,396 @@
+{
+  "status": "development_frozen_test_not_scored",
+  "frozen_at_utc": "2026-10-11T07:18:31.231898+00:00",
+  "sport": "tennis",
+  "seed": 20261011,
+  "protocol_sha256": "2091c35a9ebec86167c7ff69b32085e8ffc32aa37eac0de9c450f200fffccee8",
+  "code_sha256": "d578c17661fb6694bf5606a6fc99cd0aa0a65377480e1356a0409cd076740fb0",
+  "data_sha256": "1123803e156fdbb4a08a31520101788575706854051231ab251c6a0e92756094",
+  "development_data_sha256": "5f0ddd7871955c102f7b1feac2ade23943886e40d66555235505ed914edabc4f",
+  "development_features_sha256": "fe41241dd54ec44a547914cd3d182040036729e93397a038d431aac14b02fc6f",
+  "source_manifest_sha256": "877569be9e4a5af5264e40dbecaaaff9f36a57f9584569b9e86afb94c2107772",
+  "models_sha256": "3ee9ada9d5378a2632f695b48407f8bab290e9e42ecc31a747d8f6e169b72433",
+  "splits": {
+    "train_end": "2024-01-01",
+    "calibration_end": "2025-01-01",
+    "test_end": "2026-01-01"
+  },
+  "training": {
+    "n": 37927,
+    "first_date": "2010-01-03",
+    "last_date": "2023-11-27"
+  },
+  "calibration": {
+    "n": 2955,
+    "first_date": "2024-01-01",
+    "last_date": "2024-11-24"
+  },
+  "folds": [
+    {
+      "fit": {
+        "n": 29580,
+        "first_date": "2010-01-03",
+        "last_date": "2020-11-16"
+      },
+      "validation": {
+        "n": 2634,
+        "first_date": "2021-01-04",
+        "last_date": "2021-12-05"
+      }
+    },
+    {
+      "fit": {
+        "n": 32214,
+        "first_date": "2010-01-03",
+        "last_date": "2021-12-05"
+      },
+      "validation": {
+        "n": 2826,
+        "first_date": "2022-01-03",
+        "last_date": "2022-11-27"
+      }
+    },
+    {
+      "fit": {
+        "n": 35040,
+        "first_date": "2010-01-03",
+        "last_date": "2022-11-27"
+      },
+      "validation": {
+        "n": 2887,
+        "first_date": "2023-01-02",
+        "last_date": "2023-11-27"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "config": {
+        "name": "v1_recipe_refit",
+        "family": "v1_recipe",
+        "v1_config": {
+          "family": "hist_gradient_boosting",
+          "leaves": 15,
+          "l2": 10.0
+        }
+      },
+      "fold_log_losses": [
+        0.6216815940975454,
+        0.6079538906817765,
+        0.6187883600555569
+      ],
+      "mean_fold_log_loss": 0.6161412816116263,
+      "fit_seconds": 1.2017497930028185
+    },
+    {
+      "config": {
+        "name": "rating_logistic",
+        "family": "rating",
+        "C": 1.0
+      },
+      "fold_log_losses": [
+        0.6154485304474153,
+        0.6078229303086717,
+        0.622297162624881
+      ],
+      "mean_fold_log_loss": 0.6151895411269893,
+      "fit_seconds": 0.07007313299982343
+    },
+    {
+      "config": {
+        "name": "logistic_C0.1",
+        "family": "logistic",
+        "C": 0.1
+      },
+      "fold_log_losses": [
+        0.6189352136526233,
+        0.602608625985476,
+        0.6191939119618459
+      ],
+      "mean_fold_log_loss": 0.6135792505333151,
+      "fit_seconds": 0.36965707300259965
+    },
+    {
+      "config": {
+        "name": "logistic_C1.0",
+        "family": "logistic",
+        "C": 1.0
+      },
+      "fold_log_losses": [
+        0.6188463037034548,
+        0.6019705984826943,
+        0.6192010791817267
+      ],
+      "mean_fold_log_loss": 0.6133393271226253,
+      "fit_seconds": 0.40081762399859144
+    },
+    {
+      "config": {
+        "name": "logistic_C10.0",
+        "family": "logistic",
+        "C": 10.0
+      },
+      "fold_log_losses": [
+        0.6188335833020443,
+        0.6018654486980007,
+        0.6192599210312141
+      ],
+      "mean_fold_log_loss": 0.6133196510104196,
+      "fit_seconds": 0.4081403540003521
+    },
+    {
+      "config": {
+        "name": "boost_leaves7",
+        "family": "boost",
+        "leaves": 7,
+        "l2": 5.0
+      },
+      "fold_log_losses": [
+        0.6174866416732825,
+        0.606072070768588,
+        0.6176472981029106
+      ],
+      "mean_fold_log_loss": 0.6137353368482604,
+      "fit_seconds": 3.1674472440026875
+    },
+    {
+      "config": {
+        "name": "boost_leaves15",
+        "family": "boost",
+        "leaves": 15,
+        "l2": 10.0
+      },
+      "fold_log_losses": [
+        0.616801450910062,
+        0.6047427508256982,
+        0.6162613125489605
+      ],
+      "mean_fold_log_loss": 0.612601838094907,
+      "fit_seconds": 4.0102272069998435
+    },
+    {
+      "config": {
+        "name": "boost_leaves31",
+        "family": "boost",
+        "leaves": 31,
+        "l2": 20.0
+      },
+      "fold_log_losses": [
+        0.6188016401619773,
+        0.6071901614822499,
+        0.6142817506016356
+      ],
+      "mean_fold_log_loss": 0.6134245174152876,
+      "fit_seconds": 5.674607151999226
+    },
+    {
+      "config": {
+        "name": "random_forest_depth6",
+        "family": "random_forest",
+        "depth": 6,
+        "leaf": 20
+      },
+      "fold_log_losses": [
+        0.6171157520537459,
+        0.6041389103801523,
+        0.6171299262809442
+      ],
+      "mean_fold_log_loss": 0.6127948629049474,
+      "fit_seconds": 140.6233487560021
+    },
+    {
+      "config": {
+        "name": "random_forest_depth12",
+        "family": "random_forest",
+        "depth": 12,
+        "leaf": 10
+      },
+      "fold_log_losses": [
+        0.6193227962159387,
+        0.607033378300512,
+        0.6165913277655823
+      ],
+      "mean_fold_log_loss": 0.614315834094011,
+      "fit_seconds": 251.3108165550002
+    },
+    {
+      "config": {
+        "name": "extra_trees_depth10",
+        "family": "extra_trees",
+        "depth": 10,
+        "leaf": 10
+      },
+      "fold_log_losses": [
+        0.6155223415236954,
+        0.6039915427608973,
+        0.6152850078300192
+      ],
+      "mean_fold_log_loss": 0.6115996307048707,
+      "fit_seconds": 26.778801372998714
+    },
+    {
+      "config": {
+        "name": "extra_trees_depthNone",
+        "family": "extra_trees",
+        "depth": null,
+        "leaf": 20
+      },
+      "fold_log_losses": [
+        0.6170790075935897,
+        0.6036407917143058,
+        0.6156762832968594
+      ],
+      "mean_fold_log_loss": 0.6121320275349184,
+      "fit_seconds": 40.259200315998896
+    }
+  ],
+  "selected_by_family": {
+    "v1_recipe": {
+      "name": "v1_recipe_refit",
+      "family": "v1_recipe",
+      "v1_config": {
+        "family": "hist_gradient_boosting",
+        "leaves": 15,
+        "l2": 10.0
+      }
+    },
+    "rating": {
+      "name": "rating_logistic",
+      "family": "rating",
+      "C": 1.0
+    },
+    "logistic": {
+      "name": "logistic_C10.0",
+      "family": "logistic",
+      "C": 10.0
+    },
+    "boost": {
+      "name": "boost_leaves15",
+      "family": "boost",
+      "leaves": 15,
+      "l2": 10.0
+    },
+    "random_forest": {
+      "name": "random_forest_depth6",
+      "family": "random_forest",
+      "depth": 6,
+      "leaf": 20
+    },
+    "extra_trees": {
+      "name": "extra_trees_depth10",
+      "family": "extra_trees",
+      "depth": 10,
+      "leaf": 10
+    }
+  },
+  "ensemble_names": [
+    "logistic_C10.0",
+    "boost_leaves15",
+    "random_forest_depth6",
+    "extra_trees_depth10"
+  ],
+  "ensemble_weights": [
+    0.26747762930290647,
+    0.2385940040431914,
+    0.23228200973801746,
+    0.26164635691588484
+  ],
+  "ensemble_fitted_oof_loss_not_unbiased": 0.6105982124141812,
+  "temperatures": {
+    "v1_recipe_refit": 1.0563632256782014,
+    "rating_logistic": 1.099289110169826,
+    "logistic_C10.0": 1.0965409091555678,
+    "boost_leaves15": 1.0716922606962753,
+    "random_forest_depth6": 1.0366877127346634,
+    "extra_trees_depth10": 0.9984256355571403,
+    "ensemble": 1.025399924685486,
+    "elo": 1.1450611239090314
+  },
+  "calibration_fit_metrics": {
+    "v1_recipe_refit": {
+      "uncalibrated_log_loss": 0.608126842858735,
+      "temperature_fit_log_loss": 0.607923066396649
+    },
+    "rating_logistic": {
+      "uncalibrated_log_loss": 0.6111671367845466,
+      "temperature_fit_log_loss": 0.6105644830810221
+    },
+    "logistic_C10.0": {
+      "uncalibrated_log_loss": 0.6066460896272005,
+      "temperature_fit_log_loss": 0.6060458426943471
+    },
+    "boost_leaves15": {
+      "uncalibrated_log_loss": 0.6070302363424241,
+      "temperature_fit_log_loss": 0.6066963648330783
+    },
+    "random_forest_depth6": {
+      "uncalibrated_log_loss": 0.6081180332673652,
+      "temperature_fit_log_loss": 0.608031202984984
+    },
+    "extra_trees_depth10": {
+      "uncalibrated_log_loss": 0.6051882961188421,
+      "temperature_fit_log_loss": 0.6051881327606615
+    }
+  },
+  "elapsed_seconds": 612.3283914849999,
+  "features": [
+    "elo_diff",
+    "surface_elo_diff",
+    "form_diff",
+    "margin_diff",
+    "scoring_diff",
+    "conceding_diff",
+    "experience_diff",
+    "rest_diff",
+    "neutral",
+    "cold_a",
+    "cold_b",
+    "log_rank_diff",
+    "rank_missing_a",
+    "rank_missing_b",
+    "fast_elo_diff",
+    "slow_elo_diff",
+    "batch_surface_elo_diff",
+    "rank_inverse_diff",
+    "rank_best_log",
+    "rank_worst_log",
+    "season_form_diff",
+    "season_games_diff",
+    "role_form_diff",
+    "opponent_strength_diff",
+    "surface_form_diff",
+    "surface_games_diff",
+    "result_30d_diff",
+    "margin_30d_diff",
+    "scored_30d_a",
+    "scored_30d_b",
+    "conceded_30d_a",
+    "conceded_30d_b",
+    "result_90d_diff",
+    "margin_90d_diff",
+    "scored_90d_a",
+    "scored_90d_b",
+    "conceded_90d_a",
+    "conceded_90d_b",
+    "result_365d_diff",
+    "margin_365d_diff",
+    "scored_365d_a",
+    "scored_365d_b",
+    "conceded_365d_a",
+    "conceded_365d_b",
+    "surface_hard",
+    "surface_clay",
+    "surface_grass",
+    "surface_carpet",
+    "absence_log_a",
+    "absence_log_b"
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3"
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "phase": "independently_verified_final_aggregate",
+  "schema_version": 1,
+  "targets": [
+    {
+      "case_set_sha256": "b03059aeb86ad664acea7961856088db4e51351bbec6b48c386ccd9e31feea07",
+      "cases": 1855,
+      "clusters": 72,
+      "cohort": "full",
+      "comparisons": [],
+      "id": "goal",
+      "models": [
+        {
+          "case_set_sha256": "b03059aeb86ad664acea7961856088db4e51351bbec6b48c386ccd9e31feea07",
+          "id": "full_A_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8835579514824797
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.10293243691261081
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.3600230969739217
+            }
+          }
+        },
+        {
+          "case_set_sha256": "b03059aeb86ad664acea7961856088db4e51351bbec6b48c386ccd9e31feea07",
+          "id": "full_B_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8835579514824797
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7046626782365037
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.09587405992487162
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.33005548391541256
+            }
+          }
+        },
+        {
+          "case_set_sha256": "b03059aeb86ad664acea7961856088db4e51351bbec6b48c386ccd9e31feea07",
+          "id": "full_G_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8873315363881401
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.725938071995119
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.09384812823639617
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.32356295045149747
+            }
+          }
+        },
+        {
+          "case_set_sha256": "b03059aeb86ad664acea7961856088db4e51351bbec6b48c386ccd9e31feea07",
+          "id": "full_G_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8867924528301887
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.725938071995119
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.09384994826611633
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.32358092709555575
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.10943212283694857,
+              "n": 1855,
+              "observed_fraction": 0.11644204851752021
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "goal",
+          "model": "full_A_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 72,
+              "mean_probability": 0.04043269419254462,
+              "n": 406,
+              "observed_fraction": 0.03940886699507389
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.06863001784244574,
+              "n": 425,
+              "observed_fraction": 0.047058823529411764
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.12266451557976912,
+              "n": 710,
+              "observed_fraction": 0.14225352112676057
+            },
+            {
+              "clusters": 69,
+              "mean_probability": 0.25256669016124506,
+              "n": 274,
+              "observed_fraction": 0.21532846715328466
+            },
+            {
+              "clusters": 32,
+              "mean_probability": 0.4488991794621821,
+              "n": 40,
+              "observed_fraction": 0.5
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "goal",
+          "model": "full_B_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 71,
+              "mean_probability": 0.03801953712713154,
+              "n": 301,
+              "observed_fraction": 0.036544850498338874
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.0736617343847664,
+              "n": 753,
+              "observed_fraction": 0.057104913678618856
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.13795254468566553,
+              "n": 560,
+              "observed_fraction": 0.16607142857142856
+            },
+            {
+              "clusters": 66,
+              "mean_probability": 0.27119751908736184,
+              "n": 201,
+              "observed_fraction": 0.24378109452736318
+            },
+            {
+              "clusters": 24,
+              "mean_probability": 0.4791242092378232,
+              "n": 33,
+              "observed_fraction": 0.45454545454545453
+            },
+            {
+              "clusters": 7,
+              "mean_probability": 0.7261128079005876,
+              "n": 7,
+              "observed_fraction": 0.7142857142857143
+            }
+          ],
+          "class": "goal",
+          "model": "full_G_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 71,
+              "mean_probability": 0.03819393431868085,
+              "n": 301,
+              "observed_fraction": 0.036544850498338874
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.07357631229874653,
+              "n": 760,
+              "observed_fraction": 0.05789473684210526
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.13747847694439339,
+              "n": 560,
+              "observed_fraction": 0.16964285714285715
+            },
+            {
+              "clusters": 66,
+              "mean_probability": 0.2723741766506462,
+              "n": 200,
+              "observed_fraction": 0.245
+            },
+            {
+              "clusters": 21,
+              "mean_probability": 0.4860328651604435,
+              "n": 27,
+              "observed_fraction": 0.4444444444444444
+            },
+            {
+              "clusters": 7,
+              "mean_probability": 0.7161782584552021,
+              "n": 7,
+              "observed_fraction": 0.7142857142857143
+            }
+          ],
+          "class": "goal",
+          "model": "full_G_calibrated"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+      "cases": 1855,
+      "clusters": 72,
+      "cohort": "matched",
+      "comparisons": [
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.013694679892248481,
+          "interval": [
+            -0.02077666807184703,
+            -0.006477269498723407
+          ],
+          "metric": "log_loss",
+          "model": "matched_R_calibrated",
+          "reference": "matched_G_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_match_bootstrap"
+        },
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.003799196049994292,
+          "interval": [
+            -0.006093055448041224,
+            -0.0015844340430353238
+          ],
+          "metric": "brier",
+          "model": "matched_R_calibrated",
+          "reference": "matched_G_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_match_bootstrap"
+        }
+      ],
+      "id": "goal",
+      "models": [
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_A_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8835579514824797
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.10293307921100392
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.360026392878044
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_B_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8835579514824797
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7046259575621991
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.095874647144874
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.33003841100175607
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_G_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8867924528301887
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7259465459968816
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.0938441541143654
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.32356170836389825
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_G_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8867924528301887
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7259465459968816
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.0938458493127588
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.3235817491017474
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_R_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8884097035040431
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7584372810882878
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.09012314118276156
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.31021381500221856
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e375d13268a7709485060a83f101ed2c16c7f795864c79bbeee8fae4cf769817",
+          "id": "matched_R_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.8867924528301887
+            },
+            "auroc": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.7584372810882878
+            },
+            "brier": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.09004665326276451
+            },
+            "log_loss": {
+              "cases": 1855,
+              "clusters": 72,
+              "status": "reported",
+              "value": 0.3098870692094989
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.10938645807870938,
+              "n": 1855,
+              "observed_fraction": 0.11644204851752021
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "goal",
+          "model": "matched_A_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 72,
+              "mean_probability": 0.040592334112292974,
+              "n": 406,
+              "observed_fraction": 0.03940886699507389
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.06820563653148251,
+              "n": 425,
+              "observed_fraction": 0.047058823529411764
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.12216271961538405,
+              "n": 710,
+              "observed_fraction": 0.14225352112676057
+            },
+            {
+              "clusters": 69,
+              "mean_probability": 0.25301747922721596,
+              "n": 274,
+              "observed_fraction": 0.21532846715328466
+            },
+            {
+              "clusters": 32,
+              "mean_probability": 0.44889442271653224,
+              "n": 40,
+              "observed_fraction": 0.5
+            },
+            {
+              "clusters": 0,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "goal",
+          "model": "matched_B_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 71,
+              "mean_probability": 0.03790776459120457,
+              "n": 301,
+              "observed_fraction": 0.036544850498338874
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.07345342859411381,
+              "n": 751,
+              "observed_fraction": 0.05725699067909454
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.13777608814451053,
+              "n": 563,
+              "observed_fraction": 0.1669626998223801
+            },
+            {
+              "clusters": 66,
+              "mean_probability": 0.2721062211695549,
+              "n": 201,
+              "observed_fraction": 0.24378109452736318
+            },
+            {
+              "clusters": 24,
+              "mean_probability": 0.4819403369991579,
+              "n": 32,
+              "observed_fraction": 0.4375
+            },
+            {
+              "clusters": 7,
+              "mean_probability": 0.7267596470623473,
+              "n": 7,
+              "observed_fraction": 0.7142857142857143
+            }
+          ],
+          "class": "goal",
+          "model": "matched_G_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 71,
+              "mean_probability": 0.038060700980127884,
+              "n": 299,
+              "observed_fraction": 0.03678929765886288
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.07354078301373922,
+              "n": 764,
+              "observed_fraction": 0.056282722513089
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.13758916619692713,
+              "n": 558,
+              "observed_fraction": 0.17383512544802868
+            },
+            {
+              "clusters": 66,
+              "mean_probability": 0.27248082323922873,
+              "n": 200,
+              "observed_fraction": 0.24
+            },
+            {
+              "clusters": 20,
+              "mean_probability": 0.48642611618435827,
+              "n": 27,
+              "observed_fraction": 0.4444444444444444
+            },
+            {
+              "clusters": 7,
+              "mean_probability": 0.7168771812266593,
+              "n": 7,
+              "observed_fraction": 0.7142857142857143
+            }
+          ],
+          "class": "goal",
+          "model": "matched_G_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 72,
+              "mean_probability": 0.03630420871389585,
+              "n": 465,
+              "observed_fraction": 0.03225806451612903
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.0711682039618122,
+              "n": 677,
+              "observed_fraction": 0.0620384047267356
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.1377678550876162,
+              "n": 456,
+              "observed_fraction": 0.14912280701754385
+            },
+            {
+              "clusters": 68,
+              "mean_probability": 0.2714487051337894,
+              "n": 202,
+              "observed_fraction": 0.3069306930693069
+            },
+            {
+              "clusters": 34,
+              "mean_probability": 0.47841169347501905,
+              "n": 46,
+              "observed_fraction": 0.5
+            },
+            {
+              "clusters": 7,
+              "mean_probability": 0.72437798547072,
+              "n": 9,
+              "observed_fraction": 0.6666666666666666
+            }
+          ],
+          "class": "goal",
+          "model": "matched_R_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": 72,
+              "mean_probability": 0.03484088460310107,
+              "n": 534,
+              "observed_fraction": 0.033707865168539325
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.07127958427879061,
+              "n": 611,
+              "observed_fraction": 0.06382978723404255
+            },
+            {
+              "clusters": 72,
+              "mean_probability": 0.13764131736135385,
+              "n": 423,
+              "observed_fraction": 0.14893617021276595
+            },
+            {
+              "clusters": 68,
+              "mean_probability": 0.2727239799351834,
+              "n": 215,
+              "observed_fraction": 0.2744186046511628
+            },
+            {
+              "clusters": 42,
+              "mean_probability": 0.4883304763275649,
+              "n": 59,
+              "observed_fraction": 0.4745762711864407
+            },
+            {
+              "clusters": 11,
+              "mean_probability": 0.7294592397950661,
+              "n": 13,
+              "observed_fraction": 0.6923076923076923
+            }
+          ],
+          "class": "goal",
+          "model": "matched_R_calibrated"
+        }
+      ]
+    }
+  ],
+  "task": "soccer"
+}

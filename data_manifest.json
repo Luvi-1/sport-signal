@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact input byte snapshot; mutable upstream revisions must be reviewed",
+  "files": [
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2015.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2015.zip",
+      "sha256": "3e5e02b2fc5cf4b0efc210ea461a7370d9f95ee02054109f5a8448a5408c060e",
+      "bytes": 450107
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2016.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2016.zip",
+      "sha256": "c447193bc9d0084c95e1d3f3b5b8e68770b4e69f370082d29c58649e4f151819",
+      "bytes": 451072
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2017.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2017.zip",
+      "sha256": "9612a0200236c9661761ae33819ed0d0782450bbf38e4af95930ab2e8a75d933",
+      "bytes": 451026
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2018.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2018.zip",
+      "sha256": "7c1cc0348444b003152d86b585bf660746ae9f52ecc628ef31916a059987b779",
+      "bytes": 462655
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2019.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2019.zip",
+      "sha256": "af624738230530f2f59e141c84cb31a97c2298727301e4be8308266f6e49d229",
+      "bytes": 465409
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2020.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2020.zip",
+      "sha256": "c5138dcda34809223085f036354e61a743958337c9e19a86036406819cfe9752",
+      "bytes": 175970
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2021.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2021.zip",
+      "sha256": "19cc610732f3b15f69dbcfb72e048e512adcc8f38c39ae33f2d5fe4feb9a50bb",
+      "bytes": 465227
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2022.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2022.zip",
+      "sha256": "c1d5416ed28b172c70fb88e8afdfbccfddddd204d9dcb8e326c4052b3d2d7aa2",
+      "bytes": 475414
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2023.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2023.zip",
+      "sha256": "c1461a3ed965c428406f288201b7021fcf051e5b43cca9143c8f1f0b78c072e1",
+      "bytes": 473397
+    },
+    {
+      "sport": "baseball",
+      "path": "data/raw/baseball/gl2024.zip",
+      "url": "https://www.retrosheet.org/gamelogs/gl2024.zip",
+      "sha256": "3089e0a895e70a6fd244d31fe822bc4d856d0987458e86b5acc5df1aa297d250",
+      "bytes": 465881
+    },
+    {
+      "sport": "football",
+      "path": "data/raw/football/games.csv",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
+      "sha256": "ab8580e05d7469154c3948e56730e6bdf028dd6e4757fa16aa4663759e4b244b",
+      "bytes": 2184000
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/2019-20-source-date-audit.txt",
+      "url": "https://raw.githubusercontent.com/openfootball/england/b17e8f01707d83d2ce1790c14d4a5eeb35987825/2019-20/1-premierleague.txt",
+      "sha256": "fdc8300c09e0700faa0c517ff408bc630b8b6a77b6f1aa68e5858f9adae6f72d",
+      "bytes": 25416
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/LICENSE.openfootball-england.md",
+      "url": "https://raw.githubusercontent.com/openfootball/england/b17e8f01707d83d2ce1790c14d4a5eeb35987825/LICENSE.md",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+      "bytes": 6555
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/LICENSE.openfootball-json.md",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/LICENSE.md",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+      "bytes": 6555
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2015-16.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2015-16/en.1.json",
+      "sha256": "4d8ab70f5d2c29231320be7404310bc1b0fbc6e6be0284e5ee667f581406fead",
+      "bytes": 113631
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2016-17.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2016-17/en.1.json",
+      "sha256": "9c8cdb27355678ab81aacbbabc34a08d00b399aacc28ef4b733da4954a344f17",
+      "bytes": 113759
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2017-18.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2017-18/en.1.json",
+      "sha256": "b635f2442a94aa91d85f282fc5e8f7f5dc4f0d04e3e30c4472102f5708d7548c",
+      "bytes": 114087
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2018-19.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2018-19/en.1.json",
+      "sha256": "e2224d86f0605a5a1b5b019c845cdecb13aca1d88035686d4159b875250d4730",
+      "bytes": 114723
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2019-20.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2019-20/en.1.json",
+      "sha256": "9e1695f85ce5553f762e809dea357ec0a95838939be89569060a83c4e98a302d",
+      "bytes": 114817
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2020-21.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2020-21/en.1.json",
+      "sha256": "21ddf26b48469da530c51ccc4857bf1a534bda3aed08766b55185efb142e9a20",
+      "bytes": 115947
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2021-22.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2021-22/en.1.json",
+      "sha256": "fbdfd426fa18fa2f8630b77de87c082734da495ac4668d6d72f29f76b73b9564",
+      "bytes": 115863
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2022-23.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2022-23/en.1.json",
+      "sha256": "8d09f0f9846981626cdfec48903e1f21e7c79aabe6f92535c9e092e8e79b808b",
+      "bytes": 116149
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2023-24.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2023-24/en.1.json",
+      "sha256": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+      "bytes": 116669
+    },
+    {
+      "sport": "soccer",
+      "path": "data/raw/soccer/en.1-2024-25.json",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/en.1.json",
+      "sha256": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+      "bytes": 110141
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/README.md",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/README.md",
+      "sha256": "80fd5a50ba020fd306890d31142187bb737627ba468d3e36faabe92d48ab5083",
+      "bytes": 4673
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2010.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2010.csv",
+      "sha256": "135a4a1e2ab69c33318b6e5ad59efc67cc5358629b15bf28fb2f905d48f7aeb0",
+      "bytes": 614299
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2011.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2011.csv",
+      "sha256": "8e91e4b680f0b4e9605a3c71b4c676b55e2a102de8544a7d3b2fbaca5977575a",
+      "bytes": 611939
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2012.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2012.csv",
+      "sha256": "03f03612691af370c9c47939dde4202d9858e05ea044367388115e627d4d13f3",
+      "bytes": 610116
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2013.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2013.csv",
+      "sha256": "9e1e3b124ac22c1b840118f78475a910cb2ea68684289581f70b54a022f2832c",
+      "bytes": 596714
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2014.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2014.csv",
+      "sha256": "7c102ee3b0da1fee59edc6a5f280eb0784ac0bad69988583f65791dcb7084177",
+      "bytes": 589216
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2015.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2015.csv",
+      "sha256": "20c1f723df86b367f3ec205bbda3d8a7163fa6d4e46dcfda15095e24965bc5ed",
+      "bytes": 594438
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2016.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2016.csv",
+      "sha256": "86dda3871cb79d3226a047774c8fc97b86267cfe96709dea832a347dfbf81684",
+      "bytes": 617660
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2017.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2017.csv",
+      "sha256": "4bb295788c37487b120cd39171d413cef0ebc6f4c2d9fa40b7261f5143f3719f",
+      "bytes": 611380
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2018.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2018.csv",
+      "sha256": "0363dc6012190f337fcf34b4ca443634f192c4670cc6c14c94342a54b9adf7eb",
+      "bytes": 608903
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2019.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2019.csv",
+      "sha256": "7f1a21451ff622bb0c6a09690898db46d51e59dcdf08086d369753822e1d5478",
+      "bytes": 586071
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2020.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2020.csv",
+      "sha256": "985a917b72d5efb7dd5ef9df8ecc58c637ed6b88561ccad364653af71ac12da0",
+      "bytes": 307277
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2021.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2021.csv",
+      "sha256": "b9b1d31a4b0b9273b8f338cbb1347c5a847ad2361334ec760a286f5990fba347",
+      "bytes": 573056
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2022.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2022.csv",
+      "sha256": "7190042565ab8400e74f44fda60700acb36ddf3c82d393f331a07589e05b5f52",
+      "bytes": 608789
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2023.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2023.csv",
+      "sha256": "9b9671aa7c8156e74c2e4466675b7ed4e762bb8a58b7237a30daefd84ffceff5",
+      "bytes": 625341
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/atp_matches_2024.csv",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/atp_matches_2024.csv",
+      "sha256": "73aec32247a0db68d8aa8fd8003eefea132905177f1cb145502d9215b53311be",
+      "bytes": 650136
+    },
+    {
+      "sport": "tennis",
+      "path": "data/raw/tennis/matches_data_dictionary.txt",
+      "url": "https://raw.githubusercontent.com/Kadantte/tennis_atp/712be0c5ade693cdab9e69c23a71a0edf5a23c44/matches_data_dictionary.txt",
+      "sha256": "b4b525ad8163f9ee2ffde3ab7108924ec1385ef7d2fddf828c1fc096fcaafee4",
+      "bytes": 3758
+    }
+  ]
+}

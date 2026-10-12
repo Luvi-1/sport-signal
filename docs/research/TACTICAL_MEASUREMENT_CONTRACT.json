@@ -1,0 +1,170 @@
+{
+  "status": "candidate research recommendation pending parent/reviewer approval before implementation; no tactical model fitted",
+  "research_date_utc": "2026-10-11",
+  "source_qa_disclosure": "Aggregate outcomes in some later-evaluation games were inspected during source QA. No predictive scores or model fitting were inspected. Not a human-blind/prospective validation claim.",
+  "soccer": {
+    "source_commit": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+    "license_gate": "StatsBomb custom noncommercial research terms and attribution/logo; restricted raw/row-level data remain local",
+    "population": "FA Womens Super League competition_id 37",
+    "train_season_ids": [
+      4,
+      42,
+      90
+    ],
+    "train_games": 325,
+    "calibration_season_id": 281,
+    "calibration_date_max_exclusive": "2024-01-01",
+    "calibration_games": 60,
+    "test_season_id": 281,
+    "test_date_min_inclusive": "2024-01-01",
+    "test_games": 72,
+    "target": "goal conditional on recorded valid non-penalty shot; all miss types included",
+    "exclude": [
+      "Penalty shot type",
+      "shootout period 5",
+      "invalid/missing location"
+    ],
+    "coordinate_units": "StatsBomb standardized 120x80 native grid, not metres",
+    "attacking_goal": [
+      120,
+      40
+    ],
+    "goalposts": [
+      [
+        120,
+        36
+      ],
+      [
+        120,
+        44
+      ]
+    ],
+    "primary_feature_blocks": [
+      "standardized distance and goal angular width",
+      "lateral coordinate/bearing",
+      "broad body part and restart/play pattern",
+      "matched-case recorded goalkeeper depth/lateral offset and opponent geometry"
+    ],
+    "denylist": [
+      "shot.outcome",
+      "shot.end_location",
+      "shot.statsbomb_xg as input",
+      "goal_assist flags",
+      "future rebound/save/block events",
+      "full-season future aggregates"
+    ],
+    "calibration": "simple logistic intercept/slope learned only on calibration block; family chosen using development; report raw and calibrated",
+    "evaluation": [
+      "log loss",
+      "Brier",
+      "paired match-cluster bootstrap where adequate",
+      "coarse reliability",
+      "coverage and subgroup counts",
+      "AUROC secondary"
+    ],
+    "recorded_geometry_caveat": "Selective relevant-player annotation, missing visibility and coordinate error: nearest recorded opponent distance and recorded cone counts are not complete-defense measurements or strict physical bounds."
+  },
+  "basketball": {
+    "source_commit": "4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66",
+    "license": "MIT SkillCorner 2026 notice",
+    "population": "ten sampled Liga ACB 2025/26 games",
+    "development_game_order": [
+      114243,
+      114234,
+      114169,
+      114099,
+      114086
+    ],
+    "forward_test_game_order": [
+      178442,
+      179612,
+      184439,
+      188630,
+      191313
+    ],
+    "refit_rule": "At each outer game refit coefficients/preprocessing on strictly earlier games; write/hash predictions before joining labels; admit labels only into next training history; no feature/model/hyperparameter redesign; inspect scores only after all five predictions saved",
+    "target": "make conditional on all recorded field-goal releases, including fouled misses",
+    "event_geometry_cohort": 1433,
+    "raw_consistent_cohort": 1347,
+    "frame_rate_hz": 25,
+    "wall_clock_units": "milliseconds since video origin",
+    "game_clock_units": "seconds remaining in period",
+    "shot_clock_units": "seconds remaining",
+    "coordinate_units": "feet",
+    "offense_normalized_hoop": [
+      -40.75,
+      0
+    ],
+    "geometry_consistency_primary_tolerance_ft": 0.1,
+    "geometry_consistency_sensitivity_ft": 1.0,
+    "quality_caveat": "representation/frame agreement, not physical accuracy; directly detected sensitivity; no outcome-based threshold tuning",
+    "primary_feature_blocks": [
+      "distance",
+      "court bearing",
+      "three flag",
+      "shotClock",
+      "nearest defender distance and limited interaction"
+    ],
+    "denylist": [
+      "outcome",
+      "endFrame",
+      "endGameClock",
+      "endWallClock",
+      "assisted",
+      "assistOpp",
+      "blocked",
+      "blockerId",
+      "fouled",
+      "foulId",
+      "contestLevel",
+      "contested",
+      "shotQuality",
+      "full-season aggregate stats"
+    ],
+    "calibration": "No separate fitted recalibrator in this ten-game study; held-out coarse reliability diagnostic only, no calibrated-model claim",
+    "expected_points_label": "immediate field-goal points only: (2 or 3)*P(make), excludes foul rewards/rebounds/turnovers/continuation",
+    "claims_limit": "exploratory five-game forward evaluation; no reliable modern NBA or league-wide superiority claim",
+    "frozen_candidates": {
+      "constant": "Beta(1,1) training-only make rate",
+      "zone": "three x [0,6),[6,14),[14,22),[22,infinity) ft; shrinkage concentration 20 around training global rate",
+      "geometry": "L2 logistic C=1, intercept, log1p(distance), three, absolute hoop-relative court bearing, shotClock and shotClock-missing indicator",
+      "defense": "same plus log1p(closestDefDist) and its interaction with three"
+    },
+    "preprocessing": "At each outer game fit median clock imputation and feature standardization on strictly earlier eligible rows only; fixed transformations/cutpoints; no class balancing",
+    "court_bearing_definition": "abs(atan2(event_y, event_x + 40.75)) radians; hoop-to-shooter vector in offense-normalized event coordinates; valid behind-hoop observations retained"
+  },
+  "soccer_pose": {
+    "tracking_commit": "4340d274572876239c154c90bc507a9b3250a656",
+    "pose_revision": "a62e1ec1e3b82952042a7f7fa9dafd77c0e0822a",
+    "license": "MIT SkillCorner 2020 notice",
+    "matches_available": [
+      1925299,
+      1996435
+    ],
+    "full_match_audited": 1925299,
+    "pose_rate_hz": 25,
+    "tracking_event_rate_hz": 10,
+    "joint_units": "metres",
+    "error_units": "centimetres",
+    "target": "provider-estimated pose measurement demonstration, not causal scoring model; independently validated contact alignment required before any mechanics/outcome fit",
+    "gaps": [
+      "independent ball-contact alignment",
+      "eye gaze",
+      "ground-calibrated absolute player z",
+      "forces",
+      "spin",
+      "large independent sample"
+    ]
+  },
+  "spl": {
+    "status": "bounded independent noncommercial source/schema audit cleared and completed; 18 raw trials remain local; no fitting approved",
+    "source_commit": "a3f9cffbde917b1e1747cedd6ec25dfab18c6051",
+    "sample_trials": 18,
+    "age_context": "unverified; ages/DOB and participant-information file absent; potentially minors safeguards",
+    "release_gate": "no explicit release frame; independently validate alignment before mechanics/outcome fit",
+    "session_schema_hazard": "69 exposed keys but 27 finite older-session markers; 42 structurally absent; 30 versus 60 Hz; older ball NaN tokens",
+    "publication": "aggregate/deidentified quality summaries only after review with complete source terms; no participant/trial ID values, individual skeletons, body/health or selection/performance rankings",
+    "addendum": "docs/research/SPL_BOUNDED_SCHEMA_ADDENDUM.md"
+  },
+  "publication_policy": "docs/research/RESEARCH_PUBLICATION_POLICY.md"
+}

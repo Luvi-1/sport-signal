@@ -1,0 +1,28 @@
+"""Bounded local SPL schema QA only. Read complete source terms and RESEARCH_PUBLICATION_POLICY.md. Outputs no participant/trial ID values, health assessments or rankings."""
+import json,pathlib,collections,math,statistics
+base=pathlib.Path(__file__).resolve().parents[2];docs=base/'data/research_source_docs/SPL-Open-Data';manifest=json.load(open(docs/'local_sample_manifest.json'));as_=[json.load(open(r['path'])) for r in manifest['files']];c=collections.Counter();session={};mark=collections.defaultdict(collections.Counter);rootkeys=set();trackkeys=set();datakeys=set();participants=set();pdays=collections.defaultdict(set)
+def valid_xyz(v):return isinstance(v,list) and len(v)==3 and all(isinstance(x,(int,float)) and math.isfinite(x) for x in v)
+for a in as_:
+ day=a['trial_date'].split('T')[0];rootkeys.update(a);participants.add(a['participant_id']);pdays[a['participant_id']].add(day);ss=session.setdefault(day,collections.Counter());ss['trials']+=1;ss['sampling_hz_'+str(a['sampling_rate'])]+=1;ss['frames']+=len(a['tracking']);ss['frame_count_'+str(len(a['tracking']))]+=1
+ c['trials']+=1;c['outcome_'+a['result']]+=1;c['missing_result']+=not a.get('result');
+ for k in ['landing_x','landing_y','entry_angle']:c[k+'_finite_trials']+=isinstance(a.get(k),(int,float)) and math.isfinite(a[k])
+ prev=None
+ for r in a['tracking']:
+  c['frames']+=1;trackkeys.update(r);datakeys.update(r['data']);v=r['data']['ball'];ok=valid_xyz(v);ss['ball_finite_frames']+=ok;ss['ball_not_finite_frames']+=not ok
+  if ok:ss['ball_all_zero_frames']+=v==[0,0,0];ss['ball_z_negative_frames']+=v[2]<0
+  ss['time_min_ms']=min(ss.get('time_min_ms',r['time']),r['time']);ss['time_max_ms']=max(ss.get('time_max_ms',r['time']),r['time'])
+  if prev:ss['time_delta_ms_'+str(r['time']-prev['time'])]+=1;ss['nonincreasing_time']+=r['time']<=prev['time'];ss['nonconsecutive_frame']+=r['frame']-prev['frame']!=1
+  prev=r
+  ps=r['data']['player'];ss['marker_count_'+str(len(ps))]+=1
+  for k,v in ps.items():
+   mark[day][k+'_total']+=1;mark[day][k+'_valid']+=valid_xyz(v);ss['marker_records']+=1;ss['marker_finite_records']+=valid_xyz(v);ss['marker_all_zero_records']+=valid_xyz(v) and v==[0,0,0]
+summary={d:{'distinct_markers':sum(k.endswith('_total') for k in ms),'fully_finite_markers':sum(k.endswith('_total') and ms[k.replace('_total','_valid')]==v for k,v in ms.items()),'entirely_missing_markers':[k[:-6] for k,v in ms.items() if k.endswith('_total') and ms[k.replace('_total','_valid')]==0],'partly_missing_markers':[k[:-6] for k,v in ms.items() if k.endswith('_total') and 0<ms[k.replace('_total','_valid')]<v]} for d,ms in mark.items()}
+r={'source_commit':'a3f9cffbde917b1e1747cedd6ec25dfab18c6051','source_url':'https://github.com/Sport-Performance-Lab/SPL-Open-Data','license':'CC BY-NC-SA 4.0 heading plus explicit affiliation exclusion; research eligibility clarified; raw local only','sampling':'18 trials: first midpoint last in each participant-session group; nonrandom schema QA, not representative performance estimate','counts':dict(c),'sample_unique_participants':len(participants),'sample_participants_repeated_across_sessions':sum(len(d)>1 for d in pdays.values()),'root_schema_keys':sorted(rootkeys),'tracking_schema_keys':sorted(trackkeys),'tracking_data_schema_keys':sorted(datakeys),'session_quality':{d:dict(v) for d,v in session.items()},'marker_quality':summary,'age_context':'No ages or date-of-birth fields in inspected trial schema; no participant-information file found in pinned repository tree. Whether participants include minors is unverified. Treat outputs conservatively as potentially involving minors.','consent_context':'Official README says participants are non-professional and gave fully informed consent for release of movement-capture data; individual age/guardian-consent details not supplied.','release_context':'No explicit release frame, separation timestamp or pose confidence/error fields in inspected schema. Clocks restart per trial. Post-release outcome metrics are separate top-level fields.','publication':'Aggregate/deidentified schema-quality report only, with full source notice and modifications attribution; no participant/trial IDs or individual bodies, health, performance or selection rankings. Raw files and local manifests remain excluded.'}
+extra=collections.defaultdict(lambda:{'max_time_quantization_error_ms':0,'frames_with_no_finite_player_markers':0,'ball_invalid_and_all_markers_invalid_frames':0,'nonstandard_json_constants':0})
+for f in manifest['files']:
+ raw=pathlib.Path(f['path']).read_text();constants=[];a=json.loads(raw,parse_constant=lambda x:constants.append(x));day=a['trial_date'].split('T')[0];q=extra[day];q['nonstandard_json_constants']+=len(constants)
+ for fr in a['tracking']:
+  q['max_time_quantization_error_ms']=max(q['max_time_quantization_error_ms'],abs(fr['time']-fr['frame']/a['sampling_rate']*1000));empty=not any(valid_xyz(v) for v in fr['data']['player'].values());q['frames_with_no_finite_player_markers']+=empty;q['ball_invalid_and_all_markers_invalid_frames']+=empty and not valid_xyz(fr['data']['ball'])
+r['additional_schema_quality']=dict(extra)
+r['documentation_code_caveat']='Official usage notebook/animation inspected but not executed: older data paths and R_HIP naming differ from current RIGHT_HIP keys; derivatives/playback hard-code 30 Hz. Whole-clip peaks can include post-release motion.'
+(base/'reports/research_spl_sample_quality_aggregate.json').write_text(json.dumps(r,indent=2,allow_nan=False));print('Deidentified source-QA report written; trials:',r['counts']['trials'],'frames:',r['counts']['frames'])

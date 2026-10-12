@@ -1,0 +1,160 @@
+{
+  "distribution_scope": "local_noncommercial_aggregate_snapshot",
+  "implementation_sha256": {
+    "experiments/tactical/model_views.py": "b3ade0d755379063355c98575d5c9abe73dd6bba182d016e448a10ce657721c6",
+    "experiments/tactical/web/app.js": "1bb62de57a3658c803d9c5de267ccd2c562fd8e590037724ba178528ba194a49",
+    "experiments/tactical/web/index.html": "a29737f829555949982d80032bbc04fa65ef6fad198a18fe1aaaff934823e395",
+    "experiments/tactical/web/style.css": "2bf8818304e4e9dbe0ce646906c4c019278f3574af52e5cc9f071ce83093bb41",
+    "experiments/tactical/workbench.py": "c0b19209a9f7984d3f05b908c79a1b54988b4f0600d0f10501179add4104c134"
+  },
+  "independent": true,
+  "local_final_review_sha256": "66dadcce36926672c0ef3647cb9339cbf604fec108710e280b87c9f42d3308f0",
+  "review_type": "independent_aggregate_snapshot_review",
+  "reviewer": "Independent AI-assisted methodological review",
+  "schema_version": 1,
+  "seven_task_completion": {
+    "baseball": {
+      "binding_sha256": "b3c85bddc67202e107dabd7b04973da1b297aac3052ac522678eb273beb1a5fc",
+      "final_report_sha256": "e179cd7005d1f44b6e86b399292b9525a9d77f55d99e8054a46841b6c4e3bc15",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "baseball_mechanics": {
+      "binding_sha256": "998cfa40a3f1044c463c12e888cb5a22dac15ddd7d934854dd44b6df016c8f01",
+      "final_report_sha256": "af7cc802b94fedb6784ff449880ba51a86e97e898aa948ac2d4a2ccc4c06b467",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "basketball": {
+      "binding_sha256": "9b9566efe3b0fc16ebeb34266e2809ac6949055e04be336540ffdc6a7094927d",
+      "final_report_sha256": "1843e373324198acff8639f70b297eb380a28f6db0cb104aa89fd5cf3471b5e9",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "football": {
+      "binding_sha256": "a36bdf33e6ac74065b93f0f01315934f547ca2c7afeb03a15fe47087743d74a1",
+      "final_report_sha256": "b0b93cd13d01ea5d6d10847db2c3a4ddc3e2e8af57ad90ed6d838c2d45943969",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "soccer": {
+      "binding_sha256": "a68b3aa86daa0849e9939aaacd6c4317328cff3d87d4ce2e01afc0461254427f",
+      "final_report_sha256": "ffe5e29eb1a6ec172519259f195b8eb819f4b087945c642d5f2bfa9441b7ad97",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "tennis": {
+      "binding_sha256": "38d558b3d1847367cacf76a7e314e16fc85fb062b38c4f2d9c0a4c661210c7b6",
+      "final_report_sha256": "34969ac32da1389d95dbc3ecd2f5f924376c469997e66c599c92f7dae9c4285c",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    },
+    "tennis_execution": {
+      "binding_sha256": "54c757c297ecfe7a44029291df84e8e62a9f45732b7156d1426e68dafe81eea7",
+      "final_report_sha256": "cee1619dd8c5832e87c6d8fbb75da239ed9a4670a8165eec516fd59f2e3f6ac3",
+      "independent_result_review_sha256": "1925545af0bdb9c2cbf554792bcce8cfc6061843630a33fb1a6a724bc19bd864",
+      "status": "verified_final"
+    }
+  },
+  "status": "cleared",
+  "tasks": {
+    "baseball": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "a805660a6cb42082294cc43ec9f88fbff802542de5f33343dae9bd4356128570"
+    },
+    "baseball_mechanics": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "e56b59902df1ddd3f88a12c426ebcc6a5c40a451d5125d9c32b530202c99a73c"
+    },
+    "basketball": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "95ac23ff9e602b91409481e87f00246d38421e23fb0ffb32b0ac0c2b22940cf6"
+    },
+    "football": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "c5d0555ffb31a7de9c1ffd86680ac795dcdd53774de91c6d87b84577cca59c32"
+    },
+    "soccer": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "aacde7b49b453ada9bb4118828683ea00fa2cce3f7194d08fbc84631dce1b140"
+    },
+    "tennis": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "813ccd763ed1391ae420029ef5b5b1c733d76d0e9cd0ce8ccc900189b54a3e57"
+    },
+    "tennis_execution": {
+      "checks": {
+        "aggregate_distribution_authorized": true,
+        "aggregate_only_privacy_review": true,
+        "final_evaluation_complete": true,
+        "independent_metric_recomputation": true,
+        "normalized_projection_verified": true,
+        "same_case_comparisons_verified": true,
+        "sanitized_snapshot_verified": true,
+        "source_terms_checked": true
+      },
+      "status": "verified_final",
+      "view_sha256": "54f7d4f66525e4c727d59ac4f4eb7383120172c8ed7783cc1d8f330ff6a4dc56"
+    }
+  }
+}

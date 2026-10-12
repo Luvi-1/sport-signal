@@ -1,0 +1,2037 @@
+{
+  "phase": "independently_verified_final_aggregate",
+  "schema_version": 1,
+  "targets": [
+    {
+      "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+      "cases": 705223,
+      "clusters": 2430,
+      "cohort": "eligible",
+      "comparisons": [
+        {
+          "confidence": 0.95,
+          "criterion_met": false,
+          "delta": -0.0003539163349191123,
+          "interval": [
+            -0.00041077028384927343,
+            -0.0002926893275254292
+          ],
+          "metric": "log_loss",
+          "model": "sequence_logistic_calibrated",
+          "reference": "context_logistic_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        },
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.0001783540688079881,
+          "interval": [
+            -0.00022467849244233967,
+            -0.0001286680840334835
+          ],
+          "metric": "log_loss",
+          "model": "history_table_raw",
+          "reference": "context_table_raw",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        },
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.00018271484354569654,
+          "interval": [
+            -0.00022690932095483489,
+            -0.00013444153558620303
+          ],
+          "metric": "log_loss",
+          "model": "history_table_calibrated",
+          "reference": "context_table_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        }
+      ],
+      "id": "swing",
+      "models": [
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "constant_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5231097113962534
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.24946719575147241
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6920811971714506
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "constant_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5231097113962534
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.2494846309109793
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6921161231979371
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "context_table_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6026022974293238
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.64182431780651
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23363191966335659
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6592112620827668
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "context_table_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6027724563719561
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.64182431780651
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.2336409770814395
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6592355625421216
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "history_table_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.60333681686502
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6423745374557236
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23355539892735372
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6590329080139588
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "history_table_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6029809010766807
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6423745374557236
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23356336890984655
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6590528476985759
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "context_logistic_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6040926061685453
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6436230192208253
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23345950721786066
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6588009499808026
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "context_logistic_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6036076531820431
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6436230192208253
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23346750496157342
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6588256889247186
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "sequence_logistic_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6047590620271885
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6444872968087431
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23329182343467839
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6584460175575598
+            }
+          }
+        },
+        {
+          "case_set_sha256": "0477744a814cde22b13368eb3f102b977b150b2b41d8b244bc09a588ba0ef6f9",
+          "id": "sequence_logistic_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6042244793490853
+            },
+            "auroc": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6444872968087431
+            },
+            "brier": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.23330008142536626
+            },
+            "log_loss": {
+              "cases": 705223,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.6584717725897995
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.475770238475184,
+              "n": 705223,
+              "observed_fraction": 0.4768902886037466
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "constant_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4812134439094732,
+              "n": 705223,
+              "observed_fraction": 0.4768902886037466
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "constant_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10800835831554742,
+              "n": 7136,
+              "observed_fraction": 0.08267937219730942
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.29683138343373955,
+              "n": 79474,
+              "observed_fraction": 0.3072199713113723
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31828294131613505,
+              "n": 102904,
+              "observed_fraction": 0.3225239057762575
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.45780204535690555,
+              "n": 182651,
+              "observed_fraction": 0.4574844922830973
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5515391255009391,
+              "n": 238144,
+              "observed_fraction": 0.5507634036549315
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6530731578405415,
+              "n": 75808,
+              "observed_fraction": 0.6565402068383284
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7081226336854188,
+              "n": 19106,
+              "observed_fraction": 0.7132314456191772
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_table_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.11421898792492986,
+              "n": 7136,
+              "observed_fraction": 0.08267937219730942
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31586043259519825,
+              "n": 180590,
+              "observed_fraction": 0.31528877567971647
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4539436269884898,
+              "n": 149991,
+              "observed_fraction": 0.4463134454733951
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5487811981897125,
+              "n": 272592,
+              "observed_fraction": 0.5445684392792158
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6547060685250714,
+              "n": 75808,
+              "observed_fraction": 0.6565402068383284
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7085456965333756,
+              "n": 19106,
+              "observed_fraction": 0.7132314456191772
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_table_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.09102536324982229,
+              "n": 4178,
+              "observed_fraction": 0.07994255624700813
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.1003253077465067,
+              "n": 2958,
+              "observed_fraction": 0.08654496281271129
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.29650469080655023,
+              "n": 79474,
+              "observed_fraction": 0.3072199713113723
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31811163491342404,
+              "n": 103057,
+              "observed_fraction": 0.32255936035397886
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.45820044961052814,
+              "n": 185900,
+              "observed_fraction": 0.4569607315761162
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5519847992602861,
+              "n": 229628,
+              "observed_fraction": 0.5515877854617033
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6473290759956443,
+              "n": 75571,
+              "observed_fraction": 0.648701221367985
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7105215424908445,
+              "n": 24457,
+              "observed_fraction": 0.7128429488490002
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "history_table_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.08701853786531777,
+              "n": 1852,
+              "observed_fraction": 0.07937365010799136
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10773400238750562,
+              "n": 5284,
+              "observed_fraction": 0.08383800151400454
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3168537320494081,
+              "n": 180687,
+              "observed_fraction": 0.31529108347584495
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4546098672823364,
+              "n": 153051,
+              "observed_fraction": 0.44702092766463464
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5461361641155121,
+              "n": 254971,
+              "observed_fraction": 0.5427832969239639
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6439540380258651,
+              "n": 87346,
+              "observed_fraction": 0.6434410276372129
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7099558402796348,
+              "n": 22032,
+              "observed_fraction": 0.7145061728395061
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "history_table_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.09226780666097778,
+              "n": 5738,
+              "observed_fraction": 0.07511327988846288
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10487216667758019,
+              "n": 1398,
+              "observed_fraction": 0.11373390557939914
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.2914201082266362,
+              "n": 58540,
+              "observed_fraction": 0.2883498462589682
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31869947232500756,
+              "n": 126545,
+              "observed_fraction": 0.33113121814374336
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.45433093754246107,
+              "n": 170653,
+              "observed_fraction": 0.45244443402694356
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5483236858497873,
+              "n": 236192,
+              "observed_fraction": 0.5485621866955697
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6464963920154936,
+              "n": 85888,
+              "observed_fraction": 0.6493456594634873
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7137677443973303,
+              "n": 20269,
+              "observed_fraction": 0.7100991662144162
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_logistic_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.09620344427045166,
+              "n": 2893,
+              "observed_fraction": 0.06671275492568268
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10653545662307903,
+              "n": 4243,
+              "observed_fraction": 0.09356587320292246
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.2950990548491024,
+              "n": 23321,
+              "observed_fraction": 0.2773465974872433
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.320810928618216,
+              "n": 157726,
+              "observed_fraction": 0.3212406324892535
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4562572850092695,
+              "n": 163145,
+              "observed_fraction": 0.44902387446749825
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.549162460376305,
+              "n": 245714,
+              "observed_fraction": 0.5453657504252912
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6467011336379384,
+              "n": 89053,
+              "observed_fraction": 0.6486137468698415
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.713208263459167,
+              "n": 19128,
+              "observed_fraction": 0.7092743621915516
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_logistic_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.0923270795114761,
+              "n": 5720,
+              "observed_fraction": 0.07465034965034965
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10490958212070121,
+              "n": 1416,
+              "observed_fraction": 0.11511299435028248
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.29142842242853656,
+              "n": 58588,
+              "observed_fraction": 0.2883354953232744
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3185951221470741,
+              "n": 126461,
+              "observed_fraction": 0.3310823099611738
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.45556207896462025,
+              "n": 177625,
+              "observed_fraction": 0.4530049261083744
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5478007342303842,
+              "n": 222695,
+              "observed_fraction": 0.5491142594130987
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6447954973233672,
+              "n": 91634,
+              "observed_fraction": 0.644629722592051
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7180338098347968,
+              "n": 21084,
+              "observed_fraction": 0.7181749193701384
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "sequence_logistic_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.09611567322426862,
+              "n": 2676,
+              "observed_fraction": 0.06427503736920777
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.10645849516711003,
+              "n": 4460,
+              "observed_fraction": 0.09372197309417041
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.29513512986015755,
+              "n": 23230,
+              "observed_fraction": 0.27735686612139476
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3208342640971194,
+              "n": 157989,
+              "observed_fraction": 0.3212248954041104
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.45743749092217023,
+              "n": 169202,
+              "observed_fraction": 0.4497346367064219
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5480918889217733,
+              "n": 232597,
+              "observed_fraction": 0.5451661027442314
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6446423577042311,
+              "n": 95043,
+              "observed_fraction": 0.6443399303473165
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.717153738169452,
+              "n": 20026,
+              "observed_fraction": 0.7186157994607011
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "sequence_logistic_calibrated"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+      "cases": 336314,
+      "clusters": 2430,
+      "cohort": "eligible",
+      "comparisons": [
+        {
+          "confidence": 0.95,
+          "criterion_met": false,
+          "delta": -0.0011058557681574523,
+          "interval": [
+            -0.0012705995663638786,
+            -0.0009377626507427937
+          ],
+          "metric": "log_loss",
+          "model": "sequence_logistic_calibrated",
+          "reference": "context_logistic_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        },
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.000604840890517337,
+          "interval": [
+            -0.000737461316491818,
+            -0.00047209489412169606
+          ],
+          "metric": "log_loss",
+          "model": "history_table_raw",
+          "reference": "context_table_raw",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        },
+        {
+          "confidence": 0.95,
+          "criterion_met": null,
+          "delta": -0.0006051376989267228,
+          "interval": [
+            -0.00073242403837638,
+            -0.000477113169750303
+          ],
+          "metric": "log_loss",
+          "model": "history_table_calibrated",
+          "reference": "context_table_calibrated",
+          "sensitivity_range": null,
+          "uncertainty": "paired_game_bootstrap"
+        }
+      ],
+      "id": "contact_given_swing",
+      "models": [
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "constant_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17831520291802144
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5419980356720063
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "constant_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.1783174157461579
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5420041799540182
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "context_table_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5402493630657197
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17761917887938952
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5399803809362919
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "context_table_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5402493630657197
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17762087263289783
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5399863627197141
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "history_table_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5462792832044613
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17739263433725327
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5393755400457745
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "history_table_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5462792832044613
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17739394506363265
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5393812250207874
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "context_logistic_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5499459456146626
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17730254163576853
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5391099536508078
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "context_logistic_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5499459456146626
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.1773046670166838
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5391158632512597
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "sequence_logistic_raw",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5590144985647423
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.17689391647335262
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5380022096341227
+            }
+          }
+        },
+        {
+          "case_set_sha256": "c30cd8e717290321c7e13a5fc98402235980d1d5da4ec621fcd2d348aed923ce",
+          "id": "sequence_logistic_calibrated",
+          "metrics": {
+            "accuracy": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.7677587016894926
+            },
+            "auroc": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5590144985647423
+            },
+            "brier": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.1768968476240934
+            },
+            "log_loss": {
+              "cases": 336314,
+              "clusters": 2430,
+              "status": "reported",
+              "value": 0.5380100074831022
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7646082654555596,
+              "n": 336314,
+              "observed_fraction": 0.7677587016894926
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "constant_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7642747274357691,
+              "n": 336314,
+              "observed_fraction": 0.7677587016894926
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "constant_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7578714059987398,
+              "n": 300631,
+              "observed_fraction": 0.7606900153344133
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8226584637605466,
+              "n": 35683,
+              "observed_fraction": 0.8273127259479304
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_table_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7576673384007823,
+              "n": 300631,
+              "observed_fraction": 0.7606900153344133
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8211350927047145,
+              "n": 35683,
+              "observed_fraction": 0.8273127259479304
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_table_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.681446607573404,
+              "n": 10842,
+              "observed_fraction": 0.6909241837299391
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7598062753166744,
+              "n": 283761,
+              "observed_fraction": 0.762546650173914
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8225240287953967,
+              "n": 41711,
+              "observed_fraction": 0.8231881278319868
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "history_table_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6798941801937937,
+              "n": 8663,
+              "observed_fraction": 0.6887914117511255
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7588654734706984,
+              "n": 285957,
+              "observed_fraction": 0.7620691222806226
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8200716841428595,
+              "n": 41694,
+              "observed_fraction": 0.8231879886794263
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "history_table_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6928738693730676,
+              "n": 3642,
+              "observed_fraction": 0.6933003844041735
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7556002472844524,
+              "n": 281007,
+              "observed_fraction": 0.7589775343674713
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8204522666639389,
+              "n": 51665,
+              "observed_fraction": 0.8207684118842543
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_logistic_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6929265204270244,
+              "n": 3642,
+              "observed_fraction": 0.6933003844041735
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7554312526110653,
+              "n": 282107,
+              "observed_fraction": 0.7591091323504912
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8202261069762032,
+              "n": 50565,
+              "observed_fraction": 0.8213784238109364
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "context_logistic_calibrated"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5946623347118835,
+              "n": 26,
+              "observed_fraction": 0.6538461538461539
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.67909637245208,
+              "n": 14947,
+              "observed_fraction": 0.6779286813407372
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7567387704876827,
+              "n": 261008,
+              "observed_fraction": 0.7602870410102373
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8217501519712165,
+              "n": 60333,
+              "observed_fraction": 0.8223857590373428
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "sequence_logistic_raw"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5937855618460245,
+              "n": 31,
+              "observed_fraction": 0.5806451612903226
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6789769502660219,
+              "n": 15646,
+              "observed_fraction": 0.6792151348587498
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.7564589066537828,
+              "n": 260544,
+              "observed_fraction": 0.760524134119381
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8218420321757344,
+              "n": 60093,
+              "observed_fraction": 0.8222754730168239
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "positive",
+          "model": "sequence_logistic_calibrated"
+        }
+      ]
+    }
+  ],
+  "task": "baseball"
+}

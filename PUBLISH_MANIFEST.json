@@ -1,0 +1,579 @@
+{
+  "schema_version": 1,
+  "status": "final",
+  "scope": "Original code, documentation, aggregate reports and source/selection hashes; no upstream raw datasets, per-match feature/prediction tables, weights, environments, credentials or caches; includes one CC-BY-4.0 licensed normalized NFL input snapshot",
+  "file_count": 114,
+  "total_uncompressed_bytes": 1764985,
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 390,
+      "sha256": "fe2589b5ce1827d5ec91dbce1f14b130966413aee199b02517004a4d7c339173"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 202,
+      "sha256": "ec490568c4fae41cc129b702195e3df2ce02621f16b5bbc592db8f83908a8efa"
+    },
+    {
+      "path": "DATA_LICENSES.md",
+      "bytes": 3438,
+      "sha256": "49ee1ef8505c335824a48c9a67a1ff8c447388b36fa6d45e02fcc717d6426498"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1300,
+      "sha256": "e7423d78791074948fa21e1d6fcd608f0ebd9ba9a3d87744eecdd8809ca3a43f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12621,
+      "sha256": "0a2f1df46b1d4adc484daafd830ad716c53248dfa92cbe4b5aa19c19a5551589"
+    },
+    {
+      "path": "data_manifest.json",
+      "bytes": 12885,
+      "sha256": "226ec5e451b23083227f7b04c591d5c0aa4ab4e3063e68536d19dd24232b2f54"
+    },
+    {
+      "path": "docs/APPLICATION_NOTE.md",
+      "bytes": 1864,
+      "sha256": "b66db494375ee91390aa916f3e700806ed7b936d25fff8942138a62910b2a0e4"
+    },
+    {
+      "path": "docs/COMPARATORS.md",
+      "bytes": 20687,
+      "sha256": "ca7ec4b4b7cc78cff1db58fa82ae808b2c6e824e196a0ed2b2f717e783aa0f61"
+    },
+    {
+      "path": "docs/PROJECT_GUIDE.md",
+      "bytes": 4818,
+      "sha256": "deb259a8f0e5ee8379e614ed5b598b582778230afbb013a6ef565f5371d82e23"
+    },
+    {
+      "path": "docs/deployment.md",
+      "bytes": 3869,
+      "sha256": "201787c96d4a6e7811a92f5ec42f3e08a209d0148e0f7885f12983f8c75ec780"
+    },
+    {
+      "path": "docs/laya_experiment.md",
+      "bytes": 8215,
+      "sha256": "4b4ab8c7c7c7e2a750a7fd2adfda729c7131da95922674c04c8806851982a0da"
+    },
+    {
+      "path": "docs/methodology.md",
+      "bytes": 7312,
+      "sha256": "ba8be5d8e36f310e3f7f94f76b195302a8bd1b11142b81e2134239a217f42022"
+    },
+    {
+      "path": "docs/model_cards/baseball.md",
+      "bytes": 3068,
+      "sha256": "e2c44974ceed8897a3a954dedbd8d38eb7209be184c521b5b2aa9bbc20427b47"
+    },
+    {
+      "path": "docs/model_cards/football.md",
+      "bytes": 3037,
+      "sha256": "8bb8ab9022ba8cdbc73f1112f1a628a1b6bedf1ffe5e0efc0ca9936b4d0abbbc"
+    },
+    {
+      "path": "docs/model_cards/soccer.md",
+      "bytes": 3019,
+      "sha256": "74c3389c23d5eb5113303d885fe9aa1ce988510829ee98658b89c5435b8e4de1"
+    },
+    {
+      "path": "docs/model_cards/tennis.md",
+      "bytes": 3853,
+      "sha256": "86665aab797b9ddeb682ed4c1b565df00f0d61ae4406cfac265669f195e1402a"
+    },
+    {
+      "path": "docs/sources/baseball.md",
+      "bytes": 7781,
+      "sha256": "78ecda786a8ecd198c3c0eee5503ba20c096e9a6bfb533398a95802e165a6efa"
+    },
+    {
+      "path": "docs/sources/football.md",
+      "bytes": 7255,
+      "sha256": "b0ea9595b9089e9ce52472d0d7196209b4db830f9dc2be81e144d1e53159ddec"
+    },
+    {
+      "path": "docs/sources/soccer.md",
+      "bytes": 7460,
+      "sha256": "4f18626dfb917fa56be28707489d5e778664ce0cb3d645857e679fb795c34cbc"
+    },
+    {
+      "path": "docs/sources/tennis.md",
+      "bytes": 9194,
+      "sha256": "08050c506507805df3d556c7e88341e8626007eef28d145e390d525dcf6a1209"
+    },
+    {
+      "path": "docs/v2/PROTOCOL.md",
+      "bytes": 5112,
+      "sha256": "2091c35a9ebec86167c7ff69b32085e8ffc32aa37eac0de9c450f200fffccee8"
+    },
+    {
+      "path": "docs/v2/REPRODUCE.md",
+      "bytes": 4366,
+      "sha256": "9ae836cfaa1aed320540d52ba1c27007bc0db0d4540fe587816272b83882a220"
+    },
+    {
+      "path": "docs/v2/model_cards/baseball.md",
+      "bytes": 2938,
+      "sha256": "fcecb21eaea35ff888c327b03e075ab0989da19e59e345b3fd692268a0b0c291"
+    },
+    {
+      "path": "docs/v2/model_cards/football.md",
+      "bytes": 2913,
+      "sha256": "67365413f497931a122629bcd3831aa9052e21850f8470cc638c975f6348fef7"
+    },
+    {
+      "path": "docs/v2/model_cards/soccer.md",
+      "bytes": 2900,
+      "sha256": "c215a2806652a173b0f1433e643169a07bf969687883b2f95ca1a72a78ef29f1"
+    },
+    {
+      "path": "docs/v2/model_cards/tennis.md",
+      "bytes": 3189,
+      "sha256": "4f1663dc8ec4a2a2358a2944d7247e44812713d5b82c5937760e50bae0322737"
+    },
+    {
+      "path": "docs/v2_data_audit.md",
+      "bytes": 15526,
+      "sha256": "b16c3464af8bb883a0d616f41eabf7fed815a9a945a67f7a014b943e2cfa8f40"
+    },
+    {
+      "path": "docs/walkthrough.md",
+      "bytes": 3936,
+      "sha256": "143ee379d893fd8d9847aafd90cfba90470f8cf0cb7228d41db612e709ea37e1"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "bytes": 83,
+      "sha256": "da222360d27a8f98520204d9213ee17165606378185647cbc47f213def5badad"
+    },
+    {
+      "path": "experiments/frozen_nfl.py",
+      "bytes": 1430,
+      "sha256": "ed9216c8bc85141b2db82f95f5f2d01bd9d5669c6f15bfbca5093670aac7627f"
+    },
+    {
+      "path": "experiments/scenario.py",
+      "bytes": 1258,
+      "sha256": "9880d8c25b8b1b5b6b4ed48df1f09d7bd9d270a91afaf106363e1ea1da48aca2"
+    },
+    {
+      "path": "experiments/v2/__init__.py",
+      "bytes": 79,
+      "sha256": "3e36b33368d0478c18273ef1ab55fad3714c1bf641f782929151f493ec1e00a0"
+    },
+    {
+      "path": "experiments/v2/features.py",
+      "bytes": 7097,
+      "sha256": "401a3a21670c12825e2df3d5aecbbac092b6413c7a06e4d5e19a83b084601f3e"
+    },
+    {
+      "path": "experiments/v2/models.py",
+      "bytes": 4982,
+      "sha256": "eb0fae2ff110e865966424cff4bfbdd86d26f48a241a9f862cb7d7cc4dc44322"
+    },
+    {
+      "path": "experiments/v2/predict.py",
+      "bytes": 5348,
+      "sha256": "59fbb8936777eeec278634b8d4f4888ab6c5e5e93d6e02bfc61866cced605893"
+    },
+    {
+      "path": "experiments/v2/run.py",
+      "bytes": 13675,
+      "sha256": "76a56d8b9f42a6c800a095da34056659e2435aac8bd842c58e0c2ba4e106fb46"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 503,
+      "sha256": "42461f6a85106bd0b3d58905d0588aaa83fab1482c94c8bf2e1eda4dc31c0eaf"
+    },
+    {
+      "path": "reports/RESULTS.md",
+      "bytes": 4165,
+      "sha256": "1e7e528f50e8c9f13d62042c9fdcd6155bf79be2bb7dd40eb69446e4bb139d39"
+    },
+    {
+      "path": "reports/VALIDATION.md",
+      "bytes": 3628,
+      "sha256": "fbf5098accf6d9c9a4778bbaa17630cc783054b644529c4fc49b4aeb0d5e89b7"
+    },
+    {
+      "path": "reports/baseball/evaluation.json",
+      "bytes": 35279,
+      "sha256": "14cd0659cbf0c303ffb16593ef622f4d91e6b1ecd1f23552b8fa67c83e67ed64"
+    },
+    {
+      "path": "reports/baseball/reliability.svg",
+      "bytes": 61419,
+      "sha256": "5ceb43c8cb22bab2948dc3ff8b56539a17b0edafcd6578a26a5276aefb4e3cb6"
+    },
+    {
+      "path": "reports/external/mlb_archive_diagnostic.json",
+      "bytes": 3750,
+      "sha256": "87a554e1a9364a76abcfc6dfc88bcde8796505cda93cc62b90e1eb1372fd6fb8"
+    },
+    {
+      "path": "reports/external/mlb_archive_quality_checks.json",
+      "bytes": 1659,
+      "sha256": "9a4c5832da5eb30afb8110ae3f1292edf83874c501a88aac8422c10d762f125e"
+    },
+    {
+      "path": "reports/football/evaluation.json",
+      "bytes": 42516,
+      "sha256": "12385f7247e8f4f4e958c33da9029e499e6bb90d55cf31c44d746c6c3830c6e8"
+    },
+    {
+      "path": "reports/football/reliability.svg",
+      "bytes": 62819,
+      "sha256": "cac7f495f247de6bf89b28842641aa91a5139f7a70c296b623763b3a52c7a2c6"
+    },
+    {
+      "path": "reports/laya/code_provenance.json",
+      "bytes": 1013,
+      "sha256": "37ca9093cdecd678877e6cdb921c26c40a43acd656ae8518bf3b1f9327730aa8"
+    },
+    {
+      "path": "reports/laya/evaluation.json",
+      "bytes": 82846,
+      "sha256": "db3bc37a60e9dd89dafd39c9d154f242937586277705e965bc9cfd125716f403"
+    },
+    {
+      "path": "reports/laya/frozen_manifest.json",
+      "bytes": 34721,
+      "sha256": "77244b3bfbf470f2f8fbe24e7d556ccae83e17996eb0d388813b0215fbdf0553"
+    },
+    {
+      "path": "reports/soccer/evaluation.json",
+      "bytes": 58107,
+      "sha256": "fa1a19568ceaa458eea53e1df7f88c8c6116f768acb12faa4c40be47c30e571a"
+    },
+    {
+      "path": "reports/soccer/reliability.svg",
+      "bytes": 80239,
+      "sha256": "7a111f9fe7af460d9755585822d5cde24a6bbba9221aa59eeb1a7f0f51d8167b"
+    },
+    {
+      "path": "reports/tennis/LICENSE.md",
+      "bytes": 667,
+      "sha256": "1122712158a01288361e5871db2cc4c50fcfbb0b2afd265a2c0b24f371d4ac2c"
+    },
+    {
+      "path": "reports/tennis/evaluation.json",
+      "bytes": 53889,
+      "sha256": "6dcb256c2c7c0de70dc85d88b57e275ba6721b877c52dbc121feccb72409f097"
+    },
+    {
+      "path": "reports/tennis/reliability.svg",
+      "bytes": 64782,
+      "sha256": "b82c3e3e3edaad08b5c23eaac4a9e4e80b85b97f0a46f4c1d07508b758bd646e"
+    },
+    {
+      "path": "reports/v2/LICENSE.md",
+      "bytes": 1151,
+      "sha256": "acd09c3caa3a2364e618c2e9474613308c3b274f8c4ba365c36bbdc677480c00"
+    },
+    {
+      "path": "reports/v2/RESULTS.md",
+      "bytes": 9208,
+      "sha256": "c2797a98700b29c30809033437d1563a2d496c497de6645cda2732b8ce93c7ac"
+    },
+    {
+      "path": "reports/v2/baseball/development.json",
+      "bytes": 9680,
+      "sha256": "b8612ae1b31299eaabdff02470b537c274e32e476e324262096b948a852e8db5"
+    },
+    {
+      "path": "reports/v2/baseball/evaluation.json",
+      "bytes": 48435,
+      "sha256": "d76084d47b55c2fb74b21d3a7b334b3bbf5821288b8813e96f752cbca230fbff"
+    },
+    {
+      "path": "reports/v2/baseball/reliability.svg",
+      "bytes": 56952,
+      "sha256": "06f7acdcce4b5ed90fbf911e496003ea76a83de0ba911dedb78c6f9876180d8c"
+    },
+    {
+      "path": "reports/v2/football/development.json",
+      "bytes": 9676,
+      "sha256": "874b2c8cba33d672ca56f020b0df032b848f4672bd960f133920a613ec1880ea"
+    },
+    {
+      "path": "reports/v2/football/evaluation.json",
+      "bytes": 62072,
+      "sha256": "440192c526e6fede3de4447dfda9db84df92da403a73770229f93ad6f182d98f"
+    },
+    {
+      "path": "reports/v2/football/reliability.svg",
+      "bytes": 58857,
+      "sha256": "13e73d2ae443f183b7764e47c022398f62e2d66ae8cbe65c425ce62c024ec5bd"
+    },
+    {
+      "path": "reports/v2/improvement_intervals.svg",
+      "bytes": 41828,
+      "sha256": "4a365d3d852d0e1ebf594d34fc39defbcae7fe0fab383f228d875d2b5d09fce2"
+    },
+    {
+      "path": "reports/v2/reproduction_check.json",
+      "bytes": 6216,
+      "sha256": "ae6471633c8bfd91c222567c6a18a4f7f741f3a47be33b8fa870549dbf55aa2b"
+    },
+    {
+      "path": "reports/v2/selection_freeze.json",
+      "bytes": 592,
+      "sha256": "28727bd0553d6b23e01498ad21dcfa68b72afbefc49e41b67bfde09804bc38ef"
+    },
+    {
+      "path": "reports/v2/soccer/development.json",
+      "bytes": 10277,
+      "sha256": "85a88e022cd848b511b75c9ce4d3e238c88c0cbbb3dd35811a073d14644dfc4a"
+    },
+    {
+      "path": "reports/v2/soccer/evaluation.json",
+      "bytes": 83176,
+      "sha256": "95c1cb9604e33187034438e221bcf5701c0550ba6747eb29132e704d7b13ebea"
+    },
+    {
+      "path": "reports/v2/soccer/reliability.svg",
+      "bytes": 73843,
+      "sha256": "88469534b2cca5be607775e1552beb26aec21aa2632d7a803a272dd819d2cfb6"
+    },
+    {
+      "path": "reports/v2/source_manifest.json",
+      "bytes": 57948,
+      "sha256": "877569be9e4a5af5264e40dbecaaaff9f36a57f9584569b9e86afb94c2107772"
+    },
+    {
+      "path": "reports/v2/tennis/development.json",
+      "bytes": 9753,
+      "sha256": "33e22536a5866f6cf03d42f335c87243d49a1a3977508e8f38fa62d1424680cd"
+    },
+    {
+      "path": "reports/v2/tennis/evaluation.json",
+      "bytes": 78271,
+      "sha256": "77942d1ab969fa6910fdce8151eeca15a645c9c96d03e58fe70c25266e535e40"
+    },
+    {
+      "path": "reports/v2/tennis/reliability.svg",
+      "bytes": 60290,
+      "sha256": "2408d5f0a3ae542b54c6f1f3ca01b8a3173e8406032ec11564ee6f315fc4f427"
+    },
+    {
+      "path": "scripts/analyze_matchup.py",
+      "bytes": 7101,
+      "sha256": "2b21bb556757a768826edb30c5898de52a94c4a6a6c0198de2f4045f20199d8d"
+    },
+    {
+      "path": "scripts/check_reproduction.py",
+      "bytes": 4077,
+      "sha256": "3f0ede97f2788f6a5480ae9654c77f7b96da79788d874d11271ee9c75a916926"
+    },
+    {
+      "path": "scripts/compare_mlb_archive.py",
+      "bytes": 7985,
+      "sha256": "c3e79a81c5cd040e14287375d6ecf9ab7f1b3b68eef326bd92d8b6c2d233b73b"
+    },
+    {
+      "path": "scripts/evaluate_laya.py",
+      "bytes": 15168,
+      "sha256": "2262acf5164a93cf3a90a242426145c3ba7472b3fd8977b7cd0ed6a4fe789685"
+    },
+    {
+      "path": "scripts/freeze_snapshot.py",
+      "bytes": 908,
+      "sha256": "b8935ab435e6c40df90408800a69e7b54374067f2780b9967065ddab2378c4cf"
+    },
+    {
+      "path": "scripts/package_release.py",
+      "bytes": 4091,
+      "sha256": "d563995ea5c14b573f7debb66a32b7d84f9ed3961a541b9d21add0bc502496ca"
+    },
+    {
+      "path": "scripts/reproduce.sh",
+      "bytes": 474,
+      "sha256": "36627b431e5f748baef8817b6d5ff7a181e71d5ae3e53024d6d631d332dd7e21"
+    },
+    {
+      "path": "scripts/reproduce_frozen_nfl.py",
+      "bytes": 2266,
+      "sha256": "01ba0e8fc7a4f0dd524ca10b9c466898c53e5cd072681ce8c990d5c4d20fb037"
+    },
+    {
+      "path": "scripts/reproduce_v2.sh",
+      "bytes": 2042,
+      "sha256": "8ecc634858ecc448e42db5baf20de730555f76167819194e5a13f23483fd425c"
+    },
+    {
+      "path": "scripts/stage_v2_data.py",
+      "bytes": 32904,
+      "sha256": "c745ba7e4fab26638d40f0856b716bb6e4a4ff58b4e938b1d3ec40787ad9c410"
+    },
+    {
+      "path": "scripts/summarize_results.py",
+      "bytes": 9271,
+      "sha256": "e2983bbae3a67b58c5ceb1c8f12be4d1ec1caeb4d5b88b9fce1b213a1f38f2fc"
+    },
+    {
+      "path": "scripts/summarize_v2.py",
+      "bytes": 15151,
+      "sha256": "13df1543def4f4c0373baf8a1ca9147e72711b087e216f2d99a62883ba4d761a"
+    },
+    {
+      "path": "snapshots/LICENSE.nflverse.md",
+      "bytes": 18651,
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111"
+    },
+    {
+      "path": "snapshots/README.md",
+      "bytes": 1126,
+      "sha256": "fb22b46769ca7669a4c526708b2b49d8c13b2138698d333fac0d5414cc6a0738"
+    },
+    {
+      "path": "snapshots/nfl_regular_2010_2025.csv.gz",
+      "bytes": 56737,
+      "sha256": "734a5950bc0e1c3db5e4e95fb0d854f2f4702b6ed624601d4558efbba661616b"
+    },
+    {
+      "path": "snapshots/nfl_regular_2010_2025.json",
+      "bytes": 1961,
+      "sha256": "c8ed4dfae924ef976aa806767a8c7731241fd5ec57f50fff227d6d444d678ebb"
+    },
+    {
+      "path": "sportslab/__init__.py",
+      "bytes": 80,
+      "sha256": "14dd9dc67b446dc0b28f9f6e6927322633d3c3e8a3acbf8776164bc684261e7a"
+    },
+    {
+      "path": "sportslab/__main__.py",
+      "bytes": 38,
+      "sha256": "3ffadeb0abbc4e042090d88bfb921521cb45eee12fa2128f871016c6b996d847"
+    },
+    {
+      "path": "sportslab/adapters/__init__.py",
+      "bytes": 60,
+      "sha256": "f47f6cdde173cfbffe9564f8390871e97c24c36842162273045ad5cee3e5e299"
+    },
+    {
+      "path": "sportslab/adapters/baseball.py",
+      "bytes": 6965,
+      "sha256": "482bb0f293a945d1c7fb525df3ec839147ba30ea915f5a600cee237fe3621d21"
+    },
+    {
+      "path": "sportslab/adapters/football.py",
+      "bytes": 4233,
+      "sha256": "421a9a5884574ac4f0aaf95b108ca8883d86848985e7cf0e2bdec69fe7035568"
+    },
+    {
+      "path": "sportslab/adapters/soccer.py",
+      "bytes": 7652,
+      "sha256": "7bdf86e7c1ae023a8f6f4b707dd371c24f43487f7a5ca5642ace784ee058bff8"
+    },
+    {
+      "path": "sportslab/adapters/tennis.py",
+      "bytes": 9335,
+      "sha256": "d13ac75b9cbd7e783d404d80087cdc08f9fe306e748133107a9cb229a88bdc89"
+    },
+    {
+      "path": "sportslab/cli.py",
+      "bytes": 7818,
+      "sha256": "b97d226882c652f154ac08945fb718f9e71bfb3b1a2f9d75a9ff0193b0b6b057"
+    },
+    {
+      "path": "sportslab/data.py",
+      "bytes": 4533,
+      "sha256": "38aa6ff374d3cb8bc1c710ae42f5dced485519ca5c481748b457fc41d1e2600e"
+    },
+    {
+      "path": "sportslab/evaluate.py",
+      "bytes": 12975,
+      "sha256": "7c140cf594da3d6bc14e7449f17cfc0b0dbe58215ecade516dc40069bef0bd9e"
+    },
+    {
+      "path": "sportslab/features.py",
+      "bytes": 5046,
+      "sha256": "813cdcf6c267c2bc3d6a72e73dd2edea49cccb58e5ae09a30a591cf89fe3fcde"
+    },
+    {
+      "path": "tests/test_baseball_adapter.py",
+      "bytes": 5826,
+      "sha256": "8ff21fd9e91e750caf1ce26964bcc8fb0908ed04335794fb9954460769016cf4"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 5215,
+      "sha256": "73fdae13e26e9db355b57097e2e70cc557046bbda5383f00b5b31412be46d435"
+    },
+    {
+      "path": "tests/test_fast_entrypoint.py",
+      "bytes": 1877,
+      "sha256": "adb799e436dd09fddc0c4a1b495c8630c6045242d6eb98b26fb923371a35c5bf"
+    },
+    {
+      "path": "tests/test_fast_scenario.py",
+      "bytes": 1995,
+      "sha256": "e7296c877e1b703a0025191a2a3e44b6bc1581bd071533438af89dc7aa7b24a9"
+    },
+    {
+      "path": "tests/test_football_adapter.py",
+      "bytes": 4847,
+      "sha256": "db1196ee9408561bcc0d8267da07a558277924233c5d9f910d02f7c240d3c96c"
+    },
+    {
+      "path": "tests/test_frozen_nfl.py",
+      "bytes": 1555,
+      "sha256": "a46481dfeae36ce987df59b211ed3f53682a96b8771f33505bfafe7d87465453"
+    },
+    {
+      "path": "tests/test_inference_contract.py",
+      "bytes": 3163,
+      "sha256": "90a2eeb656e259e88fe2bc8544ee9a3ecea479f2a6abc2fb030eafdb5168404a"
+    },
+    {
+      "path": "tests/test_laya_experiment.py",
+      "bytes": 5237,
+      "sha256": "e5951456128d9450e068524986b4fd3aae9a270d8a8ee06a0c5692b4b26cadc3"
+    },
+    {
+      "path": "tests/test_reproduction_check.py",
+      "bytes": 2335,
+      "sha256": "2a6325c909e207924bf29d383a408537b3fdfa43c47dff566e517e76dc9d9639"
+    },
+    {
+      "path": "tests/test_soccer_adapter.py",
+      "bytes": 6670,
+      "sha256": "37806c0335455e3844c80bdd0fd24dbd949eee687df152d521dcfd6d5fdb48c5"
+    },
+    {
+      "path": "tests/test_tennis_adapter.py",
+      "bytes": 7941,
+      "sha256": "c163e699686b0459224e85d74980bcfe2189ebd8591f2180cde0a8737c483a01"
+    },
+    {
+      "path": "tests/test_training_smoke.py",
+      "bytes": 2528,
+      "sha256": "6d29dd682cf8c343c315ed2a6a20e759d230d8a6393c4c881567e16ea62a181e"
+    },
+    {
+      "path": "tests/test_v2_features.py",
+      "bytes": 2314,
+      "sha256": "d04ea6e58a88db79a04f5dddb76daf3f368e7fe70e391fbfb8677d8d4bb22f36"
+    },
+    {
+      "path": "tests/test_v2_inference.py",
+      "bytes": 2541,
+      "sha256": "655178b6ee3e757ad28bd7011f5ca62588e1c7a4e2b040b179cf202dbe4f2dbc"
+    },
+    {
+      "path": "tests/test_v2_report.py",
+      "bytes": 3059,
+      "sha256": "c28600636713d1183ca66a13605ae5d7bb5889a079d9b46963223c385e1c0041"
+    },
+    {
+      "path": "tests/test_v2_seal.py",
+      "bytes": 1907,
+      "sha256": "fac8af11fde601841bb0d5fda5e677accb395cff7b40ccb31078b9ab55896dc3"
+    }
+  ]
+}

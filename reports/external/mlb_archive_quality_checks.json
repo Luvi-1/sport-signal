@@ -1,0 +1,53 @@
+{
+  "aliases_538_to_retrosheet": {
+    "CHC": "CHN",
+    "CHW": "CHA",
+    "KCR": "KCA",
+    "LAD": "LAN",
+    "NYM": "NYN",
+    "NYY": "NYA",
+    "SDP": "SDN",
+    "SFG": "SFN",
+    "STL": "SLN",
+    "TBD": "TBA",
+    "FLA": "MIA",
+    "WSN": "WAS"
+  },
+  "matched_alias_values_all_exist": true,
+  "local_period_rows": 992,
+  "source_period_completed_rows": 989,
+  "source_ambiguous_matchup_keys": 10,
+  "source_ambiguous_rows": 20,
+  "source_unique_missing_local": 0,
+  "local_period_keys_missing_source_completed": [
+    [
+      "2023-05-14",
+      "BOS",
+      "SLN"
+    ],
+    [
+      "2023-05-14",
+      "OAK",
+      "TEX"
+    ],
+    [
+      "2023-05-14",
+      "WAS",
+      "NYN"
+    ]
+  ],
+  "source_missing_probabilities": 0,
+  "max_elo_probability_sum_error": 0.0,
+  "max_ratings_probability_sum_error": 9.992007221626409e-16,
+  "probability_in_range": true,
+  "scores_exactly_agree_all_matched": true,
+  "postgame_columns_used_as_predictions": false,
+  "source_forecast_issuance_timestamp_present": false,
+  "primary_definition_of_elo_prob1": "Home win probability according to Elo ratings",
+  "primary_definition_of_rating_prob1": "Home win probability according to team ratings and starting pitchers",
+  "primary_schema_pre_post_distinction": "Ratings include distinct *_pre and *_post; only probability fields consumed; no *_post input consumed",
+  "mirror_commit_time": "2024-02-04T03:59:36Z",
+  "secondary_mirror_same_sha256": true,
+  "secondary_mirror_url": "https://raw.githubusercontent.com/Megabuster/Data607/refs/heads/main/data/Assignment1/mlb_elo_latest.csv",
+  "secondary_mirror_git_blob": "36f84df384e2d772379a534c28b4982d52d23c9b"
+}

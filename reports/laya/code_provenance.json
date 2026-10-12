@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-10-11T06:34:50.889392+00:00",
+  "inference_script_sha256": "7465d5ca26c5f8f52a19211a7b4986bfa991ff8428720bbbc1aca6a80709906b",
+  "note": "Digest of unchanged executing script recorded during initial 800-row inference. Subsequent hardening does not change input, selection, model, or predictions.",
+  "final_script_sha256": "2262acf5164a93cf3a90a242426145c3ba7472b3fd8977b7cd0ed6a4fe789685",
+  "final_tests_sha256": "e5951456128d9450e068524986b4fd3aae9a270d8a8ee06a0c5692b4b26cadc3",
+  "validation_at_utc": "2026-10-11T06:51:33.458335+00:00",
+  "validated_record_count": 800,
+  "evaluation_sha256": "db3bc37a60e9dd89dafd39c9d154f242937586277705e965bc9cfd125716f403",
+  "final_hardening": "Strict offline cached record validation; no input, model, prompt, selection, or prediction changes",
+  "model_weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c",
+  "final_documentation_sha256": "4b4ab8c7c7c7e2a750a7fd2adfda729c7131da95922674c04c8806851982a0da"
+}

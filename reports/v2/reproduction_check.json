@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-11T07:50:27.799612+00:00",
+  "scope": "Comparison of supplied checkouts: normalized inputs, feature bytes, per-event predictions and aggregate metrics",
+  "original_raw_nfl_absent_from_reproduction": true,
+  "tolerance": 1e-06,
+  "sports": {
+    "soccer": {
+      "identical_data_and_feature_files": [
+        {
+          "path": "data/processed/soccer.csv",
+          "sha256": "ca01e4ce767457023d332ef50781fc06d2ea6bec10844ad6875b3171477e7d42"
+        },
+        {
+          "path": "data/v2/processed/soccer.csv",
+          "sha256": "c809a16cbbce18bfb962bb8cccf6dfa81d366180608b1fcb31ae4d827ab9208f"
+        },
+        {
+          "path": "data/v2/pre_holdout_development/soccer.csv",
+          "sha256": "ca01e4ce767457023d332ef50781fc06d2ea6bec10844ad6875b3171477e7d42"
+        },
+        {
+          "path": "artifacts/soccer/features.csv",
+          "sha256": "db279a723cc5d72ae88a770e9ef26622afc1b9c526649e05f5165656c1da5b62"
+        },
+        {
+          "path": "artifacts/v2/soccer/development_features.csv",
+          "sha256": "3ab517a53e0d72a82dc64f24fba395711c808d0042dd23008b239c4444283892"
+        },
+        {
+          "path": "artifacts/v2/soccer/features.csv",
+          "sha256": "550628e02db1d78ea40a7cae9d02edcbddeda54563b27bb3bb1d4b8758ec50e5"
+        }
+      ],
+      "experiments": {
+        "v1": {
+          "events": 760,
+          "model_variants": 5,
+          "maximum_metric_difference": 0.0,
+          "maximum_prediction_difference": 0.0
+        },
+        "v2": {
+          "events": 380,
+          "model_variants": 19,
+          "maximum_metric_difference": 2.8545958929981907e-09,
+          "maximum_prediction_difference": 4.677438780742449e-08
+        }
+      }
+    },
+    "baseball": {
+      "identical_data_and_feature_files": [
+        {
+          "path": "data/processed/baseball.csv",
+          "sha256": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6"
+        },
+        {
+          "path": "data/v2/processed/baseball.csv",
+          "sha256": "71e2379da9805fe296f81d737074f1d4322c6bd3d42d6a1072bbfe2fb4ebed26"
+        },
+        {
+          "path": "data/v2/pre_holdout_development/baseball.csv",
+          "sha256": "8d351a9ddc2402e89d7ee60006bd72fa5138ebb2d61f3bcaa71c4013aa3430a6"
+        },
+        {
+          "path": "artifacts/baseball/features.csv",
+          "sha256": "5eaedc53da99e31b9d791227d715898eac13cc31c37135ee92b10cd7eeb3df89"
+        },
+        {
+          "path": "artifacts/v2/baseball/development_features.csv",
+          "sha256": "0edf796b424263437150e36035e4aebfefa60a07ed1c7d30315485c0d1d8f021"
+        },
+        {
+          "path": "artifacts/v2/baseball/features.csv",
+          "sha256": "17a453a6cda88971a70c8f9089882ea3585f6f540cdb2cabfff2a3be1515d70a"
+        }
+      ],
+      "experiments": {
+        "v1": {
+          "events": 4859,
+          "model_variants": 5,
+          "maximum_metric_difference": 0.0,
+          "maximum_prediction_difference": 0.0
+        },
+        "v2": {
+          "events": 2430,
+          "model_variants": 17,
+          "maximum_metric_difference": 3.8995716378220635e-14,
+          "maximum_prediction_difference": 2.409239474587821e-12
+        }
+      }
+    },
+    "football": {
+      "identical_data_and_feature_files": [
+        {
+          "path": "data/processed/football.csv",
+          "sha256": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5"
+        },
+        {
+          "path": "data/v2/processed/football.csv",
+          "sha256": "b0d565c308f62f0fc7bd6239b15784c2e34204f5c1ed4a58a5b063d5a643c206"
+        },
+        {
+          "path": "data/v2/pre_holdout_development/football.csv",
+          "sha256": "c8d3e1ffb6bf0aae2ba576d0b22636ed988c9ef002f2840c497bc2566ecc9ab5"
+        },
+        {
+          "path": "artifacts/football/features.csv",
+          "sha256": "4417363a26e64037713f7e8a1f368bfc8fd3ce0ef701cfb6a82be3acf9351619"
+        },
+        {
+          "path": "artifacts/v2/football/development_features.csv",
+          "sha256": "e339d73ad7d5843383d4f45ef08789ea832c913f35aba92321cdf9c9ce8ad31d"
+        },
+        {
+          "path": "artifacts/v2/football/features.csv",
+          "sha256": "162331725c4cf093abf4d4abdc2c040c5252410c02cc280ad61b3c3df91d8afb"
+        }
+      ],
+      "experiments": {
+        "v1": {
+          "events": 544,
+          "model_variants": 5,
+          "maximum_metric_difference": 0.0,
+          "maximum_prediction_difference": 0.0
+        },
+        "v2": {
+          "events": 271,
+          "model_variants": 17,
+          "maximum_metric_difference": 1.1914130904067122e-08,
+          "maximum_prediction_difference": 2.952365474317986e-07
+        }
+      }
+    },
+    "tennis": {
+      "identical_data_and_feature_files": [
+        {
+          "path": "data/processed/tennis.csv",
+          "sha256": "61c619f6a2a1b99d520ad17e5b62eff63a49df1f8f87decc703bd8896f8fb442"
+        },
+        {
+          "path": "data/v2/processed/tennis.csv",
+          "sha256": "1123803e156fdbb4a08a31520101788575706854051231ab251c6a0e92756094"
+        },
+        {
+          "path": "data/v2/pre_holdout_development/tennis.csv",
+          "sha256": "5f0ddd7871955c102f7b1feac2ade23943886e40d66555235505ed914edabc4f"
+        },
+        {
+          "path": "artifacts/tennis/features.csv",
+          "sha256": "03115ef6b5d930052e3691ee575896c06cc1fd95591201c1c0b1aab96c467537"
+        },
+        {
+          "path": "artifacts/v2/tennis/development_features.csv",
+          "sha256": "fe41241dd54ec44a547914cd3d182040036729e93397a038d431aac14b02fc6f"
+        },
+        {
+          "path": "artifacts/v2/tennis/features.csv",
+          "sha256": "865231e7912fd196cfa876238d01955dc0eecbb2a31d5f817efd5f27efd0bfa3"
+        }
+      ],
+      "experiments": {
+        "v1": {
+          "events": 5856,
+          "model_variants": 5,
+          "maximum_metric_difference": 0.0,
+          "maximum_prediction_difference": 0.0
+        },
+        "v2": {
+          "events": 2728,
+          "model_variants": 17,
+          "maximum_metric_difference": 4.668589136808121e-09,
+          "maximum_prediction_difference": 1.8874065266238915e-07
+        }
+      }
+    }
+  }
+}

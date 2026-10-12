@@ -1,0 +1,1502 @@
+{
+  "phase": "independently_verified_final_aggregate",
+  "schema_version": 1,
+  "targets": [
+    {
+      "case_set_sha256": "e3d93e80bd6e37bd6bb07d1b10a40bc9640c9ba158865757418fe4898e57ff10",
+      "cases": 708,
+      "clusters": 5,
+      "cohort": "event_geometry",
+      "comparisons": [
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.0035015364264107626,
+          "interval": null,
+          "metric": "brier",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        },
+        {
+          "confidence": null,
+          "criterion_met": false,
+          "delta": -0.0071220500110289065,
+          "interval": null,
+          "metric": "log_loss",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "make",
+      "models": [
+        {
+          "case_set_sha256": "e3d93e80bd6e37bd6bb07d1b10a40bc9640c9ba158865757418fe4898e57ff10",
+          "id": "A",
+          "metrics": {
+            "accuracy": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5550847457627118
+            },
+            "auroc": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.4984126984126984
+            },
+            "brier": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.24896571544665605
+            },
+            "log_loss": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6911939091607893
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e3d93e80bd6e37bd6bb07d1b10a40bc9640c9ba158865757418fe4898e57ff10",
+          "id": "B",
+          "metrics": {
+            "accuracy": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6242937853107344
+            },
+            "auroc": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5949876812472232
+            },
+            "brier": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2373304673430634
+            },
+            "log_loss": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6677306509217548
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e3d93e80bd6e37bd6bb07d1b10a40bc9640c9ba158865757418fe4898e57ff10",
+          "id": "C",
+          "metrics": {
+            "accuracy": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5819209039548022
+            },
+            "auroc": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.611874469889737
+            },
+            "brier": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2398145612648395
+            },
+            "log_loss": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6725835741917047
+            }
+          }
+        },
+        {
+          "case_set_sha256": "e3d93e80bd6e37bd6bb07d1b10a40bc9640c9ba158865757418fe4898e57ff10",
+          "id": "D",
+          "metrics": {
+            "accuracy": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6031073446327684
+            },
+            "auroc": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6202512217779393
+            },
+            "brier": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23631302483842873
+            },
+            "log_loss": {
+              "cases": 708,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6654615241806757
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.38814016172506743,
+              "n": 155,
+              "observed_fraction": 0.4645161290322581
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.40648967214091725,
+              "n": 553,
+              "observed_fraction": 0.4394213381555154
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "A"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3254829873374704,
+              "n": 457,
+              "observed_fraction": 0.3610503282275711
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5428813168696712,
+              "n": 251,
+              "observed_fraction": 0.5976095617529881
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "B"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.18772630774719423,
+              "n": 2,
+              "observed_fraction": 0.0
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3194029960919803,
+              "n": 421,
+              "observed_fraction": 0.3586698337292161
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.49681020362515144,
+              "n": 252,
+              "observed_fraction": 0.5873015873015873
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6308968312337923,
+              "n": 31,
+              "observed_fraction": 0.45161290322580644
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8236630639037332,
+              "n": 2,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "C"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.16774317522993856,
+              "n": 7,
+              "observed_fraction": 0.42857142857142855
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3130233786321624,
+              "n": 416,
+              "observed_fraction": 0.3605769230769231
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.48141022496397995,
+              "n": 212,
+              "observed_fraction": 0.5283018867924528
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6726803265946545,
+              "n": 68,
+              "observed_fraction": 0.6617647058823529
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8460050166073785,
+              "n": 5,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "D"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "01a20521bfcbbf124ff25115fb34ab1104fd407d935581cc15a3359edc453ae9",
+      "cases": 719,
+      "clusters": 5,
+      "cohort": "all_releases_with_A_fallback",
+      "comparisons": [
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.003447966328092933,
+          "interval": null,
+          "metric": "brier",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        },
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.007013089579705795,
+          "interval": null,
+          "metric": "log_loss",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "make",
+      "models": [
+        {
+          "case_set_sha256": "01a20521bfcbbf124ff25115fb34ab1104fd407d935581cc15a3359edc453ae9",
+          "id": "A",
+          "metrics": {
+            "accuracy": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5563282336578581
+            },
+            "auroc": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.49783307210031347
+            },
+            "brier": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.24872226367117387
+            },
+            "log_loss": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6907003845414946
+            }
+          }
+        },
+        {
+          "case_set_sha256": "01a20521bfcbbf124ff25115fb34ab1104fd407d935581cc15a3359edc453ae9",
+          "id": "B",
+          "metrics": {
+            "accuracy": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6244784422809457
+            },
+            "auroc": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5947335423197492
+            },
+            "brier": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23726502353578638
+            },
+            "log_loss": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6675960913102896
+            }
+          }
+        },
+        {
+          "case_set_sha256": "01a20521bfcbbf124ff25115fb34ab1104fd407d935581cc15a3359edc453ae9",
+          "id": "C",
+          "metrics": {
+            "accuracy": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5827538247566064
+            },
+            "auroc": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6112343260188088
+            },
+            "brier": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23971111323900965
+            },
+            "log_loss": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6723747695788912
+            }
+          }
+        },
+        {
+          "case_set_sha256": "01a20521bfcbbf124ff25115fb34ab1104fd407d935581cc15a3359edc453ae9",
+          "id": "D",
+          "metrics": {
+            "accuracy": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6036161335187761
+            },
+            "auroc": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.619110501567398
+            },
+            "brier": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23626314691091668
+            },
+            "log_loss": {
+              "cases": 719,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6653616799991854
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3881401617250675,
+              "n": 158,
+              "observed_fraction": 0.4620253164556962
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4064952314797481,
+              "n": 561,
+              "observed_fraction": 0.4385026737967914
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "A"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3258916210834764,
+              "n": 460,
+              "observed_fraction": 0.36086956521739133
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5386804891911153,
+              "n": 259,
+              "observed_fraction": 0.5907335907335908
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "B"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.18772630774719423,
+              "n": 2,
+              "observed_fraction": 0.0
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3198893439620257,
+              "n": 424,
+              "observed_fraction": 0.3584905660377358
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4940431056913444,
+              "n": 260,
+              "observed_fraction": 0.5807692307692308
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6308968312337923,
+              "n": 31,
+              "observed_fraction": 0.45161290322580644
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8236630639037332,
+              "n": 2,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "C"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.16774317522993856,
+              "n": 7,
+              "observed_fraction": 0.42857142857142855
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3135612076280543,
+              "n": 419,
+              "observed_fraction": 0.360381861575179
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.47870001753897795,
+              "n": 220,
+              "observed_fraction": 0.5227272727272727
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6726803265946545,
+              "n": 68,
+              "observed_fraction": 0.6617647058823529
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8460050166073785,
+              "n": 5,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "D"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "33271fefd01cc0b38804d1a56f98844c4ab6b17878002b7cc2aa7773b6ceb2d7",
+      "cases": 658,
+      "clusters": 5,
+      "cohort": "raw_consistent_0p1ft",
+      "comparisons": [
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.0035668384736478992,
+          "interval": null,
+          "metric": "brier",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        },
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.007425251024913912,
+          "interval": null,
+          "metric": "log_loss",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "make",
+      "models": [
+        {
+          "case_set_sha256": "33271fefd01cc0b38804d1a56f98844c4ab6b17878002b7cc2aa7773b6ceb2d7",
+          "id": "A",
+          "metrics": {
+            "accuracy": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5440729483282675
+            },
+            "auroc": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.498012104283054
+            },
+            "brier": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2511033247915021
+            },
+            "log_loss": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6955250473847358
+            }
+          }
+        },
+        {
+          "case_set_sha256": "33271fefd01cc0b38804d1a56f98844c4ab6b17878002b7cc2aa7773b6ceb2d7",
+          "id": "B",
+          "metrics": {
+            "accuracy": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6185410334346505
+            },
+            "auroc": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5942132216014897
+            },
+            "brier": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23920857350785232
+            },
+            "log_loss": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6716103168651784
+            }
+          }
+        },
+        {
+          "case_set_sha256": "33271fefd01cc0b38804d1a56f98844c4ab6b17878002b7cc2aa7773b6ceb2d7",
+          "id": "C",
+          "metrics": {
+            "accuracy": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5729483282674772
+            },
+            "auroc": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6099627560521415
+            },
+            "brier": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.24211941483455635
+            },
+            "log_loss": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6773963707411862
+            }
+          }
+        },
+        {
+          "case_set_sha256": "33271fefd01cc0b38804d1a56f98844c4ab6b17878002b7cc2aa7773b6ceb2d7",
+          "id": "D",
+          "metrics": {
+            "accuracy": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5957446808510638
+            },
+            "auroc": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6169087523277468
+            },
+            "brier": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23855257636090843
+            },
+            "log_loss": {
+              "cases": 658,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6699711197162723
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.38814016172506743,
+              "n": 144,
+              "observed_fraction": 0.4722222222222222
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.40649175834470785,
+              "n": 514,
+              "observed_fraction": 0.45136186770428016
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "A"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.32511603990787746,
+              "n": 407,
+              "observed_fraction": 0.36855036855036855
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5428813168696712,
+              "n": 251,
+              "observed_fraction": 0.5976095617529881
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "B"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.18772630774719423,
+              "n": 2,
+              "observed_fraction": 0.0
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3191608661394025,
+              "n": 371,
+              "observed_fraction": 0.3665768194070081
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.49681020362515144,
+              "n": 252,
+              "observed_fraction": 0.5873015873015873
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6308968312337923,
+              "n": 31,
+              "observed_fraction": 0.45161290322580644
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8236630639037332,
+              "n": 2,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "C"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.16621472477410282,
+              "n": 6,
+              "observed_fraction": 0.3333333333333333
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3131148464412478,
+              "n": 369,
+              "observed_fraction": 0.37398373983739835
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.481845365048901,
+              "n": 210,
+              "observed_fraction": 0.5238095238095238
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6726803265946545,
+              "n": 68,
+              "observed_fraction": 0.6617647058823529
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8460050166073785,
+              "n": 5,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "D"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "50256917feb5098414a5f373acb85ead16c46f0f0e1b37c240f633965b907495",
+      "cases": 687,
+      "clusters": 5,
+      "cohort": "raw_consistent_1ft",
+      "comparisons": [
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.0035886465671855884,
+          "interval": null,
+          "metric": "brier",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        },
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.007532433130092723,
+          "interval": null,
+          "metric": "log_loss",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "make",
+      "models": [
+        {
+          "case_set_sha256": "50256917feb5098414a5f373acb85ead16c46f0f0e1b37c240f633965b907495",
+          "id": "A",
+          "metrics": {
+            "accuracy": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5502183406113537
+            },
+            "auroc": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.49581770860088015
+            },
+            "brier": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.24994150962863396
+            },
+            "log_loss": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6931729194186107
+            }
+          }
+        },
+        {
+          "case_set_sha256": "50256917feb5098414a5f373acb85ead16c46f0f0e1b37c240f633965b907495",
+          "id": "B",
+          "metrics": {
+            "accuracy": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6215429403202329
+            },
+            "auroc": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5935001112994641
+            },
+            "brier": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23830467485371315
+            },
+            "log_loss": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6697559983117436
+            }
+          }
+        },
+        {
+          "case_set_sha256": "50256917feb5098414a5f373acb85ead16c46f0f0e1b37c240f633965b907495",
+          "id": "C",
+          "metrics": {
+            "accuracy": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5778748180494906
+            },
+            "auroc": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6102463998904128
+            },
+            "brier": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2409947163356882
+            },
+            "log_loss": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6750710808463695
+            }
+          }
+        },
+        {
+          "case_set_sha256": "50256917feb5098414a5f373acb85ead16c46f0f0e1b37c240f633965b907495",
+          "id": "D",
+          "metrics": {
+            "accuracy": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5997088791848617
+            },
+            "auroc": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.61820003082139
+            },
+            "brier": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2374060697685026
+            },
+            "log_loss": {
+              "cases": 687,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6675386477162767
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3881401617250675,
+              "n": 148,
+              "observed_fraction": 0.47297297297297297
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4065011498855558,
+              "n": 539,
+              "observed_fraction": 0.44341372912801486
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "A"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.32561871720420416,
+              "n": 436,
+              "observed_fraction": 0.3646788990825688
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5428813168696712,
+              "n": 251,
+              "observed_fraction": 0.5976095617529881
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "B"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.18772630774719423,
+              "n": 2,
+              "observed_fraction": 0.0
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3195587600651807,
+              "n": 400,
+              "observed_fraction": 0.3625
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.49681020362515144,
+              "n": 252,
+              "observed_fraction": 0.5873015873015873
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6308968312337923,
+              "n": 31,
+              "observed_fraction": 0.45161290322580644
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8236630639037332,
+              "n": 2,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "C"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.16621472477410282,
+              "n": 6,
+              "observed_fraction": 0.3333333333333333
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31292637876256507,
+              "n": 398,
+              "observed_fraction": 0.3693467336683417
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.481845365048901,
+              "n": 210,
+              "observed_fraction": 0.5238095238095238
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6726803265946545,
+              "n": 68,
+              "observed_fraction": 0.6617647058823529
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8460050166073785,
+              "n": 5,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "D"
+        }
+      ]
+    },
+    {
+      "case_set_sha256": "73f1b98071238d6524cc89ecc95979d85f8fa71956e567ceedb11afadca895df",
+      "cases": 587,
+      "clusters": 5,
+      "cohort": "raw_consistent_and_directly_detected_0p1ft",
+      "comparisons": [
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.005466308450402353,
+          "interval": null,
+          "metric": "brier",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        },
+        {
+          "confidence": null,
+          "criterion_met": null,
+          "delta": -0.011565508931932297,
+          "interval": null,
+          "metric": "log_loss",
+          "model": "D",
+          "reference": "C",
+          "sensitivity_range": null,
+          "uncertainty": "not_available"
+        }
+      ],
+      "id": "make",
+      "models": [
+        {
+          "case_set_sha256": "73f1b98071238d6524cc89ecc95979d85f8fa71956e567ceedb11afadca895df",
+          "id": "A",
+          "metrics": {
+            "accuracy": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5468483816013628
+            },
+            "auroc": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5104232543976766
+            },
+            "brier": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2504186509458288
+            },
+            "log_loss": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6941291852124946
+            }
+          }
+        },
+        {
+          "case_set_sha256": "73f1b98071238d6524cc89ecc95979d85f8fa71956e567ceedb11afadca895df",
+          "id": "B",
+          "metrics": {
+            "accuracy": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.616695059625213
+            },
+            "auroc": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5950097205630901
+            },
+            "brier": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23953575587915102
+            },
+            "log_loss": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6723326371105577
+            }
+          }
+        },
+        {
+          "case_set_sha256": "73f1b98071238d6524cc89ecc95979d85f8fa71956e567ceedb11afadca895df",
+          "id": "C",
+          "metrics": {
+            "accuracy": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.5826235093696763
+            },
+            "auroc": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6150188555500903
+            },
+            "brier": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.2411071189492697
+            },
+            "log_loss": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.675269702789233
+            }
+          }
+        },
+        {
+          "case_set_sha256": "73f1b98071238d6524cc89ecc95979d85f8fa71956e567ceedb11afadca895df",
+          "id": "D",
+          "metrics": {
+            "accuracy": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.606473594548552
+            },
+            "auroc": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6261213782118848
+            },
+            "brier": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.23564081049886734
+            },
+            "log_loss": {
+              "cases": 587,
+              "clusters": 5,
+              "status": "reported",
+              "value": 0.6637041938573007
+            }
+          }
+        }
+      ],
+      "reliability": [
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.38814016172506743,
+              "n": 130,
+              "observed_fraction": 0.45384615384615384
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4065608439856719,
+              "n": 457,
+              "observed_fraction": 0.45295404814004375
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "A"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.32518419242284846,
+              "n": 376,
+              "observed_fraction": 0.3723404255319149
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.5428783605678364,
+              "n": 211,
+              "observed_fraction": 0.5971563981042654
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            },
+            {
+              "clusters": null,
+              "mean_probability": null,
+              "n": 0,
+              "observed_fraction": null
+            }
+          ],
+          "class": "make",
+          "model": "B"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.18772630774719423,
+              "n": 2,
+              "observed_fraction": 0.0
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.3194813128323934,
+              "n": 352,
+              "observed_fraction": 0.3664772727272727
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.49997990652597574,
+              "n": 204,
+              "observed_fraction": 0.6029411764705882
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6330900314587395,
+              "n": 27,
+              "observed_fraction": 0.4444444444444444
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8236630639037332,
+              "n": 2,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "C"
+        },
+        {
+          "bins": [
+            {
+              "clusters": null,
+              "mean_probability": 0.16144210799105588,
+              "n": 5,
+              "observed_fraction": 0.4
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.31332574682447795,
+              "n": 341,
+              "observed_fraction": 0.36656891495601174
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.4816800622828065,
+              "n": 173,
+              "observed_fraction": 0.5317919075144508
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.6753283456462251,
+              "n": 63,
+              "observed_fraction": 0.6666666666666666
+            },
+            {
+              "clusters": null,
+              "mean_probability": 0.8460050166073785,
+              "n": 5,
+              "observed_fraction": 1.0
+            }
+          ],
+          "class": "make",
+          "model": "D"
+        }
+      ]
+    }
+  ],
+  "task": "basketball"
+}
